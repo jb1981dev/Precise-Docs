@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Instance Wrangler'
+    copyright = '2025, JB'
+author = 'JB'
 
 release = '0.1'
 version = '0.1.0'
