@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Instance Wrangler'
-    copyright = '2025, JB'
+copyright = '2025, JB'
 author = 'JB'
 
 release = '0.1'
