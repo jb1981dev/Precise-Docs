@@ -20,26 +20,62 @@ Bold: **text**
 
 Monospace/Code: ``text``
 
-Subscript: Use the :sub: role, like ``:sub:`H2O``` which renders as H₂O.
-
-Superscript: Use the :sup: role, like E=mc\ :sup:\2`` which renders as E=mc².
-
 * An item
 * Another item
    * A nested item
 
-**Instance Wrangler** is a Blender addon to assist in managing instances.
-Developed by Jeroen Backx <https://jeroenbackx.com/>`_
-and offers a *simple* and *intuitive* API.
+Links
 
-Lumache hosts its documentation on Read the Docs.
+**Instance Wrangler** is a Blender addon to assist in managing instances.
+Developed by `Jeroen Backx <https://jeroenbackx.com/>`_
+
+.. _my-target-label:
+
+My Target Section
+=================
+
+:ref:`My Target Section <my-target-label>`.
+To link to another document: ``:doc:`path/to/other/document```
+
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
-.. note::
+.. image:: /_static/my_image.png
+   :alt: Alternative text for the image
+   :align: center
+   :width: 400px
+   :height: 200px``
 
-   This project is under active development.
+.. code-block:: python
+   :linenos:
+   :emphasize-lines: 3,4
+
+   def my_function():
+       """A sample function."""
+       print("Hello, world!")
+       return True
+
+.. note::
+   This is something you should pay attention to.
+
+.. warning::
+   Be careful with this command as it can cause data loss.
+
+=====  =====
+Header 1  Header 2
+=====  =====
+Cell 1    Cell 2
+Cell 3    Cell 4
+=====  =====
+
++------------+------------+-----------+
+| Header 1   | Header 2   | Header 3  |
++============+============+===========+
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+| body row 2 | Cells may span columns.|
++------------+------------+-----------+
 
 Contents
 --------
@@ -48,3 +84,11 @@ Contents
 
    usage
    api
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Getting Started
+
+   introduction
+   installation
+   quickstart
