@@ -1,9 +1,35 @@
-Welcome to Lumache's documentation!
-===================================
+=================
+Document Title
+=================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
+Section Title (Level 1)
+=======================
+
+Subsection Title (Level 2)
+--------------------------
+
+Sub-subsection Title (Level 3)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Paragraph Title (Level 4)
+"""""""""""""""""""""""""
+
+Italics: *text*
+
+Bold: **text**
+
+Monospace/Code: ``text``
+
+Subscript: Use the :sub: role, like ``:sub:`H2O``` which renders as H₂O.
+
+Superscript: Use the :sup: role, like E=mc\ :sup:\2`` which renders as E=mc².
+
+* An item
+* Another item
+   * A nested item
+
+**Instance Wrangler** is a Blender addon to assist in managing instances.
+Developed by Jeroen Backx <https://jeroenbackx.com/>`_
 and offers a *simple* and *intuitive* API.
 
 Lumache hosts its documentation on Read the Docs.
