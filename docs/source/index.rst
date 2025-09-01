@@ -56,6 +56,7 @@ how to :ref:`installation` the project.
 .. warning::
    Be careful with this command as it can cause data loss.
 
+.. code-block:: python
 =====  =====
 Header 1  Header 2
 =====  =====
