@@ -41,12 +41,6 @@ To link to another document: ``:doc:`path/to/other/document```
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
-.. image:: /_static/my_image.png
-   :alt: Alternative text for the image
-   :align: center
-   :width: 400px
-   :height: 200px``
-
 .. code-block:: python
    :linenos:
    :emphasize-lines: 3,4
