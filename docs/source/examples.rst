@@ -54,6 +54,8 @@ My Target Section
 
 :ref:`My Target Section <my-target-label>`.
 
+Also we can link to Titles/Headers, although explicit linking is better, because then we can still change the title while the link remains intact. :ref:`Subsection Title (Level 2)`.
+
 ``To link to another document: ``:doc:`path/to/other/document```
 
 
@@ -89,3 +91,13 @@ Cell 3    Cell 4
 +------------+------------+-----------+
 | body row 2 | Cells may span columns.|
 +------------+------------+-----------+
+
+.. list-table::
+   :header-rows: 1
+
+   * - Header 1
+     - Header 2
+   * - Cell 1
+     - Cell 2
+   * - Cell 3
+     - Cell 4
