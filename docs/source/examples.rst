@@ -54,7 +54,7 @@ My Target Section
 
 :ref:`My Target Section <my-target-label>`.
 
-Also we can link to Titles/Headers, although explicit linking is better, because then we can still change the title while the link remains intact. :ref:`Subsection Title (Level 2)`.
+Also we can link to Titles/Headers, although explicit linking is better, because then we can still change the title while the link remains intact. :ref:`Section Title (Level 1)`.
 
 ``To link to another document: ``:doc:`path/to/other/document```
 
@@ -77,6 +77,11 @@ how to :ref:`installation` the project.
 .. warning::
    Be careful with this command as it can cause data loss.
 
+Tables
+------
+
+Here is a simple table
+
 ========  ========
 Header 1  Header 2
 ========  ========
@@ -84,13 +89,7 @@ Cell 1    Cell 2
 Cell 3    Cell 4
 ========  ========
 
-+------------+------------+-----------+
-| Header 1   | Header 2   | Header 3  |
-+============+============+===========+
-| body row 1 | column 2   | column 3  |
-+------------+------------+-----------+
-| body row 2 | Cells may span columns.|
-+------------+------------+-----------+
+We can also create a list table
 
 .. list-table::
    :header-rows: 1
@@ -101,3 +100,13 @@ Cell 3    Cell 4
      - Cell 2
    * - Cell 3
      - Cell 4
+
+This is a slightly more complex table
+
++------------+------------+-----------+
+| Header 1   | Header 2   | Header 3  |
++============+============+===========+
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+| body row 2 | Cells may span columns.|
++------------+------------+-----------+
