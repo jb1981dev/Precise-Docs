@@ -1,5 +1,5 @@
 =================
-Document Title
+Formatting Example Document
 =================
 
 Section Title (Level 1)
@@ -24,7 +24,21 @@ Monospace/Code: ``text``
 * Another item
    * A nested item
 
-.. This is a comment and will be invisible.
+.. This is a comment line and will be invisible.
+
+.. code-block:: rst
+
+   .. This is a comment line and will be invisible.
+
+   ..
+      The following list is temporarily commented out for review.
+      It will not appear in the final output.
+
+      * Item 1
+      * Item 2
+      * Item 3
+
+
 
 Links
 
@@ -72,7 +86,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Getting Started
+   :caption: Contents
 
    usage
    api
