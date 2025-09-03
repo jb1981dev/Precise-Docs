@@ -73,18 +73,12 @@ how to :ref:`installation` the project.
 .. warning::
    Be careful with this command as it can cause data loss.
 
-This is a paragraph of text introducing the table.
-<-- Make sure this line is completely blank
-
-=====  =====
+========  ========
 Header 1  Header 2
-=====  =====
+========  ========
 Cell 1    Cell 2
 Cell 3    Cell 4
-=====  =====
-
-<-- It's also good practice to have a blank line after.
-This is the text that comes after the table.
+========  ========
 
 +------------+------------+-----------+
 | Header 1   | Header 2   | Header 3  |
