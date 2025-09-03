@@ -24,6 +24,8 @@ Monospace/Code: ``text``
 * Another item
    * A nested item
 
+.. This is a comment and will be invisible.
+
 Links
 
 **Instance Wrangler** is a Blender addon to assist in managing instances.
