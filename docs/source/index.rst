@@ -11,6 +11,7 @@ Contact: JeroenBackx @ Proton.me
    :maxdepth: 2
    :caption: Contents
 
+   modifiersync
    examples
    usage
    api
