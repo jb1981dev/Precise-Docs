@@ -35,7 +35,8 @@ My Target Section
 =================
 
 :ref:`My Target Section <my-target-label>`.
-To link to another document: ``:doc:`path/to/other/document```
+
+``To link to another document: ``:doc:`path/to/other/document```
 
 
 Check out the :doc:`usage` section for further information, including
