@@ -13,9 +13,8 @@ Contact: JeroenBackx @ Proton.me
 .. toctree::
    :maxdepth: 1
    :caption: Contents
-   :hidden:
 
    modifiersync
-   examples
+
 .. usage
 .. api
