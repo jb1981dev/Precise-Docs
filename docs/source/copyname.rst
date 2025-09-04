@@ -1,5 +1,5 @@
 Copy Name (Object ↔ Data)
-=========================
+===========================
 
 These two buttons are powerful utilities for managing the names of your objects and their associated **Object Data**. In scenes with many linked duplicates, keeping names consistent is crucial for organization. These tools allow you to quickly enforce a clear naming convention across entire instance groups.
 
@@ -7,7 +7,7 @@ These two buttons are powerful utilities for managing the names of your objects 
 * **Data → Object:** This copies the name of the object's data-block to the object itself. This is used to propagate or "sync" that master name across multiple selected instances.
 
 Workflow: Consistent Naming for Instances
-----------------------------------------
+-------------------------------------------
 
 This workflow is perfect for cleaning up a scene where you've placed many instances without worrying about their names.
 
