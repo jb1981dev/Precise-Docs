@@ -17,7 +17,7 @@ How to Use
 .. important::
    If your selection includes multiple objects that share the same data (i.e., they are linked duplicates of each other), you must specify a source. To do this, simply make sure the object you want to copy modifiers *from* is the **active object** (selected last, with a brighter outline).
 
-.. figure:: /images/modifier_sync_active_object.jpg
+.. figure:: images/modifier_sync_active_object.jpg
   :align: center
   :alt: Three linked cubes selected with one active
 
