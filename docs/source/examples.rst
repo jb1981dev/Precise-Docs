@@ -29,7 +29,7 @@ Monospace/Code: ``text``
 
 .. This is a comment line and will be invisible.
 
-.. code-block:: rst
+.. code-block:: console
 
    .. This is a comment line and will be invisible.
 
