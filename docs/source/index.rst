@@ -23,6 +23,7 @@ Contact: JeroenBackx @ Proton.me
    makesingleuser
    copyname
    cycledata
+   mergedcopy
 
 .. usage
 .. api
