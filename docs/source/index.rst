@@ -8,7 +8,7 @@ Instance Wrangler is developed by `Jeroen Backx <https://jeroenbackx.com/>`_
 Contact: JeroenBackx @ Proton.me
 
 .. note::
-Refer to the :doc:`examples` page for formatting examples. 
+   Refer to the :doc:`examples` page for formatting examples. 
 
 .. toctree::
    :maxdepth: 2
