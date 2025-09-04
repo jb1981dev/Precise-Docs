@@ -13,5 +13,5 @@ Contact: JeroenBackx @ Proton.me
 
    modifiersync
    examples
-   usage
-   api
+..   usage
+..   api
