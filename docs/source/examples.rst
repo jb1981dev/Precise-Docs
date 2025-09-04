@@ -1,3 +1,7 @@
+:orphan:
+
+.. _formatting-examples:
+
 ===========================
 Formatting Example Document
 ===========================
@@ -56,9 +60,9 @@ My Target Section
 
 ``To link to another document: ``:doc:`path/to/other/document```
 
-
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
+Finally there is also the :doc:`api` page. 
 
 .. code-block:: python
    :linenos:
