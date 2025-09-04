@@ -20,6 +20,7 @@ Contact: JeroenBackx @ Proton.me
    applymodifiers
    selectlinked
    linkselected
+   makesingleuser
 
 .. usage
 .. api
