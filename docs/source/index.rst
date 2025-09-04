@@ -15,6 +15,7 @@ Contact: JeroenBackx @ Proton.me
    :caption: Contents
 
    multitransform
+   applytransforms
    modifiersync
 
 .. usage
