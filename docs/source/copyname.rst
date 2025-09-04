@@ -25,8 +25,9 @@ Let's say you have dozens of linked rocks named ``Sphere.001``, ``Sphere.034``, 
 #. **Step 4: Sync Name to Objects**
    With all the instances selected, click the **Data → Object** button. Every selected object's name will instantly be updated to match the data-block's name.
 
-.. figure:: /_static/images/outliner_consistent_names.png
-   :align: center
-   :alt: Blender outliner showing consistently named rock instances
+..
+   .. figure:: /_static/images/outliner_consistent_names.png
+      :align: center
+      :alt: Blender outliner showing consistently named rock instances
 
 In just a few clicks, you have synced the names of all your instances, creating a much cleaner and more organized scene.
