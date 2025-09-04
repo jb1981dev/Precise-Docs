@@ -11,7 +11,7 @@ Contact: JeroenBackx @ Proton.me
    Refer to the :doc:`examples` page for formatting examples. 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents
 
    modifiersync
