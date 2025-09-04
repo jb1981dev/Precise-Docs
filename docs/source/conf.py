@@ -1,13 +1,13 @@
-# Configuration file for the Sphinx documentation builder.
+n# Configuration file for the Sphinx documentation builder.
 
 # -- Project information
 
 project = 'Instance Wrangler'
-copyright = '2025, JB'
+copyright = '2025, Pro Art Tools'
 author = 'JB'
 
-release = '0.1'
-version = '0.1.0'
+release = '1.0'
+version = '1.0.0'
 
 # -- General configuration
 
