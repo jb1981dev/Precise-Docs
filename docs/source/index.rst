@@ -19,5 +19,5 @@ Contact: JeroenBackx @ Proton.me
    :hidden:
 
    examples
-   .. usage
-   .. api
+.. usage
+.. api
