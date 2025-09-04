@@ -21,6 +21,7 @@ Contact: JeroenBackx @ Proton.me
    selectlinked
    linkselected
    makesingleuser
+   copyname
 
 .. usage
 .. api
