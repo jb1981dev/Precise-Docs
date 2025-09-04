@@ -15,7 +15,7 @@ Contact: JeroenBackx @ Proton.me
    :caption: Contents
 
    modifiersync
-   # Hidden section – will not show up in the navigation
+
    :hidden:
 
    examples
