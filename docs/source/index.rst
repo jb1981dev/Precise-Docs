@@ -19,6 +19,7 @@ Contact: JeroenBackx @ Proton.me
    modifiersync
    applymodifiers
    selectlinked
+   linkselected
 
 .. usage
 .. api
