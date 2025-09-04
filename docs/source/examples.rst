@@ -1,5 +1,3 @@
-:orphan:
-
 .. _formatting-examples:
 
 ===========================
@@ -50,6 +48,8 @@ Links
 
 **Instance Wrangler** is a Blender addon to assist in managing instances.
 Developed by `Jeroen Backx <https://jeroenbackx.com/>`_
+
+`More formatting <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
 
 .. _my-target-label:
 
