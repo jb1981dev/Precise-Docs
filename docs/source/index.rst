@@ -22,6 +22,7 @@ Contact: JeroenBackx @ Proton.me
    linkselected
    makesingleuser
    copyname
+   cycledata
 
 .. usage
 .. api
