@@ -13,9 +13,9 @@ Contact: JeroenBackx @ Proton.me
 .. toctree::
    :maxdepth: 1
    :caption: Contents
-   :hidden:               # <- option, same indentation as the other options
+   :hidden:
 
-   modifiersync          # <- document names are indented one level deeper
+   modifiersync
    examples
 .. usage
 .. api
