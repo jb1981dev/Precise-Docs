@@ -14,6 +14,7 @@ Contact: JeroenBackx @ Proton.me
    :maxdepth: 1
    :caption: Contents
 
+   multitransform
    modifiersync
 
 .. usage
