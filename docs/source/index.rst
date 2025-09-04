@@ -18,6 +18,7 @@ Contact: JeroenBackx @ Proton.me
    applytransforms
    modifiersync
    applymodifiers
+   selectlinked
 
 .. usage
 .. api
