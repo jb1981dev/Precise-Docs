@@ -17,6 +17,7 @@ Contact: JeroenBackx @ Proton.me
    multitransform
    applytransforms
    modifiersync
+   applymodifiers
 
 .. usage
 .. api
