@@ -40,11 +40,15 @@ In this mode, the entire selection behaves as if temporarily parented to the act
 * **Rotation:** Followers **orbit** around the active object as it rotates to its new orientation.
 * **Scale:** Followers move closer to or further away from the active object as it scales to its new size, maintaining the group's proportions.
 
-.. figure:: /_static/images/active_leads_orbit.png
+.. figure:: images/multitransform_activeleads_rotation.gif
    :align: center
-   :alt: Objects orbiting a central active object during rotation.
+   :alt: Animation demonstrating active leads functionality with objects orbiting around the active object.
 
-   In "Transform as Children" mode, followers orbit the active object.
+.. figure:: images/multitransform_activeleads_scale.gif
+   :align: center
+   :alt: Animation demonstrating active leads functionality with objects scaling around the active object.
+
+   In "Transform as Children" mode, followers orbit and scale with the active object.
 
 Relative Mode (Relative ON): Incremental Parented Transform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
