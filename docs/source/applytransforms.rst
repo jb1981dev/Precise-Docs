@@ -24,4 +24,4 @@ Usage with Selections
 The operator is designed to be simple and efficient, regardless of your selection:
 
 * **Single Object:** Select any single object that has linked duplicates and run the operator. The transform will be applied to that object and all of its instances.
-* **Multiple Objects:** You can select multiple objects at once, even if they belong to different instance groups. The operator will intelligently process each group independently in a single action. The **active object** has no special role here; it is simply treated like any other object in the selection.
+* **Multiple Objects:** You can select multiple objects at once, even if they belong to different instance groups. The operator will try to find a leader for each group, if the instances belong to a single group it will try to find the active object as a reference. If the instances belong to different groups, you can only have one instance of each group selected, so that it knows which object to use when applying the transforms. 
