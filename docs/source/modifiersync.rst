@@ -33,24 +33,3 @@ The operator is flexible, but follows a key rule:
 * **Active Object Required:** If your selection contains multiple linked duplicates, the **active object is mandatory** and will be used as the single source for that entire instance group.
 
 * **One Group at a Time:** Your selection cannot contain more than one group of linked duplicates (e.g., you cannot select two linked spheres *and* two linked cubes at the same time).
-
-Troubleshooting & Error Messages
-================================
-
-**Error:** "A group is selected, but there is no active object to act as a leader."
-    **Cause:**
-        You selected linked duplicates, but no object is active or the active object is not selected.
-    **Solution:**
-        Re-select your objects, making sure the source object is selected **last** to make it active.
-
-**Error:** "The active object is not part of the selected instance group."
-    **Cause:**
-        You selected linked duplicates (e.g., spheres), but your active object is a different, un-linked object (e.g., a cube).
-    **Solution:**
-        The active object must be one of the objects from the group itself.
-
-**Error:** "Selection contains a second instance group..."
-    **Cause:**
-        Your selection includes more than one group of linked duplicates.
-    **Solution:**
-        Perform the sync operation on one group at a time.
