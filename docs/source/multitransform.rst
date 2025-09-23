@@ -3,17 +3,21 @@ Multi Transform
 
 The **Multi Transform** panel provides a powerful and precise way to manipulate the position, rotation, and scale of multiple objects simultaneously. It's designed for workflows that demand accurate, numeric input, offering a level of control that goes beyond Blender's standard interactive tools.
 
-The panel is organized into three rows for **Position**, **Rotation**, and **Scale**, each with its own numeric input fields and a **Set** button to apply the changes. These rows share a set of powerful controls that define how the transformations are applied, allowing the tool to operate in two distinct ways: a **Standard Mode** for editing objects independently, and a powerful **Active Leads Mode** which uses the active object as a group pivot.
+The panel is organized into a grid layout, with each row corresponding to a transform **axis** (X, Y, and Z). This allows you to view and edit the Position, Rotation, and Scale values for a specific axis all in one place. This structure is controlled by a powerful set of modes, allowing for both standard independent editing and an **Active Leads Mode** which uses the active object as a group pivot.
 
 UI Controls Explained
 ---------------------
 
-* **Affect: X, Y, Z:** These checkboxes let you apply transforms to specific axes while ignoring others.
-* **Set Button:** Applies the values from the numeric fields to all selected objects, respecting the mode settings.
-* **Set All Button:** Applies the values for Position, Rotation, and Scale all at once.
-* **Pos, Rot, Scale Buttons:** These are shortcuts to reset the numeric input fields next to them to their default values—``(0,0,0)`` for Position/Rotation and ``(1,1,1)`` for Scale.
-* **Relative Toggle:** Switches between **Absolute** and **Relative** modes. Its behavior changes depending on whether **Active Leads** is enabled.
-* **Active Leads Toggle:** Switches the tool to a powerful mode where the **active object** acts as a pivot or "fake parent" for the rest of the selection.
+* **Header Row:** The top row contains shortcuts to reset the transform values. **Pos** resets Position to ``(0,0,0)``, **Rot** resets Rotation to ``(0,0,0)``, and **Scale** resets Scale to ``(1,1,1)``.
+* **Axis Rows (X, Y, Z):** Each of these three rows contains:
+    * An **axis toggle** on the left to include or exclude that axis from the operation.
+    * Three numeric input fields for that axis's **Position**, **Rotation**, and **Scale**.
+* **Set Buttons Row:** The bottom row contains the buttons to apply the transforms:
+    * **Set All:** Applies the values for Position, Rotation, and Scale all at once.
+    * **Set (per-transform):** Applies only the values for either Position, Rotation, or Scale.
+* **Mode Toggles:**
+    * **Relative Toggle:** Switches between **Absolute** and **Relative** modes. Its behavior changes depending on whether **Active Leads** is enabled.
+    * **Active Leads Toggle:** Switches the tool to a powerful mode where the **active object** acts as a pivot or "fake parent" for the rest of the selection.
 
 Standard Modes (Active Leads OFF)
 ---------------------------------
