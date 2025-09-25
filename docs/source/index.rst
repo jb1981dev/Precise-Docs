@@ -1,29 +1,33 @@
-===============================
-Instance Wrangler Documentation
-===============================
+.. Precise Tools Documentation
 
-**Instance Wrangler** is a Blender addon to assist in managing instanced objects in your Blender scene.
+Welcome to the Precise Tools Blender Addon Documentation
+========================================================
 
-Instance Wrangler is developed by `Jeroen Backx <https://jeroenbackx.com/>`_
-Contact: JeroenBackx @ Proton.me
-
-.. note::
-   Refer to the :doc:`examples` page for formatting examples. 
+Addon Projects:
+---------------
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents
+   :caption: Instance Wrangler
 
-   multitransform
-   applytransforms
-   modifiersync
-   applymodifiers
-   selectlinked
-   linkselected
-   makesingleuser
-   copyname
-   cycledata
-   mergedcopy
+   instwrangler/index
+   instwrangler/multitransform
+   instwrangler/applytransforms
+   instwrangler/modifiersync
+   instwrangler/applymodifiers
+   instwrangler/selectlinked
+   instwrangler/linkselected
+   instwrangler/makesingleuser
+   instwrangler/copyname
+   instwrangler/cycledata
+   instwrangler/mergedcopy
 
-.. usage
-.. api
+.. .. toctree::
+..   :hidden:
+..   :maxdepth: 2
+..   :caption: Addon 2
+
+..   testpages/index
+..   testpages/examples
+..   testpages/usage
+.. .. testpages/api
