@@ -4,7 +4,7 @@
 
 project = 'Precise Tools Documentation'
 copyright = '2025, Precise Tools'
-author = 'JB'
+author = 'Jeroen Backx'
 
 # release = '1.0'
 # version = '1.0.0'
