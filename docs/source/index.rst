@@ -7,7 +7,7 @@ Addon Projects:
 ---------------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Addons
 
    instwrangler/index
