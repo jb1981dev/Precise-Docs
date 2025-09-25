@@ -6,8 +6,8 @@ project = 'Precise Tools Documentation'
 copyright = '2025, Precise Tools'
 author = 'Jeroen Backx'
 
-# release = '1.0'
-# version = '1.0.0'
+release = '1.0'
+version = '1.0.0'
 
 # -- General configuration
 
