@@ -10,6 +10,10 @@ release = '1.0'
 version = '1.0.0'
 
 # -- General configuration
+html_title = 'Precise Tools Documentation'
+html_short_title = 'Precise Tools'
+html_show_sourcelink = False
+html_show_sphinx = False
 
 extensions = [
     'sphinx.ext.duration',
@@ -21,7 +25,7 @@ extensions = [
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
+    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),    
 }
 intersphinx_disabled_domains = ['std']
 
@@ -33,3 +37,9 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# This dictionary is ONLY for theme-specific options
+html_theme_options = {
+    'display_version': False,
+    # other theme-specific options would go here
+}
