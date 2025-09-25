@@ -11,5 +11,5 @@ Here are just some testpages to explore
 
    examples.rst
    usage.rst
-   api.rst
+.. api.rst
   
