@@ -11,4 +11,9 @@ Addon Projects:
    :caption: Addons
 
    instwrangler/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Addon 2
+
    testpages/index
