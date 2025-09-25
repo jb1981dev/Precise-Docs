@@ -2,8 +2,8 @@
 
 # -- Project information
 
-project = 'Instance Wrangler'
-copyright = '2025, Pro Art Tools'
+project = 'Precise Tools Documentation'
+copyright = '2025, Precise Tools'
 author = 'JB'
 
 release = '1.0'
