@@ -1,3 +1,4 @@
+:orphan:
 .. Test Pages
 
 Welcome to my addon documentation!
