@@ -11,4 +11,4 @@ Addon Projects:
    :caption: Addons
 
    instwrangler/index
-   addon2/index
+   testpages/index
