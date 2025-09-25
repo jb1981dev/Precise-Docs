@@ -7,7 +7,7 @@ Addon Projects:
 ---------------
 
 .. toctree::
-   :hidden:
+#   :hidden:
    :maxdepth: 1
    :caption: Instance Wrangler
 
@@ -23,12 +23,12 @@ Addon Projects:
    instwrangler/cycledata
    instwrangler/mergedcopy
 
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-   :caption: Addon 2
+#.. toctree::
+#   :hidden:
+#   :maxdepth: 2
+#   :caption: Addon 2
 
-   testpages/index
-   testpages/examples
-   testpages/usage
-.. testpages/api
+#   testpages/index
+#   testpages/examples
+#   testpages/usage
+#.. testpages/api
