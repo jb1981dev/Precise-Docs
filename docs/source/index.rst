@@ -28,3 +28,4 @@ Addon Projects:
    testpages/index
    testpages/examples
    testpages/usage
+.. testpages/api
