@@ -7,7 +7,8 @@ Addon Projects:
 ---------------
 
 .. toctree::
-   :maxdepth: 2
+   :hidden:
+   :maxdepth: 1
    :caption: Instance Wrangler
 
    instwrangler/index
@@ -16,12 +17,14 @@ Addon Projects:
    instwrangler/modifiersync
    instwrangler/applymodifiers
    instwrangler/selectlinked
+   instwrangler/linkselected
    instwrangler/makesingleuser
    instwrangler/copyname
    instwrangler/cycledata
    instwrangler/mergedcopy
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
    :caption: Addon 2
 
