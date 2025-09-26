@@ -7,9 +7,9 @@
 
 /* Targets the text inside the caption paragraph */
 p.caption .caption-text {
-    font-size: 1.2em;   /* Makes it slightly larger and bolder */
-    font-weight: bold;
-    color: #DDDDDD;     /* Example: a lighter gray color */
+    font-size: 0.8em;   /* Makes it slightly larger and bolder */
+    /*font-weight: bold;
+    /*color: #DDDDDD;     /* Example: a lighter gray color */
 }
 
 /* Optional: remove the default top margin to bring it closer to the list */
