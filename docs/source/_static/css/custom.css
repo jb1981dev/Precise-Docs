@@ -1,6 +1,6 @@
 /* Decrease the font size of the toctree sidebar caption */
 .wy-menu-vertical .caption span {
-    font-size: 100%;
+    font-size: 200%;
 }
 
 /* --- Style for the in-page toctree caption --- */
