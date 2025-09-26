@@ -43,3 +43,11 @@ html_theme_options = {
     'display_version': False,
     # other theme-specific options would go here
 }
+
+# Path to your custom static files (css, images, etc.)
+html_static_path = ['_static']
+
+# A list of CSS files to include. The path is relative to the _static folder.
+html_css_files = [
+    'css/custom.css',
+]
