@@ -9,7 +9,8 @@ Addon Projects:
 ---------------
 
 ..
-   Draft List.
+   Draft List
+
    instwrangler/index
    instwrangler/multitransform
    instwrangler/applytransforms
@@ -42,22 +43,13 @@ Addon Projects:
    instwrangler/copyname
    instwrangler/mergedcopy
 
-.. .. toctree::
-..   :hidden:
-..   :maxdepth: 2
-..   :caption: Addon 2
-
-..   testpages/index
-..   testpages/examples
-..   testpages/usage
-.. .. testpages/api
-
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-   :caption: Addon 2
-
-   testpages/index
-   testpages/examples
-   testpages/usage
-   testpages/api
+..
+   .. toctree::
+      :hidden:
+      :maxdepth: 2
+      :caption: Addon 2
+   
+      testpages/index
+      testpages/examples
+      testpages/usage
+      testpages/api
