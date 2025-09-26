@@ -1,6 +1,6 @@
 /* Decrease the font size of the toctree sidebar caption */
 .wy-menu-vertical .caption span {
-    font-size: 90%;
+    font-size: 100%;
 }
 
 /* --- Style for the in-page toctree caption --- */
@@ -15,4 +15,5 @@ p.caption .caption-text {
 /* Optional: remove the default top margin to bring it closer to the list */
 p.caption {
     margin-top: 0;
+    margin-bottom: 0;
 }
