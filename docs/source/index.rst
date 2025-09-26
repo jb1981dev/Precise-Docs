@@ -18,12 +18,12 @@ Addon Projects:
    instwrangler/selectlinked
    instwrangler/linkselected
    instwrangler/makesingleuser
-#   instwrangler/unlink
-#   instwrangler/groupunlink
+   #   instwrangler/unlink
+   #   instwrangler/groupunlink
    instwrangler/cycledata
    instwrangler/copyname
    instwrangler/mergedcopy
-#   instwrangler/blendermenus
+   #   instwrangler/blendermenus
 
 
 .. toctree::
