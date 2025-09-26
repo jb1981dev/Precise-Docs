@@ -18,9 +18,12 @@ Addon Projects:
    instwrangler/selectlinked
    instwrangler/linkselected
    instwrangler/makesingleuser
-   instwrangler/copyname
+..   instwrangler/unlink
+..   instwrangler/groupunlink
    instwrangler/cycledata
+   instwrangler/copyname
    instwrangler/mergedcopy
+..   instwrangler/blendermenus
 
 .. .. toctree::
 ..   :hidden:
@@ -31,3 +34,13 @@ Addon Projects:
 ..   testpages/examples
 ..   testpages/usage
 .. .. testpages/api
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   :caption: Addon 2
+
+   testpages/index
+   testpages/examples
+   testpages/usage
+   testpages/api
