@@ -1,0 +1,18 @@
+/* Decrease the font size of the toctree sidebar caption */
+.wy-menu-vertical .caption span {
+    font-size: 90%;
+}
+
+/* --- Style for the in-page toctree caption --- */
+
+/* Targets the text inside the caption paragraph */
+p.caption .caption-text {
+    font-size: 1.2em;   /* Makes it slightly larger and bolder */
+    font-weight: bold;
+    color: #DDDDDD;     /* Example: a lighter gray color */
+}
+
+/* Optional: remove the default top margin to bring it closer to the list */
+p.caption {
+    margin-top: 0;
+}
