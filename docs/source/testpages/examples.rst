@@ -55,6 +55,7 @@ how to :ref:`installation` the project.
 Finally there is also the :doc:`api` page. 
 
 .. code-block:: console
+
    **Instance Wrangler** is a Blender addon to assist in managing instances.
    Developed by `Jeroen Backx <https://jeroenbackx.com/>`_
     
