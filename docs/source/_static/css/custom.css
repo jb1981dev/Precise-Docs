@@ -1,6 +1,6 @@
 /* Decrease the font size of the toctree sidebar caption */
 .wy-menu-vertical .caption span {
-    font-size: 200%;
+    font-size: 100%;
 }
 
 /* --- Style for the in-page toctree caption --- */
@@ -19,6 +19,6 @@ p.caption {
 }
 
 .large-link a {
-    font-size: 1.5em; /* 150% of the normal font size */
+    font-size: 1.3em; /* 130% of the normal font size */
     font-weight: bold;
 }
