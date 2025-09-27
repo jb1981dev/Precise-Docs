@@ -15,13 +15,13 @@ Contact: JeroenBackx @ Proton.me
    :maxdepth: 1
    :caption: Pages
 
-   instwrangler/multitransform
-   instwrangler/applytransforms
-   instwrangler/modifiersync
-   instwrangler/applymodifiers
-   instwrangler/selectlinked
-   instwrangler/linkselected
-   instwrangler/makesingleuser
-   instwrangler/cycledata
-   instwrangler/copyname
-   instwrangler/mergedcopy
+   multitransform
+   applytransforms
+   modifiersync
+   applymodifiers
+   selectlinked
+   linkselected
+   makesingleuser
+   cycledata
+   copyname
+   mergedcopy
