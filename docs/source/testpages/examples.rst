@@ -55,23 +55,23 @@ how to :ref:`installation` the project.
 Finally there is also the :doc:`api` page. 
 
 .. code-block:: console
-    **Instance Wrangler** is a Blender addon to assist in managing instances.
-    Developed by `Jeroen Backx <https://jeroenbackx.com/>`_
+   **Instance Wrangler** is a Blender addon to assist in managing instances.
+   Developed by `Jeroen Backx <https://jeroenbackx.com/>`_
     
-    `More formatting <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
+   `More formatting <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
     
-    .. _my-target-label:
+   .. _my-target-label:
     
-    My Target Section
+   My Target Section
     ------------------
     
-    :ref:`My Target Section <my-target-label>`.
+   :ref:`My Target Section <my-target-label>`.
     
-    ``To link to another document: ``:doc:`path/to/other/document```
+   ``To link to another document: ``:doc:`path/to/other/document```
     
-    Check out the :doc:`usage` section for further information, including
-    how to :ref:`installation` the project.
-    Finally there is also the :doc:`api` page. 
+   Check out the :doc:`usage` section for further information, including
+   how to :ref:`installation` the project.
+   Finally there is also the :doc:`api` page. 
 
 
 Code Blocks
