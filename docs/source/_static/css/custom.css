@@ -24,6 +24,6 @@ p.caption {
 }
 
 /* Hides the floating "versions" menu in the bottom right corner */
-.rst-versions {
+div.rst-versions {
     display: none !important;
 }
