@@ -13,7 +13,6 @@ Contact: JeroenBackx @ Proton.me
 
 .. toctree::
    :maxdepth: 1
-   :caption: Pages
 
    multitransform
    applytransforms
