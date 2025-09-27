@@ -27,9 +27,11 @@ Addon Projects:
    #   instwrangler/blendermenus
 
 
+.. The following Toctree will populate the Sidebar. For the Page toctree, go to instwrangler/index
 .. toctree::
    :maxdepth: 1
    :caption: Instance Wrangler
+   :hidden:
 
    instwrangler/index
    instwrangler/multitransform
