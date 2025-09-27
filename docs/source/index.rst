@@ -7,10 +7,6 @@ Welcome to the documentation pages of Precise Tools. Precise Tools will boost yo
 
 Our Blender addons make previously tedious and repetitive actions feel effortless and even fun.
 
-Precise Tools are developed by `Jeroen Backx <https://jeroenbackx.com/>`_
-
-Contact: JeroenBackx @ Proton.me
-
 Addon Projects:
 ---------------
 
@@ -22,8 +18,16 @@ Instance Wrangler is an addon for Blender which assists the user in managing ins
 
 More addons to follow soon!
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Precise Tools
+   :hidden:
+
+   index
+   about
+
 ..
-   Draft List
+   Draft List for Instance Wrangler
 
    instwrangler/index
    instwrangler/multitransform
