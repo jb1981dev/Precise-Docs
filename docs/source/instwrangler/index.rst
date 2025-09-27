@@ -9,7 +9,8 @@ About Instance Wrangler
 Instance Wrangler is developed by `Jeroen Backx <https://jeroenbackx.com/>`_
 Contact: JeroenBackx @ Proton.me
 
-**Pages**
+Pages
+"""""
 
 * :doc:`multitransform`
 * :doc:`applytransforms`
