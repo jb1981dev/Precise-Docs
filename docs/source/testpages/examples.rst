@@ -33,6 +33,39 @@ Monospace/Code: ``text``
 
 .. This is a comment line and will be invisible.
 
+.. code-block:: console
+
+	===========================
+	Formatting Example Document
+	===========================
+
+	Section Title (Level 1)
+	=======================
+
+	Subsection Title (Level 2)
+	--------------------------
+
+	Sub-subsection Title (Level 3)
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+	Paragraph Title (Level 4)
+	"""""""""""""""""""""""""
+
+	Formatting
+	==========
+
+	Italics: *text*
+
+	Bold: **text**
+
+	Monospace/Code: ``text``
+
+	* An item
+	* Another item
+	   * A nested item
+
+	.. This is a comment line and will be invisible.
+
 Links
 ======
 
