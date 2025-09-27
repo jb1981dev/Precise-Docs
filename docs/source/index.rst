@@ -18,14 +18,6 @@ Instance Wrangler is an addon for Blender which assists the user in managing ins
 
 More addons to follow soon!
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Precise Tools
-   :hidden:
-
-   index
-   about
-
 ..
    Draft List for Instance Wrangler
 
@@ -73,3 +65,10 @@ More addons to follow soon!
       testpages/examples
       testpages/usage
       testpages/api
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Precise Tools
+   :hidden:
+
+   about
