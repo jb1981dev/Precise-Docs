@@ -87,6 +87,9 @@ Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 Finally there is also the :doc:`api` page. 
 
+You can also specify custom link text.
+The syntax for this is ``:doc:`Custom Link Text <path/to/page>```. You place your desired text before the path, separated by a space and enclosed in angle brackets.
+
 .. code-block:: console
 
    **Instance Wrangler** is a Blender addon to assist in managing instances.
