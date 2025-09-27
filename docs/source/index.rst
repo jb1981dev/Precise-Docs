@@ -1,9 +1,15 @@
 .. Precise Tools Documentation
 
-Welcome to the Precise Tools Blender Addon Documentation
+Precise Tools Documentation
 ========================================================
 
-Precise Tools will boost your asset workflow to new levels, whether for professional or hobby projects. Our Blender addons make previously tedious and repetitive actions feel effortless and even fun.
+Welcome to the documentation pages of Precise Tools. Precise Tools will boost your asset workflow to new levels, whether for professional or hobby projects.
+
+Our Blender addons make previously tedious and repetitive actions feel effortless and even fun.
+
+Precise Tools are developed by `Jeroen Backx <https://jeroenbackx.com/>`_
+
+Contact: JeroenBackx @ Proton.me
 
 Addon Projects:
 ---------------
