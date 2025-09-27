@@ -12,13 +12,13 @@ Contact: JeroenBackx @ Proton.me
 Pages
 -----
 
-* :doc:'multitransform'
-* :doc:'applytransforms'
-* :doc:'modifiersync'
-* :doc:'applymodifiers'
-* :doc:'selectlinked'
-* :doc:'linkselected'
-* :doc:'makesingleuser'
-* :doc:'cycledata'
-* :doc:'copyname'
-* :doc:'mergedcopy'
+* :doc:`multitransform`
+* :doc:`applytransforms`
+* :doc:`modifiersync`
+* :doc:`applymodifiers`
+* :doc:`selectlinked`
+* :doc:`linkselected`
+* :doc:`makesingleuser`
+* :doc:`cycledata`
+* :doc:`copyname`
+* :doc:`mergedcopy`
