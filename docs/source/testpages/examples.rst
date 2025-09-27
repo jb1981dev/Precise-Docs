@@ -33,18 +33,6 @@ Monospace/Code: ``text``
 
 .. This is a comment line and will be invisible.
 
-.. code-block:: console
-
-   .. This is a comment line and will be invisible.
-
-   ..
-      The following list is temporarily commented out for review.
-      It will not appear in the final output.
-
-      * Item 1
-      * Item 2
-      * Item 3
-
 Links
 ======
 
@@ -66,6 +54,29 @@ Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 Finally there is also the :doc:`api` page. 
 
+.. code-block:: console
+    **Instance Wrangler** is a Blender addon to assist in managing instances.
+    Developed by `Jeroen Backx <https://jeroenbackx.com/>`_
+    
+    `More formatting <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
+    
+    .. _my-target-label:
+    
+    My Target Section
+    ------------------
+    
+    :ref:`My Target Section <my-target-label>`.
+    
+    ``To link to another document: ``:doc:`path/to/other/document```
+    
+    Check out the :doc:`usage` section for further information, including
+    how to :ref:`installation` the project.
+    Finally there is also the :doc:`api` page. 
+
+
+Code Blocks
+============
+
 .. code-block:: python
    :linenos:
    :emphasize-lines: 3,4
@@ -75,6 +86,23 @@ Finally there is also the :doc:`api` page.
        print("Hello, world!")
        return True
 
+About comments
+--------------
+.. code-block:: console
+
+   .. This is a comment line and will be invisible.
+
+   ..
+      The following list is temporarily commented out for review.
+      It will not appear in the final output.
+
+      * Item 1
+      * Item 2
+      * Item 3
+
+Textboxes
+=========
+
 .. note::
    This is something you should pay attention to.
 
@@ -82,7 +110,7 @@ Finally there is also the :doc:`api` page.
    Be careful with this command as it can cause data loss.
 
 Tables
-------
+======
 
 Here is a simple table
 
