@@ -24,6 +24,6 @@ p.caption {
 }
 
 /* Hides the floating "versions" menu in the bottom right corner */
-div.rst-versions {
+readthedocs-flyout {
     display: none !important;
 }
