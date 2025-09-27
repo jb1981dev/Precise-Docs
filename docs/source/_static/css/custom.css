@@ -22,3 +22,8 @@ p.caption {
     font-size: 1.3em; /* 130% of the normal font size */
     font-weight: bold;
 }
+
+/* Hides the floating "versions" menu in the bottom right corner */
+.rst-versions {
+    display: none !important;
+}
