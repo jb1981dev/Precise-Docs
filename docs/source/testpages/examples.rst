@@ -90,7 +90,9 @@ Code Blocks
 About comments
 --------------
 .. code-block:: console
-
+   
+   code-block arguments follow on the next line after ".. code-block::console, so leave an empty line before the content ^.
+   
    .. This is a comment line and will be invisible.
 
    ..
