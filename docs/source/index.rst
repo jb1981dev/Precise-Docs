@@ -9,7 +9,7 @@ Addon Projects:
 ---------------
 
 .. rst-class:: large-link
-:doc:`Instance Wrangler <instwrangler/index>`
+   :doc:`Instance Wrangler <instwrangler/index>`
 
 Instance Wrangler is an addon for Blender which assists the user in managing instances and copies in complex scenes. 
 
