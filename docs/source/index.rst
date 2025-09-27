@@ -7,7 +7,10 @@ Precise Tools will boost your asset workflow to new levels, whether for professi
 
 Addon Projects:
 ---------------
+
+.. rst-class:: large-link
 :doc:`Instance Wrangler <instwrangler/index>`
+
 Instance Wrangler is an addon for Blender which assists the user in managing instances and copies in complex scenes. 
 
 More addons to follow soon!
