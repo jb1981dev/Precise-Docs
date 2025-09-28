@@ -36,7 +36,7 @@ More addons to follow soon!
    instwrangler/groupunlink
    instwrangler/cycledata
    instwrangler/copyname
-   instwrangler/mergedcopy
+   instwrangler/advancedcopy
 
 ..
    .. toctree::
