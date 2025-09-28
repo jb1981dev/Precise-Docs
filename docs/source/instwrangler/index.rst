@@ -9,6 +9,7 @@ About Instance Wrangler
 Pages
 """""
 
+* :doc:`iwversions`
 * :doc:`multitransform`
 * :doc:`applytransforms`
 * :doc:`modifiersync`
