@@ -19,4 +19,4 @@ Pages
 * :doc:`groupunlink`
 * :doc:`cycledata`
 * :doc:`copyname`
-* :doc:`mergedcopy`
+* :doc:`advancedcopy`
