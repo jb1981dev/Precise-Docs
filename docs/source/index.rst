@@ -26,6 +26,7 @@ More addons to follow soon!
    :hidden:
 
    instwrangler/index
+   instwrangler/iwversions
    instwrangler/multitransform
    instwrangler/applytransforms
    instwrangler/modifiersync
