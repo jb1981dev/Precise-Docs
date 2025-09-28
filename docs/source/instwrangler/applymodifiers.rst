@@ -23,14 +23,10 @@ To understand this tool, it's best to think of it as an automated two-step proce
 How to Use with Selections
 --------------------------
 
-This operator performs a **global** action for every instance group you select. It first finds a "leader" (the source object) for each group, then applies that leader's modifiers to all of its instances throughout the scene.
+The operator's behavior adapts to your selection, whether it is a single object or a group. In all cases, it performs a **global** action, affecting all instances of the object(s) being processed.
 
-The rules for determining the leader are the same as for **Modifier Sync**:
+* **For a single selected object:** This is the simplest use case. The operator will apply the modifiers to the selected object and all of its linked duplicates (if any exist).
 
-* **If your entire selection belongs to one group:** The **active object** must be part of the selection and is always considered the leader.
-
-* **If you select objects from multiple groups:** The operator can process all of them at once. To avoid ambiguity, a leader must be clear for each group:
-    * If you select only **one object** from a group, it automatically becomes that group's leader.
-    * If you select **multiple objects** from a group, the **active object** must be one of them to be designated as that group's leader.
-
-Objects whose leader does not have any modifiers will be skipped.
+* **For multiple selected objects:** The operator must find a "leader" (the source object) for each instance group. The rules are the same as for **Modifier Sync**:
+    * If your entire selection belongs to one group, the **active object** is the leader.
+    * If you select from multiple groups, a leader is found for each. If only **one object** is selected from a group, it is the leader. If **multiple objects** are selected from a group, the **active object** must be one of them.
