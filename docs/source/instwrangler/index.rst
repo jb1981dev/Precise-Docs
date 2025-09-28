@@ -20,3 +20,4 @@ Pages
 * :doc:`cycledata`
 * :doc:`copyname`
 * :doc:`advancedcopy`
+* :doc:`blendermenus`
