@@ -1,3 +1,6 @@
+.. _applymodifiers:
+
+===============
 Apply Modifiers
 ===============
 
@@ -13,17 +16,21 @@ The Two-Step Process
 
 To understand this tool, it's best to think of it as an automated two-step process that happens in the background:
 
-#. **Apply & Convert:** First, the operator runs a "Convert to Mesh" operation on your selected source object(s). This is what "bakes" the visual result of the modifiers into the object's actual geometry. Because this action modifies the shared object data, **all linked duplicates are affected simultaneously.**
+#. **Apply & Convert:** First, the operator runs a "Convert to Mesh" operation on the leader of each selected group. This bakes the visual result of the modifiers into the shared object data, affecting **all linked duplicates** of that group simultaneously.
 
-#. **Sync & Clean Up:** Immediately after, the operator automatically runs a **Modifier Sync**. Since the modifiers are now part of the base geometry, the original modifier stack is redundant. This second step intelligently removes the now-unnecessary modifiers from all the linked duplicates, leaving you with a clean, applied result across all instances.
+#. **Sync & Clean Up:** Immediately after, the operator automatically runs a **Modifier Sync**. Since the modifiers are now part of the base geometry, this step intelligently removes the now-redundant modifier stacks from all linked duplicates, leaving you with a clean result.
 
 How to Use with Selections
 --------------------------
 
-This operator uses a "leader-based" system to determine which modifier stack to apply.
+This operator performs a **global** action for every instance group you select. It first finds a "leader" (the source object) for each group, then applies that leader's modifiers to all of its instances throughout the scene.
 
-* **Unique Objects:** If you select one or more objects that are all unique (not linked duplicates of each other), the operator will simply process each one, applying its own modifiers.
+The rules for determining the leader are the same as for **Modifier Sync**:
 
-* **Groups of Linked Duplicates:** If your selection includes a group of linked duplicates, you **must** specify which object's modifier stack to use as the source. You do this by making it the **active object** (selected last, with a brighter outline). The operator will then apply the active object's modifiers to every instance sharing that data.
+* **If your entire selection belongs to one group:** The **active object** must be part of the selection and is always considered the leader.
 
-Objects in your selection that do not have any modifiers will be skipped.
+* **If you select objects from multiple groups:** The operator can process all of them at once. To avoid ambiguity, a leader must be clear for each group:
+    * If you select only **one object** from a group, it automatically becomes that group's leader.
+    * If you select **multiple objects** from a group, the **active object** must be one of them to be designated as that group's leader.
+
+Objects whose leader does not have any modifiers will be skipped.
