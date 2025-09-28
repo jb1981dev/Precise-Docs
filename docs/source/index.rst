@@ -37,6 +37,7 @@ More addons to follow soon!
    instwrangler/cycledata
    instwrangler/copyname
    instwrangler/advancedcopy
+   instwrangler/blendermenus
 
 ..
    .. toctree::
