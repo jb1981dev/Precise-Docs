@@ -21,7 +21,10 @@ You can use any combination of these toggles. For example, you can apply the sca
 
 Usage with Selections
 ---------------------
-The operator is designed to be simple and efficient, regardless of your selection:
+The operator intelligently determines a "leader" object (whose transform will be used as the source) for each instance group in your selection. The rules are applied on a per-group basis:
 
-* **Single Object:** Select any single object that has linked duplicates and run the operator. The transform will be applied to that object and all of its instances.
-* **Multiple Objects:** You can select multiple objects at once, even if they belong to different instance groups. The operator will try to find a leader for each group, if the instances belong to a single group it will try to find the active object as a reference. If the instances belong to different groups, you can only have one instance of each group selected, so that it knows which object to use when applying the transforms. 
+* **If one object is selected from a group:** That object is automatically the leader. This is the most direct way to use the tool.
+
+* **If multiple objects are selected from the same group:** The operator checks for ambiguity:
+    * If all selected instances have **uniform transforms** (for the Position, Rotation, Scale channels being applied), any one of them is chosen as the leader.
+    * If their transforms are **different**, you **must** make one of them the **active object** (select it last) to designate it as the leader.
