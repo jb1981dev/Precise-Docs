@@ -15,7 +15,7 @@ Pages
 * :doc:`applymodifiers`
 * :doc:`selectlinked`
 * :doc:`linkselected`
-* :doc:`makesingleuser`
+* :doc:`unlink`
 * :doc:`cycledata`
 * :doc:`copyname`
 * :doc:`mergedcopy`
