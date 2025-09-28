@@ -4,32 +4,44 @@
 Modifier Sync
 ===============
 
-The **Modifier Sync** tool copies the complete modifier stack from a source object to all of its linked duplicates (instances) throughout your scene. This ensures all instances of an object share the exact same modifiers.
+The **Modifier Sync** tool copies the complete modifier stack from a source object to all of its linked duplicates (instances). This ensures all instances of an object share the exact same modifiers.
 
 It works with any object type that can have modifiers, including Meshes, Curves, and Text.
 
-How to Use
-==========
+How It Works: Global vs. Limited Sync
+=====================================
 
-1. Select the object or objects you want to use as the source for your modifiers.
-2. Run the **Modifier Sync** operator. The tool will copy the modifiers from each selected object to all of its linked duplicates (:kbd:`Alt+D` instances) in the entire scene.
+The operator has two distinct modes of operation depending on your selection.
 
-.. important::
-   If your selection includes multiple objects that share the same data (i.e., they are linked duplicates of each other), you must specify a source. To do this, simply make sure the object you want to copy modifiers *from* is the **active object** (selected last, with a brighter outline).
+Global Sync (Default Behavior)
+------------------------------
+
+In most cases, the operator performs a **global sync**. It identifies a "leader" object for an instance group and copies its modifier stack to **every other instance** of that object in the entire scene, whether it's selected or not. This can be performed on multiple different instance groups in a single operation.
+
+Limited Sync (Special Case)
+---------------------------
+
+A special, limited sync mode is triggered if your selection meets these specific criteria:
+
+* The selection contains **multiple objects**.
+* All selected objects belong to the **same single instance group**.
+* One of the selected objects is the **active object**.
+
+When this condition is met, the sync is **limited to your selection**. The active object's modifiers will only be copied to the *other selected objects*, leaving any unselected instances of that group untouched. This is useful for creating a unique variation from a subset of instances.
 
 .. figure:: images/modifier_sync_active_object.jpg
-  :align: center
-  :alt: Three linked cubes selected with one active
+   :align: center
+   :alt: Three linked cubes selected with one active
 
-  A selection of linked duplicates with the source object active (brighter outline).
+   A selection that would trigger "Limited Sync" mode.
 
-Selection Logic
-===============
+Selection Rules (Determining the Leader)
+========================================
 
-The operator is flexible, but follows a key rule:
+The operator must first find a "leader" (the source object) for each instance group represented in your selection. The rules are as follows:
 
-* **Active Object Optional:** If your selection contains only unique objects (no linked duplicates of each other), an active object is **not required**. Each object acts as its own source.
+* **If your entire selection belongs to one group:** The **active object** must be part of the selection and is always considered the leader.
 
-* **Active Object Required:** If your selection contains multiple linked duplicates, the **active object is mandatory** and will be used as the single source for that entire instance group.
-
-* **One Group at a Time:** Your selection cannot contain more than one group of linked duplicates (e.g., you cannot select two linked spheres *and* two linked cubes at the same time).
+* **If you select objects from multiple groups:** The operator can process all of them at once. To avoid ambiguity, a leader must be clear for each group:
+    * If you select only **one object** from a group, it automatically becomes that group's leader.
+    * If you select **multiple objects** from a group, the **active object** must be one of them to be designated as that group's leader.
