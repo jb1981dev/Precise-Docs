@@ -33,6 +33,7 @@ More addons to follow soon!
    instwrangler/selectlinked
    instwrangler/linkselected
    instwrangler/unlink
+   instwrangler/groupunlink
    instwrangler/cycledata
    instwrangler/copyname
    instwrangler/mergedcopy
