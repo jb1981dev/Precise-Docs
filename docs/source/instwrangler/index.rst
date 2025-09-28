@@ -16,6 +16,7 @@ Pages
 * :doc:`selectlinked`
 * :doc:`linkselected`
 * :doc:`unlink`
+* :doc:`groupunlink`
 * :doc:`cycledata`
 * :doc:`copyname`
 * :doc:`mergedcopy`
