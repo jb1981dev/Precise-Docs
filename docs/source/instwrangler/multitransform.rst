@@ -19,18 +19,6 @@ UI Controls Explained
     * **Relative Toggle:** Switches between **Absolute** and **Relative** modes. Its behavior changes depending on whether **Active Leads** is enabled.
     * **Active Leads Toggle:** Switches the tool to a powerful mode where the **active object** acts as a pivot or "fake parent" for the rest of the selection.
 
-.. figure:: images/multitransform_position.gif
-   :align: center
-   :alt: Setting the position in absolute and relative mode and using the axis rows.
-
-.. figure:: images/multitransform_rotation.gif
-   :align: center
-   :alt: Setting the rotation in absolute and relative mode and using the axis rows.
-
-.. figure:: images/multitransform_scale.gif
-   :align: center
-   :alt: Setting the scale in absolute and relative mode and using the axis rows.
-
 Standard Modes (Active Leads OFF)
 ---------------------------------
 
@@ -41,6 +29,27 @@ When **Active Leads** is disabled, the tool operates on each selected object ind
 
 * **Relative Mode** (``Relative`` enabled): This mode **adds** (or multiplies for scale) the entered values to each object's current transform. It's ideal for nudging a selection of objects while preserving their existing arrangement.
     * *Example: To move all selected objects 2 units to the right, you would enable ``Relative``, enter ``2.0`` in the X position field, and click **Set**.*
+
+.. figure:: images/multitransform_position.gif
+   :align: center
+
+Setting the position in absolute and relative mode and using the axis rows.
+
+.. figure:: images/multitransform_rotation.gif
+   :align: center
+
+Setting the rotation in absolute and relative mode and using the axis rows.
+
+.. figure:: images/multitransform_scale.gif
+   :align: center
+
+Setting the scale in absolute and relative mode and using the axis rows.
+
+.. figure:: images/multitransform_setall.gif
+   :align: center
+   :alt: Setting the scale in absolute and relative mode and using the axis rows.
+
+Using "Set All" to set position, rotation and scale at the same time.
 
 Active Leads Mode (Active Leads ON)
 -----------------------------------
