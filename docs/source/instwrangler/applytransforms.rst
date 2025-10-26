@@ -5,7 +5,9 @@ The **Apply Transforms** tool is one of the most powerful features of Instance W
 
 **Apply Transforms** allows you to "bake" the position, rotation, and/or scale of an object while keeping its data linked to all its instances. It effectively applies the transform at the object level, allowing each instance to have unique transforms while still sharing the same underlying geometry.
 
-<iframe width="700" height="395" src="https://www.youtube.com/embed/VfT_Txudksw?si=kBq8_DMr0j_gsJWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+.. raw:: html
+
+    <iframe width="700" height="395" src="https://www.youtube.com/embed/VfT_Txudksw?si=kBq8_DMr0j_gsJWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 How It Works
 ------------
