@@ -5,6 +5,10 @@ The **Multi Transform** panel provides a powerful and precise way to manipulate 
 
 The panel is organized into a grid layout, with each row corresponding to a transform **axis** (X, Y, and Z). This allows you to view and edit the Position, Rotation, and Scale values for a specific axis all in one place. This structure is controlled by a powerful set of modes, allowing for both standard independent editing and an **Active Leads Mode** which uses the active object as a group pivot.
 
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/SNSlH7yfvhM?si=GbxKZPJMPVxr24y5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 UI Controls Explained
 ---------------------
 
