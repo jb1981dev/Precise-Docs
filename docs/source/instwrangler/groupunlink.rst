@@ -13,6 +13,11 @@ How to Use
 #. Select two or more linked duplicates that you wish to separate into a new, independent group.
 #. Click the **Group Unlink** button.
 
+.. figure:: images/groupunlink.gif
+   :align: center
+
+*Unlinking multiple instances from the rest of their instance groups while still keeping links between each other.*
+
 The Result
 ----------
 
