@@ -4,19 +4,20 @@
 Advanced Copy
 ==============
 
-The **Advanced Copy** section provides two powerful operators for creating new objects from your selection: **Merged Copy** and **Linked Copy**.
+The **Advanced Copy** section provides three powerful operators for creating new objects from your selection: **Merged Copy**, **Linked Copy** and **Unlinked Copy**.
 
 * **Merged Copy** is used to create a single, new mesh from a potentially diverse selection of objects.
 * **Linked Copy** is used to create new linked duplicates (instances) of your selection, with advanced options for placement and hierarchy.
+* **Unlinked Copy** is used to create new unlinked duplicates (copies) of your selection, with advanced options for placement and hierarchy.
 
-Both operators share a set of common options for controlling the placement, parenting, collection, and final selection state of the newly created objects.
+All three operators share a set of common options for controlling the placement, parenting, collection, and final selection state of the newly created objects.
 
 .. _mergedcopy:
 
 Merged Copy
 ===========
 
-The **Merged Copy** operator is a comprehensive tool for creating a **single, clean, game-ready mesh** from a selection of multiple, potentially diverse objects. It automates the process of duplicating, converting, joining, and positioning objects. This is ideal for creating simplified proxy models, preparing assets for game engines, or combining parts for 3D printing.
+The **Merged Copy** operator is a comprehensive tool for creating a **single, clean, game-ready mesh** from a selection of multiple, potentially diverse objects (meshes, curves, surfaces, text objects and grease pencil objects). It automates the process of duplicating, converting, joining, and positioning objects. This is ideal for creating simplified proxy models, preparing assets for game engines, or combining parts for 3D printing.
 
 The name of the merged object is set directly by the Name field in the common options. If it is empty, it's name will be "MergedCopy".
 
@@ -52,9 +53,9 @@ The name that will be given to the final, single object and its new mesh data. I
 **Linked Copy** and **Unlinked Copy**:
 * **Empty (default):** the names will be based on the original objects.
 * **Any text:** will be the new name of copied objects.
-* **The asterisk symbol ( /* ):** will turn into the original name of the object.
+* **The asterisk symbol ( \* ):** will turn into the original name of the object.
 
-    * For example, when renaming objects named ``Cube01`` and ``Cube02``, the string ``Prop_/*_LOD0``, would result in ``Prop_Cube01_LOD0`` and ``Prop_Cube02_LOD0``.
+    * For example, when renaming objects named ``Cube01`` and ``Cube02``, the string ``Prop_\*_LOD0``, would result in ``Prop_Cube01_LOD0`` and ``Prop_Cube02_LOD0``.
 
 Clear Parents
 -------------
