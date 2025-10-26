@@ -41,7 +41,6 @@ Linked Copy & Unlinked Copy
 
 The behavior of both operators is controlled entirely by the settings in the **Common Options** section below.
 
-==============
 Common Options
 ==============
 
