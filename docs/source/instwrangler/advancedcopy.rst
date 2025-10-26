@@ -24,7 +24,7 @@ The name of the merged object is set directly by the Name field in the common op
 The rest of its behavior is controlled entirely by the settings in the **Common Options** section below.
 
 Defining the Origin (Pivot Point)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 The origin of the new merged object is determined by your selection:
 
@@ -47,7 +47,7 @@ Common Options
 These settings are shared by the **Merged Copy**, **Linked Copy** and **Unlinked Copy** operators.
 
 Name
------------
+-----
 **Merged Copy Only** 
 The name that will be given to the final, single object and its new mesh data. If empty (default), the name will be MergedCopy.
 
