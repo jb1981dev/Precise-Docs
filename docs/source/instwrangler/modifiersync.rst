@@ -8,6 +8,10 @@ The **Modifier Sync** tool copies the complete modifier stack from a source obje
 
 It works with any object type that can have modifiers, including Meshes, Curves, and Text.
 
+.. raw:: html
+
+    <iframe width="700" height="395" src="https://www.youtube.com/embed/PPm7ixyFXkk?si=THvI4RnTcsQ_cTB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 How It Works: Global vs. Limited Sync
 =====================================
 
