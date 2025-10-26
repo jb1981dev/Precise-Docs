@@ -20,6 +20,11 @@ To understand this tool, it's best to think of it as an automated two-step proce
 
 #. **Sync & Clean Up:** Immediately after, the operator automatically runs a **Modifier Sync**. Since the modifiers are now part of the base geometry, this step intelligently removes the now-redundant modifier stacks from all linked duplicates, leaving you with a clean result.
 
+.. figure:: images/apply_modifiers.gif
+   :align: center
+
+*Applying modifiers on different object types, first a single instance group, then two groups at once*
+
 How to Use with Selections
 --------------------------
 
