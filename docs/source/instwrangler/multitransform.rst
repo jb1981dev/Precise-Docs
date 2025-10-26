@@ -10,7 +10,7 @@ The panel is organized into a grid layout, with each row corresponding to a tran
    <iframe width="700" height="394" src="https://www.youtube.com/embed/SNSlH7yfvhM?si=GbxKZPJMPVxr24y5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 UI Controls Explained
----------------------
+-----------------------
 
 * **Header Row:** The top row contains shortcuts to reset the transform values. **Pos** resets Position to ``(0,0,0)``, **Rot** resets Rotation to ``(0,0,0)``, and **Scale** resets Scale to ``(1,1,1)``.
 * **Axis Rows (X, Y, Z):** Each of these three rows contains:
@@ -19,14 +19,20 @@ UI Controls Explained
 * **Set Buttons Row:** The bottom row contains the buttons to apply the transforms:
     * **Set All:** Applies the values for Position, Rotation, and Scale all at once.
     * **Set (per-transform):** Applies only the values for either Position, Rotation, or Scale.
+
+.. figure:: images/multitransform_setall.gif
+   :align: center
+   :alt: Setting the scale in absolute and relative mode and using the axis rows.
+
+Using "Set All" to set position, rotation and scale at the same time.
+
 * **Mode Toggles:**
     * **Relative Toggle:** Switches between **Absolute** and **Relative** modes. Its behavior changes depending on whether **Active Leads** is enabled.
     * **Active Leads Toggle:** Switches the tool to a powerful mode where the **active object** acts as a pivot or "fake parent" for the rest of the selection.
 
-Standard Modes (Active Leads OFF)
----------------------------------
-	
-When **Active Leads** is disabled, the tool operates on each selected object independently.
+Relative Toggle
+------------------
+The **Relative** toggle lets you switch between relative and absolute transform mode.
 
 * **Absolute Mode** (``Relative`` disabled): This mode sets the transform values to the **exact numbers** you enter. It's perfect for aligning objects to a specific coordinate.
     * Example: To align all selected objects to a height of 5 meters, you would disable ``Relative``, enter ``5.0`` in the Z position field, and click **Set**.
@@ -49,14 +55,8 @@ Setting the rotation in absolute and relative mode and using the axis rows.
 
 Setting the scale in absolute and relative mode and using the axis rows.
 
-.. figure:: images/multitransform_setall.gif
-   :align: center
-   :alt: Setting the scale in absolute and relative mode and using the axis rows.
-
-Using "Set All" to set position, rotation and scale at the same time.
-
-Active Leads Mode (Active Leads ON)
------------------------------------
+Active Leads Mode
+----------------------
 
 Enabling **Active Leads** makes the **active object** the pivot point for the entire selection, like a lead dancer guiding their partners.
  
@@ -64,10 +64,10 @@ Enabling **Active Leads** makes the **active object** the pivot point for the en
 * **Rotation:** Followers **orbit** around the active object as it rotates to its new orientation.
 * **Scale:** The active object is scaled by the specified factor, and all followers scale with it, moving further from or closer to the leader proportionally.
 
-* **Relative Toggle:** Offers a lot of flexibility in Active Leads mode.
+**Relative Toggle:** offers a lot of flexibility in Active Leads mode.
 
-    * **Relative Mode Off (Absolute Mode):** You are setting an **absolute target** for the leader, and the followers will arrange themselves around it.
-    * **Relative Mode On:** In this mode, the UI values represent an **incremental change** that is applied to the active object, and the followers move with it in a parented fashion with each click.	
+* **Relative Mode Off (Absolute Mode):** You are setting an **absolute target** for the leader, and the followers will arrange themselves around it.
+* **Relative Mode On:** In this mode, the UI values represent an **incremental change** that is applied to the active object, and the followers move with it in a parented fashion with each click.	
 
 .. figure:: images/multitransform_activeleadspos.gif
    :align: center
