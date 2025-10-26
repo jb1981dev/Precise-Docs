@@ -42,7 +42,7 @@ Its behavior is controlled entirely by the settings in the **Common Options** se
 Common Options
 ==============
 
-These settings are shared by both the **Merged Copy** and **Linked Copy** operators.
+These settings are shared by the **Merged Copy**, **Linked Copy** and **Unlinked Copy** operators.
 
 Name
 -----------
@@ -52,7 +52,7 @@ The name that will be given to the final, single object and its new mesh data. I
 **Linked Copy** and **Unlinked Copy**:
 * **Empty (default):** the names will be based on the original objects.
 * **Any text:** will be the new name of copied objects.
-* The asterisk symbol \*:** will turn into the original name of the object.
+* **The asterisk symbol \*:** will turn into the original name of the object.
     * For example, when renaming objects named ``Cube01`` and ``Cube02``, the string ``Prop_\*_LOD0``, would result in ``Prop_Cube01_LOD0`` and ``Prop_Cube02_LOD0``.
 
 Clear Parents
