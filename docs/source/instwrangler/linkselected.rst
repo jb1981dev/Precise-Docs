@@ -10,6 +10,12 @@ This tool is very similar to Blender's native :kbd:`Ctrl+L` > ``Link Object Data
 
 In Blender, you cannot directly link a Curve's data to a Mesh object. You would have to manually delete the Curve, create a new Mesh, copy all the transforms, and then link the data. Instance Wrangler automates this entire process in a single click.
 
+.. figure:: images/linkselected.gif
+   :align: center
+
+*Linking object data from one object to one or more others, even between different object types.*
+
+
 How It Works
 ------------
 
