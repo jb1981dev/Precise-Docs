@@ -29,12 +29,6 @@ A special, limited sync mode is triggered if your selection meets these specific
 
 When this condition is met, the sync is **limited to your selection**. The active object's modifiers will only be copied to the *other selected objects*, leaving any unselected instances of that group untouched. This is useful for creating a unique variation from a subset of instances.
 
-.. figure:: images/modifier_sync_active_object.jpg
-   :align: center
-   :alt: Three linked cubes selected with one active
-
-   A selection that would trigger "Limited Sync" mode.
-
 Selection Rules (Determining the Leader)
 ========================================
 
