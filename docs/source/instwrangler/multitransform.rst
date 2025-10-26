@@ -58,25 +58,16 @@ Using "Set All" to set position, rotation and scale at the same time.
 Active Leads Mode (Active Leads ON)
 -----------------------------------
 
-Enabling **Active Leads** makes the **active object** the pivot point for the entire selection, like a lead dancer guiding their partners. The ``Relative`` toggle now switches between two powerful sub-modes.
-
-Absolute Mode (Relative OFF): Transform as Children
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In this mode, the entire selection behaves as if temporarily parented to the active object. You are setting an **absolute target** for the leader, and the followers will arrange themselves around it.
-
+Enabling **Active Leads** makes the **active object** the pivot point for the entire selection, like a lead dancer guiding their partners.
+ 
 * **Position:** The entire group moves rigidly to place the active object at the target coordinates.
 * **Rotation:** Followers **orbit** around the active object as it rotates to its new orientation.
-* **Scale:** Followers move closer to or further away from the active object as it scales to its new size, maintaining the group's proportions.
-
-Relative Mode (Relative ON): Incremental Parented Transform
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In this mode, the UI values represent an **incremental change** that is applied to the active object, and the followers move with it in a parented fashion with each click.
-
-* **Position:** The entire group moves by the specified amount.
-* **Rotation:** The active object rotates on its axis by the specified degrees, and all followers **orbit** it by that same amount.
 * **Scale:** The active object is scaled by the specified factor, and all followers scale with it, moving further from or closer to the leader proportionally.
+
+* **Relative Toggle:** Offers a lot of flexibility in Active Leads mode.
+
+    * **Relative Mode Off (Absolute Mode):** You are setting an **absolute target** for the leader, and the followers will arrange themselves around it.
+    * **Relative Mode On:** In this mode, the UI values represent an **incremental change** that is applied to the active object, and the followers move with it in a parented fashion with each click.	
 
 .. figure:: images/multitransform_activeleadspos.gif
    :align: center
