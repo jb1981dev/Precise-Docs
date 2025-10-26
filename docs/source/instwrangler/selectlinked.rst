@@ -16,6 +16,11 @@ The operator is straightforward:
 
 This is an **additive** process; the newly found objects will be added to your current selection without deselecting what you already have.
 
+.. figure:: images/selectlinked.gif
+   :align: center
+
+*Selecting one or multiple instance groups using Select Linked*
+
 Key Behavior
 ------------
 
