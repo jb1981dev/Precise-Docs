@@ -5,6 +5,8 @@ The **Apply Transforms** tool is one of the most powerful features of Instance W
 
 **Apply Transforms** allows you to "bake" the position, rotation, and/or scale of an object while keeping its data linked to all its instances. It effectively applies the transform at the object level, allowing each instance to have unique transforms while still sharing the same underlying geometry.
 
+<iframe width="700" height="395" src="https://www.youtube.com/embed/VfT_Txudksw?si=kBq8_DMr0j_gsJWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 How It Works
 ------------
 When you select an object and click **Apply Transforms**, the operator automatically finds every linked duplicate of that object in your entire scene (even in hidden collections) and applies the selected transforms to all of them at once. When the operation is complete, you will not see any objects visually change their position, rotation, or scale. The tool's purpose is to reset the transform *values* (e.g., setting Scale to 1.0) while ensuring the object's appearance in the scene remains exactly the same. This process is repeated for every unique object in your selection, making it a powerful batch-processing tool.
@@ -18,6 +20,11 @@ Next to the button, you have three toggles to control exactly which transforms a
 * ``S``: Applies the object's **Scale**.
 
 You can use any combination of these toggles. For example, you can apply the scale of several objects while leaving their unique positions and rotations untouched.
+
+.. figure:: images/apply_transform_general.gif.gif
+   :align: center
+
+Applying transforms for rotation, scale and position on multiple instances.
 
 Usage with Selections
 ---------------------
