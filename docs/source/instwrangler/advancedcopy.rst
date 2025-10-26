@@ -24,7 +24,7 @@ The name of the merged object is set directly by the Name field in the common op
 The rest of its behavior is controlled entirely by the settings in the **Common Options** section below.
 
 Defining the Origin (Pivot Point)
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The origin of the new merged object is determined by your selection:
 
@@ -33,13 +33,15 @@ The origin of the new merged object is determined by your selection:
 
 .. _linkedcopy:
 
-Linked Copy
-===========
+Linked Copy & Unlinked Copy
+============================
 
-The **Linked Copy** operator creates new **linked duplicates** (:kbd:`Alt+D` instances) of your selection. It is a non-destructive way to create more instances while keeping them linked to the same underlying object data.
+* The **Linked Copy** operator creates new **linked duplicates** (:kbd:`Alt+D` instances) of your selection. It is a non-destructive way to create more instances while keeping them linked to the same underlying object data.
+* The **Unlinked Copy** operator creates new **unlinked duplicates** (:kbd:`Shift+D` copies) of your selection. These are simple duplicates which are no longer related to their originals.
 
-Its behavior is controlled entirely by the settings in the **Common Options** section below.
+The behavior of both operators is controlled entirely by the settings in the **Common Options** section below.
 
+==============
 Common Options
 ==============
 
