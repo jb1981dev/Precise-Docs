@@ -77,3 +77,18 @@ In this mode, the UI values represent an **incremental change** that is applied 
 * **Position:** The entire group moves by the specified amount.
 * **Rotation:** The active object rotates on its axis by the specified degrees, and all followers **orbit** it by that same amount.
 * **Scale:** The active object is scaled by the specified factor, and all followers scale with it, moving further from or closer to the leader proportionally.
+
+.. figure:: images/multitransform_activeleadspos.gif
+   :align: center
+
+Use Active Leads to move objects as a group, using the active object as the group pivot.
+
+.. figure:: images/multitransform_activeleadsrot.gif
+   :align: center
+
+Use Active Leads to rotate objects as a group, using the active object as the group pivot.
+
+.. figure:: images/multitransform_activeleadsscale.gif
+   :align: center
+
+Use Active Leads to scale objects as a group, using the active object as the group pivot.
