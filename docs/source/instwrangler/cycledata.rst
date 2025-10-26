@@ -22,6 +22,11 @@ When you click **Next**, **Prev**, or **Random**, the operator performs the foll
 
 The Next/Prev cycle will automatically wrap around. For example, clicking **Next** when on the last data-block in the list will cycle back to the first one.
 
+.. figure:: images/cycledata.gif
+   :align: center
+
+*Cycling through object data on one or more objects.*
+
 How to Use
 ----------
 
@@ -41,6 +46,11 @@ Advanced Controls: Filtering and Randomizing
     
     *Example: If you have data-blocks named ``Rock_Small``, ``Rock_Large``, and ``Pebble``, typing ``rock`` into the filter will limit the cycle to only the first two.*
 
+.. figure:: images/cycledata_filter.gif
+   :align: center
+
+*Using a filter to limit the range of cycled objects.*
+
 **Random Button**
     This button assigns a random data-block from the available candidates (respecting the current filter) to each selected object. It is designed to not pick the same data-block an object is already using, ensuring a change happens with each click (if other options are available). This is excellent for creating natural-looking variation across a large number of selected instances.
 
@@ -49,6 +59,11 @@ Example Workflows
 
 **Auditioning Assets**
     This tool is invaluable for tasks like set dressing. If you have a ``Tree_Placeholder`` object, you can select it and click **Next** repeatedly to cycle through all available tree models (``Tree_Oak``, ``Tree_Pine``, etc.) to see which one fits best in your scene.
+
+.. figure:: images/cycledata_staging.gif
+   :align: center
+
+*Auditioning trees and rocks and using the randomize and filter functionality.*
 
 **Swapping Levels of Detail (LODs)**
     This tool is also ideal for managing **LODs**. If your assets are named alphabetically (e.g., ``MyAsset_LOD0``, ``MyAsset_LOD1``), you can select all ``_LOD0`` instances and click **Next** to switch them all to ``_LOD1`` instantly. You can also use the **Filter** field: typing ``LOD2`` and clicking **Next** will jump all selected objects directly to their ``_LOD2`` version.
