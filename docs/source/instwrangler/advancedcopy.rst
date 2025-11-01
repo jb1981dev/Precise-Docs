@@ -4,7 +4,7 @@
 Advanced Copy
 ==============
 
-The **Advanced Copy** section provides three powerful operators for creating new objects from your selection: **Merged Copy**, **Linked Copy** and **Unlinked Copy**.
+The **Advanced Copy** section provides three powerful operators for creating new objects from your selection: **Merged Copy**, **Linked Copy**, and **Unlinked Copy**.
 
 * **Merged Copy** is used to create a single, new mesh from a potentially diverse selection of objects.
 * **Linked Copy** is used to create new linked duplicates (instances) of your selection, with advanced options for placement and hierarchy.
@@ -19,9 +19,7 @@ Merged Copy
 
 The **Merged Copy** operator is a comprehensive tool for creating a **single, clean, game-ready mesh** from a selection of multiple, potentially diverse objects (meshes, curves, surfaces, text objects and grease pencil objects). It automates the process of duplicating, converting, joining, and positioning objects. This is ideal for creating simplified proxy models, preparing assets for game engines, or combining parts for 3D printing.
 
-The name of the merged object is set directly by the Name field in the common options. If it is empty, it's name will be "MergedCopy".
-
-The rest of its behavior is controlled entirely by the settings in the **Common Options** section below.
+Its behavior is controlled by its unique options and the settings in the **Common Options** section below.
 
 Defining the Origin (Pivot Point)
 ---------------------------------
@@ -30,6 +28,11 @@ The origin of the new merged object is determined by your selection:
 
 * If you have a valid **active object** in your selection, its world-space location is used as the pivot point.
 * If there is no valid active object, the origin is set to the **center of the new mesh's bounding box**.
+
+Unique Options
+--------------
+
+* **Unify Normals:** When enabled, the operator will recalculate the normals of the final mesh to all point outwards. This is useful for cleaning up geometry before export.
 
 .. _linkedcopy:
 
@@ -44,29 +47,37 @@ The behavior of both operators is controlled entirely by the settings in the **C
 Common Options
 ==============
 
-These settings are shared by the **Merged Copy**, **Linked Copy** and **Unlinked Copy** operators.
+These settings are shared by the **Merged Copy**, **Linked Copy**, and **Unlinked Copy** operators.
 
 Name
------
-**Merged Copy Only** 
-The name that will be given to the final, single object and its new mesh data. If empty (default), the name will be MergedCopy.
+----
+This field controls the name of the newly created object(s).
 
-**Linked Copy** and **Unlinked Copy**:
+* **For Merged Copy:**
+    * If the field is empty or contains only spaces, the new object will be named "MergedCopy".
+    * Any other text will be used as the exact name for the new object and its data-block.
 
-* **Empty (default):** the names will be based on the original objects.
-* **Any text:** will be the new name of copied objects.
-* **The asterisk symbol ( \* ):** will turn into the original name of the object.
-    * For example, when renaming objects named ``Cube01`` and ``Cube02``, the string ``Prop_*_LOD0``, would result in ``Prop_Cube01_LOD0`` and ``Prop_Cube02_LOD0``.
+* **For Linked Copy & Unlinked Copy:**
+    * **Empty (default):** The new objects will receive default names from Blender (e.g., ``Cube.001``).
+    * **Any text:** This text will be used as the base name for all new objects. Blender will append a number (e.g., ``MyObject.001``, ``MyObject.002``) to ensure a unique name for each.
+    * **Using a wildcard (\*):** Use an asterisk (``*``) as a placeholder for the original object's name. For example, renaming an object named ``Cube`` with the string ``Prop_*_LOD0`` would result in ``Prop_Cube_LOD0``.
+
+Include Children
+----------------
+When enabled, the operator will automatically expand your selection to include all (recursive) children of the objects you have selected before running.
+
+* **For Merged Copy:** Requires a selected active object to determine which children to select.
+* **For Linked Copy & Unlinked Copy:** Will find the children of all selected objects.
 
 Clear Parents
 -------------
 This toggle controls how parent-child relationships are handled for the newly created objects. It behaves differently for each operator.
 
-* For **Merged Copy**:
+* **For Merged Copy**:
     * **ON (Default):** The final merged object will have no parent.
     * **OFF:** The operator will attempt to re-parent the final merged object to the parent of the original selection (e.g., the parent of the original active object, or a parent common to all selected objects).
 
-* For **Linked Copy** and **Unlinked Copy**:
+* **For Linked Copy & Unlinked Copy**:
     * **ON (Default):** The new duplicates are unparented from each other, creating a 'flat' selection of new instances.
     * **OFF:** The original parent-child hierarchy is preserved in the duplicated set. The **Offset** is then only applied to the top-level parents, moving the entire hierarchy as a single unit.
 
@@ -85,9 +96,9 @@ These controls determine the final position of the newly created object(s).
 * **Offset (X, Y, Z fields):** The numeric coordinates for the offset.
 * **Rel (Relative Toggle):** This is similar to the Multitransform "Relative" toggle. It determines whether the offset values are applied in an absolute or relative way. 
     * **ON (Relative mode, Default):** This will nudge the newly created assets in the direction and distance as set in the XYZ fields.
-    * **Off (Absolute mode):** This will set move the newly created object(s) to the precise location set in the XYZ fields. 
+    * **Off (Absolute mode):** This will move the newly created object(s) to the precise location set in the XYZ fields. 
         * **Merged Copy:** The pivot of the newly created object will be used.
-        * **Linked Copy** and **Unlinked Copy**: The active object will be used as a leading reference for the copied group, if there was no active object the first object in the list (alphabetically) will be used as a reference. 
+        * **Linked Copy** and **Unlinked Copy**: The active object will be used as a leading reference for the copied group, if there was no active object the first object in the list will be used as a reference. 
 
 Target Collection
 -----------------
@@ -97,6 +108,6 @@ This dropdown menu controls which collection the newly created object(s) will be
     * For **Merged Copy**, the new, single mesh is placed according to the following priority:
         #. It is placed in the **collection of the original active object** (if one was validly selected).
         #. If there was no valid active object, it is placed in the **Scene Collection** (the root of the outliner).
-    * For **Linked Copy** and **Unlinked**, each new duplicate is placed into the **same collection(s) as its original counterpart**. This preserves your scene's organization. For example, if you duplicate objects from a "Props" collection and a "Characters" collection at the same time, the new props will end up in "Props" and the new characters will end up in "Characters".
+    * For **Linked Copy** and **Unlinked Copy**, each new duplicate is placed into the **same collection(s) as its original counterpart**. This preserves your scene's organization.
 
 * **Explicit Choice:** You can select any collection in the scene (including the root **Scene Collection**) to force all new objects into that specific collection, overriding the automatic behavior.
