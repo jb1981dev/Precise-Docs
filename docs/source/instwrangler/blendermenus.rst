@@ -11,7 +11,7 @@ The buttons in this section are only active when you have at least one object se
 Link/Transfer
 -------------
 
-*Shortcut: :kbd:`Ctrl+L`*
+*Shortcut:* :kbd:`Ctrl+L`
 
 This button opens Blender's native **Link/Transfer Data** menu. While the addon's own **Link Selected** tool is powerful for converting and linking object data, this menu provides many other advanced linking options, including the ability to link:
 
@@ -24,7 +24,7 @@ This button opens Blender's native **Link/Transfer Data** menu. While the addon'
 Select Grouped
 --------------
 
-*Shortcut: :kbd:`Shift+G`*
+*Shortcut:* :kbd:`Shift+G`
 
 This button opens Blender's **Select Grouped** menu. It provides various ways to expand your selection based on the properties of the active object. This is a powerful tool for quickly selecting objects that are related, for example by:
 
