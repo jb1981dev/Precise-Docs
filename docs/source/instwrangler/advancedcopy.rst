@@ -77,12 +77,22 @@ This field controls the name of the newly created object(s).
     * **Any text:** This text will be used as the base name for all new objects. Blender will append a number (e.g., ``MyObject.001``, ``MyObject.002``) to ensure a unique name for each.
     * **Using a wildcard (\*):** Use an asterisk (``*``) as a placeholder for the original object's name. For example, renaming an object named ``Cube`` with the string ``Prop_*_LOD0`` would result in ``Prop_Cube_LOD0``.
 
+.. figure:: images/advancedCopy_Name.gif
+   :align: center
+
+*Different ways of setting the name of the newly copied objects.*
+
 Include Children
 ----------------
 When enabled, the operator will automatically expand your selection to include all (recursive) children of the objects you have selected before running.
 
 * **For Merged Copy:** Requires a selected active object to determine which children to select.
 * **For Linked Copy & Unlinked Copy:** Will find the children of all selected objects.
+
+.. figure:: images/advancedCopy_IncludeChildren.gif
+   :align: center
+
+*Include children makes it very easy to duplicate hierarchies.*
 
 Clear Parents
 -------------
@@ -95,6 +105,11 @@ This toggle controls how parent-child relationships are handled for the newly cr
 * **For Linked Copy & Unlinked Copy**:
     * **ON (Default):** The new duplicates are unparented from each other, creating a 'flat' selection of new instances.
     * **OFF:** The original parent-child hierarchy is preserved in the duplicated set. The **Offset** is then only applied to the top-level parents, moving the entire hierarchy as a single unit.
+
+.. figure:: images/advancedCopy_ClearParents.gif
+   :align: center
+
+*Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
 
 Select New
 ----------
@@ -126,3 +141,8 @@ This dropdown menu controls which collection the newly created object(s) will be
     * For **Linked Copy** and **Unlinked Copy**, each new duplicate is placed into the **same collection(s) as its original counterpart**. This preserves your scene's organization.
 
 * **Explicit Choice:** You can select any collection in the scene (including the root **Scene Collection**) to force all new objects into that specific collection, overriding the automatic behavior.
+
+.. figure:: images/Collections.gif
+   :align: center
+
+*Advanced Copy will allow you to explicitly set target collections or handle it automatically in a reliable way.*
