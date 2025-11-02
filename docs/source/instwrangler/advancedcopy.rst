@@ -145,4 +145,4 @@ This dropdown menu controls which collection the newly created object(s) will be
 .. figure:: images/advancedCopy_Collections.gif
    :align: center
 
-*Advanced Copy will allow you to explicitly set target collections or handle it automatically in a reliable way.*
+*You can target collections for the new copies or handle it automatically in a reliable way.*
