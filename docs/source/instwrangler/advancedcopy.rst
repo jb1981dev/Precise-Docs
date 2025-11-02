@@ -142,7 +142,7 @@ This dropdown menu controls which collection the newly created object(s) will be
 
 * **Explicit Choice:** You can select any collection in the scene (including the root **Scene Collection**) to force all new objects into that specific collection, overriding the automatic behavior.
 
-.. figure:: images/Collections.gif
+.. figure:: images/advancedCopy_Collections.gif
    :align: center
 
 *Advanced Copy will allow you to explicitly set target collections or handle it automatically in a reliable way.*
