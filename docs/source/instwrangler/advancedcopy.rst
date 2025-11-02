@@ -12,6 +12,11 @@ The **Advanced Copy** section provides three powerful operators for creating new
 
 All three operators share a set of common options for controlling the placement, parenting, collection, and final selection state of the newly created objects.
 
+.. figure:: images/advancedCopy_Overview.gif
+   :align: center
+
+*Advanced copy will effortlessly copy or merge any type of object with ultimate control over the newly created object.*
+
 .. _mergedcopy:
 
 Merged Copy
@@ -29,10 +34,20 @@ The origin of the new merged object is determined by your selection:
 * If you have a valid **active object** in your selection, its world-space location is used as the pivot point.
 * If there is no valid active object, the origin is set to the **center of the new mesh's bounding box**.
 
+.. figure:: images/advancedCopy_Merged_Pivot.gif
+   :align: center
+
+*The pivot is determined by the active object or lack thereof.*
+
 Unique Options
 --------------
 
-* **Unify Normals:** When enabled, the operator will recalculate the normals of the final mesh to all point outwards. This is useful for cleaning up geometry before export.
+* **Unify Normals:** When enabled, the operator will recalculate the normals of the final mesh to all point outwards. This is useful for cleaning up geometry before export. Be sure to doublecheck your results because blenders "calculate outside" functionality is not entirely intuitively reliable. 
+
+.. figure:: images/advancedCopy_Merged_Normals.gif
+   :align: center
+
+*Normals are recalculated to point outwards.*
 
 .. _linkedcopy:
 
