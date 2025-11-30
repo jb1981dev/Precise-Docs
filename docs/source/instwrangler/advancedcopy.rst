@@ -1,4 +1,4 @@
-.. _advancedcopy:
+e.. _advancedcopy:
 
 ==============
 Advanced Copy
@@ -8,7 +8,7 @@ The **Advanced Copy** section provides three powerful operators for creating new
 
 .. raw:: html
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/qatFMOQRPq0?si=e2IZhFL9TTKon3Xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <iframe width="700" height="315" src="https://www.youtube.com/embed/qatFMOQRPq0?si=e2IZhFL9TTKon3Xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 * **Merged Copy** is used to create a single, new mesh from a potentially diverse selection of objects.
 * **Linked Copy** is used to create new linked duplicates (instances) of your selection, with advanced options for placement and hierarchy.
