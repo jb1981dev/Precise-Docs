@@ -5,6 +5,10 @@ The **Select Linked** tool is a utility designed to quickly expand your selectio
 
 Its purpose is to gather all instances of an asset at once, no matter where they are in your scene.
 
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/pIwjoE2UUI8?si=OVAQZsLtEotpr3kr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 How to Use
 ----------
 
