@@ -3,6 +3,10 @@ Copy Name (Object ↔ Data)
 
 These two buttons are powerful utilities for managing the names of your objects and their associated **Object Data**. In scenes with many linked duplicates, keeping names consistent is crucial for organization. These tools allow you to quickly enforce a clear naming convention across entire instance groups.
 
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/5G4moaQi-X0?si=UKAu8jSyMsYRzxDy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 * **← Object:** This copies the name of the object's data-block to the object itself. This is used to propagate or "sync" that master name across multiple selected instances.
 * **→ Data-Block:** This copies the name of the selected object to its underlying data-block. This is useful for establishing the "master" name for an entire set of instances.
 
