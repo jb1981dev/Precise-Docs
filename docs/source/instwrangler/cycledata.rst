@@ -8,6 +8,10 @@ The **Cycle Data** tool is a powerful feature for rapid iteration and asset swap
 
 Think of it as quickly trying on different versions of an asset without ever moving the object itself. The object's location, rotation, scale, and even its modifiers are all preserved; only its core data is swapped.
 
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/dd3mXKKQt6k?si=TiFg6e3Zyk9GaseU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 How It Works
 ------------
 
