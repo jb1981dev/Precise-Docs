@@ -1,4 +1,4 @@
-e.. _advancedcopy:
+.. _advancedcopy:
 
 ==============
 Advanced Copy
