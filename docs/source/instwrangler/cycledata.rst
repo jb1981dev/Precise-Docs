@@ -10,7 +10,7 @@ Think of it as quickly trying on different versions of an asset without ever mov
 
 .. raw:: html
 
-   <iframe width="700" height="315" src="https://www.youtube.com/embed/dd3mXKKQt6k?si=TiFg6e3Zyk9GaseU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <iframe width="700" height="395" src="https://www.youtube.com/embed/dd3mXKKQt6k?si=TiFg6e3Zyk9GaseU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 How It Works
 ------------
