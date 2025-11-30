@@ -6,6 +6,10 @@ Apply Modifiers
 
 The **Apply Modifiers** operator is a powerful tool designed to permanently "bake" an object's modifier stack into its geometry. Its strength lies in its versatility, handling most object types that support modifiers—such as **Meshes, Curves, and Text**—while intelligently managing linked duplicates to ensure modifiers are applied consistently across all instances.
 
+.. raw:: html
+
+   <iframe width="700" height="315" src="https://www.youtube.com/embed/AJv1jw-AsZY?si=_gWLXcfPBoblbn24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The primary function is to provide a one-click solution to apply a modifier setup and then clean up the stack across an entire instance group.
 
 .. important::
