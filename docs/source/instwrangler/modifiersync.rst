@@ -10,7 +10,7 @@ It works with any object type that can have modifiers, including Meshes, Curves,
 
 .. raw:: html
 
-    <iframe width="700" height="315" src="https://www.youtube.com/embed/jmYC9DbxdKY?si=hHmqbwuugWyZ6ncr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="700" height="395" src="https://www.youtube.com/embed/jmYC9DbxdKY?si=hHmqbwuugWyZ6ncr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 How It Works: Global vs. Limited Sync
 =====================================
