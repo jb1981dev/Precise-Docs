@@ -7,6 +7,10 @@ The **Group Unlink** tool creates a new, independent instance group from your cu
 
 This provides a crucial workflow that is distinct from the standard **Unlink** operator, which makes *every* object unique. **Group Unlink** makes the *selection* unique as a new group.
 
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/VTQgnAn1lXM?si=IuzQnHMjR_lGYoJ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 How to Use
 ----------
 
