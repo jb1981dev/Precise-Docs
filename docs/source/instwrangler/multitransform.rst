@@ -7,8 +7,7 @@ The panel is organized into a grid layout, with each row corresponding to a tran
 
 .. raw:: html
 
-   <iframe width="700" height="394" src="https://www.youtube.com/embed/SNSlH7yfvhM?si=GbxKZPJMPVxr24y5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/TcjOvJjajvQ?si=HoJK9LkZfPZ27_8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 UI Controls Explained
 -----------------------
 
