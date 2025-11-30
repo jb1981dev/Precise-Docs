@@ -8,8 +8,8 @@ The panel is organized into a grid layout, with each row corresponding to a tran
 .. raw:: html
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/TcjOvJjajvQ?si=HoJK9LkZfPZ27_8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-UI Controls Explained
 
+UI Controls Explained
 -----------------------
 
 * **Header Row:** The top row contains shortcuts to reset the transform values. **Pos** resets Position to ``(0,0,0)``, **Rot** resets Rotation to ``(0,0,0)``, and **Scale** resets Scale to ``(1,1,1)``.
