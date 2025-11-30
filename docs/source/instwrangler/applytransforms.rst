@@ -7,7 +7,7 @@ The **Apply Transforms** tool is one of the most powerful features of Instance W
 
 .. raw:: html
 
-    <iframe width="700" height="315" src="https://www.youtube.com/embed/psMwfiWq-YM?si=MRFr7_EiIog7nnzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="700" height="395" src="https://www.youtube.com/embed/psMwfiWq-YM?si=MRFr7_EiIog7nnzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 How It Works
 ------------
