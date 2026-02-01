@@ -8,7 +8,7 @@ The **Advanced Copy** section provides three powerful operators for creating new
 
 .. raw:: html
 
-   <iframe width="700" height="395" src="https://www.youtube.com/embed/qatFMOQRPq0?si=e2IZhFL9TTKon3Xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="700" height="395" src="https://www.youtube.com/embed/qatFMOQRPq0?si=e2IZhFL9TTKon3Xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 * **Merged Copy** is used to create a single, new mesh from a potentially diverse selection of objects.
 * **Linked Copy** is used to create new linked duplicates (instances) of your selection, with advanced options for placement and hierarchy.
@@ -17,7 +17,7 @@ The **Advanced Copy** section provides three powerful operators for creating new
 All three operators share a set of common options for controlling the placement, parenting, collection, and final selection state of the newly created objects.
 
 .. figure:: images/advancedCopy_Overview.gif
-   :align: center
+    :align: center
 
 *Advanced copy will effortlessly copy or merge any type of object with ultimate control over the newly created object.*
 
@@ -39,7 +39,7 @@ The origin of the new merged object is determined by your selection:
 * If there is no valid active object, the origin is set to the **center of the new mesh's bounding box**.
 
 .. figure:: images/advancedCopy_Merged_Pivot.gif
-   :align: center
+    :align: center
 
 *The pivot is determined by the active object or lack thereof.*
 
@@ -49,7 +49,7 @@ Unique Options
 * **Unify Normals:** When enabled, the operator will recalculate the normals of the final mesh to all point outwards. This is useful for cleaning up geometry before export. Be sure to doublecheck your results because blenders "calculate outside" functionality is not entirely intuitively reliable. 
 
 .. figure:: images/advancedCopy_Merged_Normals.gif
-   :align: center
+    :align: center
 
 *Normals are recalculated to point outwards.*
 
@@ -82,7 +82,7 @@ This field controls the name of the newly created object(s).
     * **Using a wildcard (\*):** Use an asterisk (``*``) as a placeholder for the original object's name. For example, renaming an object named ``Cube`` with the string ``Prop_*_LOD0`` would result in ``Prop_Cube_LOD0``.
 
 .. figure:: images/advancedCopy_Name.gif
-   :align: center
+    :align: center
 
 *Different ways of setting the name of the newly copied objects.*
 
@@ -94,7 +94,7 @@ When enabled, the operator will automatically expand your selection to include a
 * **For Linked Copy & Unlinked Copy:** Will find the children of all selected objects.
 
 .. figure:: images/advancedCopy_IncludeChildren.gif
-   :align: center
+    :align: center
 
 *Include children makes it very easy to duplicate hierarchies.*
 
@@ -108,10 +108,10 @@ This toggle controls how parent-child relationships are handled for the newly cr
 
 * **For Linked Copy & Unlinked Copy**:
     * **ON (Default):** The new duplicates are unparented from each other, creating a 'flat' selection of new instances.
-    * **OFF:** The original parent-child hierarchy is preserved in the duplicated set. The **Offset** is then only applied to the top-level parents, moving the entire hierarchy as a single unit.
+    * **OFF:** The original parent-child hierarchy is preserved in the duplicated set.
 
 .. figure:: images/advancedCopy_ClearParents.gif
-   :align: center
+    :align: center
 
 *Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
 
@@ -122,17 +122,20 @@ This toggle controls the final selection state after the operation is complete.
 * **ON (Default):** The newly created object(s) will be selected.
 * **OFF:** The original selection will be restored.
 
-Offset
-------
-These controls determine the final position of the newly created object(s).
+Apply Multi Transform
+---------------------
+Advanced Copy now integrates directly with the **Multi Transform** panel to handle position, rotation and scaling.
 
-* **Offset Button:** A shortcut to reset the Offset fields to ``(0, 0, 0)``.
-* **Offset (X, Y, Z fields):** The numeric coordinates for the offset.
-* **Rel (Relative Toggle):** This is similar to the Multitransform "Relative" toggle. It determines whether the offset values are applied in an absolute or relative way. 
-    * **ON (Relative mode, Default):** This will nudge the newly created assets in the direction and distance as set in the XYZ fields.
-    * **Off (Absolute mode):** This will move the newly created object(s) to the precise location set in the XYZ fields. 
-        * **Merged Copy:** The pivot of the newly created object will be used.
-        * **Linked Copy** and **Unlinked Copy**: The active object will be used as a leading reference for the copied group, if there was no active object the first object in the list will be used as a reference. 
+* **ON (Default):** The Position, Rotation, and Scale values currently set in the **Multi Transform** panel will be applied to the newly created objects immediately.
+* **OFF:** The new objects are created at the exact location of the originals (or the merged pivot) without any additional transformation.
+
+Skip Active
+-----------
+This option is useful when you want to use the active object as a reference point (pivot) for the operation, but do not want to duplicate the object itself.
+
+* **ON:** The active object is used to calculate the center of the operation, but is excluded from the final copies.
+    * **Parenting Behavior:** If **Skip Active** and **Include Children** are both enabled, the newly created copies will be automatically parented to the *original* active object.
+* **OFF (Default):** The active object is treated as a normal part of the selection and is copied/merged along with everything else.
 
 Target Collection
 -----------------
@@ -147,6 +150,6 @@ This dropdown menu controls which collection the newly created object(s) will be
 * **Explicit Choice:** You can select any collection in the scene (including the root **Scene Collection**) to force all new objects into that specific collection, overriding the automatic behavior.
 
 .. figure:: images/advancedCopy_Collections.gif
-   :align: center
+    :align: center
 
 *You can target collections for the new copies or handle it automatically in a reliable way.*
