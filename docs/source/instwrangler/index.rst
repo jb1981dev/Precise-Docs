@@ -11,6 +11,7 @@ Pages
 
 * :doc:`iwversions`
 * :doc:`multitransform`
+* :doc:`advancedcopy`
 * :doc:`applytransforms`
 * :doc:`modifiersync`
 * :doc:`applymodifiers`
@@ -20,5 +21,4 @@ Pages
 * :doc:`groupunlink`
 * :doc:`cycledata`
 * :doc:`copyname`
-* :doc:`advancedcopy`
 * :doc:`blendermenus`
