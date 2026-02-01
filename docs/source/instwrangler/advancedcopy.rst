@@ -43,16 +43,6 @@ The origin of the new merged object is determined by your selection:
 
 *The pivot is determined by the active object or lack thereof.*
 
-Unique Options
---------------
-
-* **Unify Normals:** When enabled, the operator will recalculate the normals of the final mesh to all point outwards. This is useful for cleaning up geometry before export. Be sure to doublecheck your results because blenders "calculate outside" functionality is not entirely intuitively reliable. 
-
-.. figure:: images/advancedCopy_Merged_Normals.gif
-    :align: center
-
-*Normals are recalculated to point outwards.*
-
 .. _linkedcopy:
 
 Linked Copy & Unlinked Copy
@@ -63,28 +53,23 @@ Linked Copy & Unlinked Copy
 
 The behavior of both operators is controlled entirely by the settings in the **Common Options** section below.
 
-Common Options
-==============
+Advanced Copy Settings
+======================
 
-These settings are shared by the **Merged Copy**, **Linked Copy**, and **Unlinked Copy** operators.
+Apply Multi Transform
+---------------------
+Advanced Copy now integrates directly with the **Multi Transform** panel to handle position, rotation and scaling.
 
-Name
-----
-This field controls the name of the newly created object(s).
+* **ON (Default):** The Position, Rotation, and Scale values currently set in the **Multi Transform** panel will be applied to the newly created objects immediately.
+* **OFF:** The new objects are created at the exact location of the originals (or the merged pivot) without any additional transformation.
 
-* **For Merged Copy:**
-    * If the field is empty or contains only spaces, the new object will be named "MergedCopy".
-    * Any other text will be used as the exact name for the new object and its data-block.
+Skip Active
+-----------
+This option is useful when you want to use the active object as a reference point (pivot) for the operation, but do not want to duplicate the object itself.
 
-* **For Linked Copy & Unlinked Copy:**
-    * **Empty (default):** The new objects will receive default names from Blender (e.g., ``Cube.001``).
-    * **Any text:** This text will be used as the base name for all new objects. Blender will append a number (e.g., ``MyObject.001``, ``MyObject.002``) to ensure a unique name for each.
-    * **Using a wildcard (\*):** Use an asterisk (``*``) as a placeholder for the original object's name. For example, renaming an object named ``Cube`` with the string ``Prop_*_LOD0`` would result in ``Prop_Cube_LOD0``.
-
-.. figure:: images/advancedCopy_Name.gif
-    :align: center
-
-*Different ways of setting the name of the newly copied objects.*
+* **ON:** The active object is used to calculate the center of the operation, but is excluded from the final copies.
+    * **Parenting Behavior:** If **Skip Active** and **Include Children** are both enabled, the newly created copies will be automatically parented to the *original* active object.
+* **OFF (Default):** The active object is treated as a normal part of the selection and is copied/merged along with everything else.
 
 Include Children
 ----------------
@@ -122,20 +107,32 @@ This toggle controls the final selection state after the operation is complete.
 * **ON (Default):** The newly created object(s) will be selected.
 * **OFF:** The original selection will be restored.
 
-Apply Multi Transform
----------------------
-Advanced Copy now integrates directly with the **Multi Transform** panel to handle position, rotation and scaling.
+Unify Normals
+--------------
+This only works for merged copies. When enabled, the operator will recalculate the normals of the final mesh to all point outwards. This is useful for cleaning up geometry before export. Be sure to doublecheck your results because blenders "calculate outside" functionality is not entirely intuitively reliable. 
 
-* **ON (Default):** The Position, Rotation, and Scale values currently set in the **Multi Transform** panel will be applied to the newly created objects immediately.
-* **OFF:** The new objects are created at the exact location of the originals (or the merged pivot) without any additional transformation.
+.. figure:: images/advancedCopy_Merged_Normals.gif
+    :align: center
 
-Skip Active
------------
-This option is useful when you want to use the active object as a reference point (pivot) for the operation, but do not want to duplicate the object itself.
+*Normals are recalculated to point outwards.*
 
-* **ON:** The active object is used to calculate the center of the operation, but is excluded from the final copies.
-    * **Parenting Behavior:** If **Skip Active** and **Include Children** are both enabled, the newly created copies will be automatically parented to the *original* active object.
-* **OFF (Default):** The active object is treated as a normal part of the selection and is copied/merged along with everything else.
+Name
+----
+This field controls the name of the newly created object(s).
+
+* **For Merged Copy:**
+    * If the field is empty or contains only spaces, the new object will be named "MergedCopy".
+    * Any other text will be used as the exact name for the new object and its data-block.
+
+* **For Linked Copy & Unlinked Copy:**
+    * **Empty (default):** The new objects will receive default names from Blender (e.g., ``Cube.001``).
+    * **Any text:** This text will be used as the base name for all new objects. Blender will append a number (e.g., ``MyObject.001``, ``MyObject.002``) to ensure a unique name for each.
+    * **Using a wildcard (\*):** Use an asterisk (``*``) as a placeholder for the original object's name. For example, renaming an object named ``Cube`` with the string ``Prop_*_LOD0`` would result in ``Prop_Cube_LOD0``.
+
+.. figure:: images/advancedCopy_Name.gif
+    :align: center
+
+*Different ways of setting the name of the newly copied objects.*
 
 Target Collection
 -----------------
