@@ -28,6 +28,7 @@ More addons to follow soon!
    instwrangler/index
    instwrangler/iwversions
    instwrangler/multitransform
+   instwrangler/advancedcopy
    instwrangler/applytransforms
    instwrangler/modifiersync
    instwrangler/applymodifiers
@@ -37,7 +38,6 @@ More addons to follow soon!
    instwrangler/groupunlink
    instwrangler/cycledata
    instwrangler/copyname
-   instwrangler/advancedcopy
    instwrangler/blendermenus
 
 ..
