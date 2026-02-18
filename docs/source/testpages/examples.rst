@@ -156,6 +156,14 @@ About comments
 
 Textboxes
 =========
+--------------
+.. code-block:: console
+
+   .. note::
+      This is a note to highlight important information.
+
+   .. warning::
+      This is a warning to alert users about potential issues.
 
 .. note::
    This is something you should pay attention to.
