@@ -156,7 +156,7 @@ About comments
 
 Textboxes
 =========
---------------
+
 .. code-block:: console
 
    .. note::
