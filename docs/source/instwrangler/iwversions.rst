@@ -1,3 +1,10 @@
+.. _version_1_2_00:
+
+Version 1.2.00
+==============
+
+Placeholder text.
+
 .. _version_1_1_30:
 
 Version 1.1.30
