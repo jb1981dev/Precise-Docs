@@ -23,7 +23,7 @@ p.caption {
     font-weight: bold;
 }
 
-/* Hides the floating "versions" menu in the bottom right corner 
-readthedocs-flyout {
-    display: none !important;
-}*/
+/* Hides the floating "versions" menu in the bottom right corner */ 
+/* readthedocs-flyout { */
+/*    display: none !important; */
+/* } */
