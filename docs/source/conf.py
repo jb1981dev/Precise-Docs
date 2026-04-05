@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Precise Tools Documentation'
-copyright = '2025, Precise Tools'
+copyright = '2026, Precise Tools'
 author = 'Jeroen Backx'
 
 release = '1.0'
@@ -40,7 +40,7 @@ epub_show_urls = 'footnote'
 
 # This dictionary is ONLY for theme-specific options
 html_theme_options = {
-    'display_version': False,
+    'display_version': True,
     # other theme-specific options would go here
 }
 
