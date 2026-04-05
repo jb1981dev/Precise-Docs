@@ -83,9 +83,6 @@ My Target Section
 
 ``To link to another document: ``:doc:`path/to/other/document```
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-Finally there is also the :doc:`api` page. 
 
 You can also specify custom link text.
 The syntax for this is ``:doc:`Custom Link Text <path/to/page>```. You place your desired text before the path, separated by a space and enclosed in angle brackets.
@@ -93,8 +90,6 @@ The syntax for this is ``:doc:`Custom Link Text <path/to/page>```. You place you
 You can also make a link bigger, by using our CSS setup
 
 .. rst-class:: large-link
-
-   :doc:`Usage page <usage>`
 
 .. code-block:: console
 
