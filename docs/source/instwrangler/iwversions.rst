@@ -1,19 +1,24 @@
-.. _versions:
+Version History
+===============
+
+.. _version_1_2_00:
 
 Version 1.2.00
-==============
+--------------
 
 Placeholder text.
 
+.. _version_1_1_30:
+
 Version 1.1.30
-==============
+--------------
 
 *Released: February 1, 2026*
 
 This is the latest stable release of the **Instance Wrangler** addon. This version provides a complete toolkit for advanced instance and transform management directly in the 3D Viewport.
 
 Key Features
-------------
+^^^^^^^^^^^^
 
 **Multi Transform**
    * Precisely edit Position, Rotation, and Scale for multiple objects at once using an intuitive, axis-driven grid.
