@@ -13,7 +13,7 @@ This file tracks which pages are up to date and what needs to be written or upda
 | Page | File | Status | Notes |
 |---|---|---|---|
 | Version History | `iwversions.rst` | ❌ Outdated | Only covers 1.1.30. Write single **1.2** release entry covering all changes since 1.1.30. |
-| Multi Transform | `multitransform.rst` | ⚠️ Needs update | Missing include toggles (Pos/Rot/Scale row) and bypass children |
+| Multi Transform | `multitransform.rst` | ✅ Up to date | Include toggles and modifier keys added |
 | Advanced Copy | `advancedcopy.rst` | ⚠️ Needs update | Missing Target Merge Mode entirely |
 | Apply Transforms | `applytransforms.rst` | ⚠️ Needs update | Missing CTRL modifier behavior |
 | Modifier Sync | `modifiersync.rst` | ✅ Up to date | |

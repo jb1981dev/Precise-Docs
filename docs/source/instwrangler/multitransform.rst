@@ -12,23 +12,45 @@ The panel is organized into a grid layout, with each row corresponding to a tran
 UI Controls Explained
 -----------------------
 
-* **Header Row:** The top row contains shortcuts to reset the transform values. **Pos** resets Position to ``(0,0,0)``, **Rot** resets Rotation to ``(0,0,0)``, and **Scale** resets Scale to ``(1,1,1)``.
-* **Axis Rows (X, Y, Z):** Each of these three rows contains:
-    * An **axis toggle** on the left to include or exclude that axis from the operation.
-    * Three numeric input fields for that axis's **Position**, **Rotation**, and **Scale**.
-* **Set Buttons Row:** The bottom row contains the buttons to apply the transforms:
-    * **Set All:** Applies the values for Position, Rotation, and Scale all at once.
-    * **Set (per-transform):** Applies only the values for either Position, Rotation, or Scale.
+The panel is organized as a grid. On the left is a column of **axis toggles**. To the right are three value columns — one each for **Position**, **Rotation**, and **Scale**.
+
+* **Include Toggles (Pos / Rot / Scale):** The top cell of each value column is a toggle that controls whether that transform type is included in **Set All** operations. For example, disabling **Rot** means clicking **Set All** will only apply Position and Scale, leaving each object's rotation untouched. These toggles also affect the **Apply Multi Transform** option in :doc:`advancedcopy`.
+* **Axis Toggles (X / Y / Z):** Each row on the left side filters which axes are affected. Disabling **Z** means the Z-axis value will never be written, regardless of which Set button you click.
+* **Value Fields:** The nine input fields in the grid hold the target values for each axis and transform type.
+* **Set Buttons:** The row below the grid contains the action buttons:
+    * **Set All:** Applies all included transform types to the selection at once.
+    * **Set P / Set R / Set S:** Applies only Position, Rotation, or Scale respectively, ignoring the Pos/Rot/Scale include toggles.
+* **Mode Toggles:**
+    * **Relative:** Switches between Absolute and Relative modes. See `Relative Toggle`_ below.
+    * **Active Leads:** Switches to a mode where the active object acts as a pivot for the selection. See `Active Leads Mode`_ below.
 
 .. figure:: images/multitransform_setall.gif
    :align: center
-   :alt: Setting the scale in absolute and relative mode and using the axis rows.
+   :alt: Using Set All to set position, rotation and scale at the same time.
 
-Using "Set All" to set position, rotation and scale at the same time.
+Using "Set All" to apply position, rotation and scale at the same time.
 
-* **Mode Toggles:**
-    * **Relative Toggle:** Switches between **Absolute** and **Relative** modes. Its behavior changes depending on whether **Active Leads** is enabled.
-    * **Active Leads Toggle:** Switches the tool to a powerful mode where the **active object** acts as a pivot or "fake parent" for the rest of the selection.
+Modifier Keys
+--------------
+
+All four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support modifier keys to perform related actions without changing any settings:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 85
+
+   * - Key
+     - Action
+   * - :kbd:`LMB`
+     - **Set** — applies the current values to the selection.
+   * - :kbd:`Ctrl`
+     - **Get** — reads the active object's current transform into the value fields (respects axis toggles).
+   * - :kbd:`Shift`
+     - **Round** — snaps the value fields to the nearest clean step: 0.5 m for Position, 1° for Rotation, 0.1 for Scale (respects axis toggles).
+   * - :kbd:`Alt`
+     - **Reset** — resets the value fields to their defaults: Position → 0, Rotation → 0°, Scale → 1 (respects axis toggles).
+
+For **Set All**, :kbd:`Ctrl`, :kbd:`Shift`, and :kbd:`Alt` also respect the **Pos / Rot / Scale include toggles** — only the enabled transform types are affected.
 
 Relative Toggle
 ------------------
