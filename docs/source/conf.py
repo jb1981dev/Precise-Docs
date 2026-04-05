@@ -40,7 +40,7 @@ epub_show_urls = 'footnote'
 
 # This dictionary is ONLY for theme-specific options
 html_theme_options = {
-    'display_version': True,
+    'display_version': False,
     # other theme-specific options would go here
 }
 
