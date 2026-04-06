@@ -28,7 +28,7 @@ Merged Copy
 
 The **Merged Copy** operator is a comprehensive tool for creating a **single, clean, game-ready mesh** from a selection of multiple, potentially diverse objects (meshes, curves, surfaces, text objects and grease pencil objects). It automates the process of duplicating, converting, joining, and positioning objects. This is ideal for creating simplified proxy models, preparing assets for game engines, or combining parts for 3D printing.
 
-Its behavior is controlled by its unique options and the settings in the **Common Options** section below.
+Its behavior is controlled by its unique options and the settings in the **Advanced Copy Settings** section below.
 
 Defining the Origin (Pivot Point)
 ---------------------------------
@@ -42,6 +42,31 @@ The origin of the new merged object is determined by your selection:
     :align: center
 
 *The pivot is determined by the active object or lack thereof.*
+
+Target Merge Mode
+-----------------
+
+By default, **Merged Copy** creates a new object. **Target Merge Mode** is an alternative workflow that merges the selection directly *into an existing object's data-block*, updating all of its linked instances in the scene without creating a new object.
+
+**Setting a target:**
+
+Before clicking **Merged Copy**, click the **Set Target** button. This stores the currently active object as the merge target. Once set, the button area changes to show:
+
+* **T: {object name}** — clicking this selects and activates the target object in the viewport.
+* **X** — clears the target, returning to normal Merged Copy behaviour.
+
+**What happens when a target is set:**
+
+When you run **Merged Copy** with a target set, the merged geometry replaces the target object's data-block. Every other object in the scene that shares the same data-block (i.e. all linked instances of the target) is updated automatically. The target object itself keeps its name, parent, collection, and all other properties — only its mesh data changes.
+
+.. note::
+   The redo/F9 panel is not available when a target is set. All **Advanced Copy Settings** are ignored in this mode — the target's existing properties are preserved as-is.
+
+.. comment::
+   IMAGE PLACEHOLDER: advancedcopy_targetmerge.gif
+   Show: setting the target, running merged copy, all instances updating in place.
+
+**Use case:** This is ideal for updating an existing game-ready proxy or LOD mesh in-place. You can adjust your source objects, re-merge them into the existing target, and all instances across your scene instantly reflect the new geometry — without renaming, re-parenting, or reorganising anything.
 
 .. _linkedcopy:
 
@@ -58,9 +83,9 @@ Advanced Copy Settings
 
 Apply Multi Transform
 ---------------------
-Advanced Copy now integrates directly with the **Multi Transform** panel to handle position, rotation and scaling.
+When enabled, the Position, Rotation, and Scale values currently set in the **Multi Transform** panel are applied to the newly created objects immediately after they are created.
 
-* **ON (Default):** The Position, Rotation, and Scale values currently set in the **Multi Transform** panel will be applied to the newly created objects immediately.
+* **ON (Default):** Transforms from the Multi Transform panel are applied. Only the transform types that are **included** (via the Pos / Rot / Scale toggles in the Multi Transform panel) are applied — disabled types are left as-is.
 * **OFF:** The new objects are created at the exact location of the originals (or the merged pivot) without any additional transformation.
 
 Skip Active
@@ -121,13 +146,13 @@ Name
 This field controls the name of the newly created object(s).
 
 * **For Merged Copy:**
-    * If the field is empty or contains only spaces, the new object will be named "MergedCopy".
+    * If the field is empty or contains only spaces, the new object will be named ``MergedCopy``.
     * Any other text will be used as the exact name for the new object and its data-block.
 
 * **For Linked Copy & Unlinked Copy:**
     * **Empty (default):** The new objects will receive default names from Blender (e.g., ``Cube.001``).
     * **Any text:** This text will be used as the base name for all new objects. Blender will append a number (e.g., ``MyObject.001``, ``MyObject.002``) to ensure a unique name for each.
-    * **Using a wildcard (\*):** Use an asterisk (``*``) as a placeholder for the original object's name. For example, renaming an object named ``Cube`` with the string ``Prop_*_LOD0`` would result in ``Prop_Cube_LOD0``.
+    * **Using a wildcard (``*``):** Use an asterisk as a placeholder for the original object's name. For example, entering ``Prop_*_LOD0`` for an object named ``Cube`` will produce ``Prop_Cube_LOD0``. This makes it easy to batch-rename copies while preserving their identity.
 
 .. figure:: images/advancedCopy_Name.gif
     :align: center

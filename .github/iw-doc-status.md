@@ -14,7 +14,7 @@ This file tracks which pages are up to date and what needs to be written or upda
 |---|---|---|---|
 | Version History | `iwversions.rst` | ❌ Outdated | Only covers 1.1.30. Write single **1.2** release entry covering all changes since 1.1.30. |
 | Multi Transform | `multitransform.rst` | ✅ Up to date | Include toggles and modifier keys added |
-| Advanced Copy | `advancedcopy.rst` | ⚠️ Needs update | Missing Target Merge Mode entirely |
+| Advanced Copy | `advancedcopy.rst` | ✅ Up to date | Target Merge Mode added, Apply MT note updated, wildcard clarified |
 | Apply Transforms | `applytransforms.rst` | ⚠️ Needs update | Missing CTRL modifier behavior |
 | Modifier Sync | `modifiersync.rst` | ✅ Up to date | |
 | Apply Modifiers | `applymodifiers.rst` | ✅ Up to date | |
