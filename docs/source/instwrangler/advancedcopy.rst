@@ -62,7 +62,7 @@ When you run **Merged Copy** with a target set, the merged geometry replaces the
 .. note::
    The redo/F9 panel is not available when a target is set. All **Advanced Copy Settings** are ignored in this mode — the target's existing properties are preserved as-is.
 
-.. comment::
+..
    IMAGE PLACEHOLDER: advancedcopy_targetmerge.gif
    Show: setting the target, running merged copy, all instances updating in place.
 
