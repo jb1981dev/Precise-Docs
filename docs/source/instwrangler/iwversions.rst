@@ -12,21 +12,7 @@ Multi Transform
 ^^^^^^^^^^^^^^^
 
 * **Include toggles (Pos / Rot / Scale):** Three toggles at the top of each value column now control which transform types are applied by **Set All** and by Advanced Copy's **Apply Multi Transform**. The individual **Set P**, **Set R**, and **Set S** buttons are unaffected — they always apply their own type.
-* **Modifier keys on all Set buttons** — all four buttons (**Set All**, **Set P**, **Set R**, **Set S**) now support:
-
-  :kbd:`LMB`
-      **Set** — apply values to the selection.
-
-  :kbd:`Ctrl`
-      **Get** — read the active object's current transform into the value fields (respects axis toggles).
-
-  :kbd:`Shift`
-      **Round** — snap the fields to the nearest clean step: 0.5 m for Position, 1° for Rotation, 0.1 for Scale (respects axis toggles).
-
-  :kbd:`Alt`
-      **Reset** — reset the fields to their defaults: Position → 0, Rotation → 0°, Scale → 1 (respects axis toggles).
-
-  For **Set All**, :kbd:`Ctrl`, :kbd:`Shift`, and :kbd:`Alt` also respect the Pos / Rot / Scale include toggles.
+* **Modifier keys on all Set buttons** — all four buttons (**Set All**, **Set P**, **Set R**, **Set S**) now support: :kbd:`LMB` **Set**, :kbd:`Ctrl` **Get** (read from active object), :kbd:`Shift` **Round** (snap to nearest step), :kbd:`Alt` **Reset** (restore defaults). All three modifier keys respect axis toggles, and on **Set All** they also respect the Pos / Rot / Scale include toggles.
 
 * **Bypass Children:** When a parent and its children are all selected, enabling this option skips the children — only the parent receives the transform.
 * **Redo / F9 panel:** Multi Transform now records its axis toggles, include toggles, and values in the redo panel for post-run adjustment.
