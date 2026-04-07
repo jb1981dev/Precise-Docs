@@ -42,16 +42,11 @@ Modifier Keys
 -------------
 The Apply Transforms button supports a modifier key for an additional workflow:
 
-.. list-table::
-   :header-rows: 1
-   :widths: 15 85
+:kbd:`LMB`
+    **Apply** — bakes the selected transform(s) to all instances in the group while keeping them visually in place.
 
-   * - Key
-     - Action
-   * - :kbd:`LMB`
-     - **Apply** — bakes the selected transform(s) to all instances in the group while keeping them visually in place.
-   * - :kbd:`Ctrl`
-     - **Selective Reset** — resets the toggled transform channels on the non-leader instances in each group to their default values (Position → 0, Rotation → 0°, Scale → 1).
+:kbd:`Ctrl`
+    **Selective Reset** — resets the toggled transform channels on the non-leader instances in each group to their default values (Position → 0, Rotation → 0°, Scale → 1).
 
 **How Selective Reset works:**
 
