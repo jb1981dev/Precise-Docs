@@ -1,7 +1,7 @@
 # Instance Wrangler Documentation Status
 
-> Last audited: March 31, 2026  
-> Docs version: 1.1.30  
+> Last audited: April 7, 2026  
+> Docs version: 1.2.00 (stub)  
 > Addon version: **1.1.33**
 
 This file tracks which pages are up to date and what needs to be written or updated.
@@ -12,9 +12,9 @@ This file tracks which pages are up to date and what needs to be written or upda
 
 | Page | File | Status | Notes |
 |---|---|---|---|
-| Version History | `iwversions.rst` | ❌ Outdated | Only covers 1.1.30. Write single **1.2** release entry covering all changes since 1.1.30. |
-| Multi Transform | `multitransform.rst` | ✅ Up to date | Include toggles and modifier keys added |
-| Advanced Copy | `advancedcopy.rst` | ✅ Up to date | Target Merge Mode added, Apply MT note updated, wildcard clarified |
+| Version History | `iwversions.rst` | ⚠️ Needs update | v1.2.00 stub exists with placeholder text — content needs to be written. |
+| Multi Transform | `multitransform.rst` | ✅ Up to date | Include toggles and modifier keys confirmed present |
+| Advanced Copy | `advancedcopy.rst` | ✅ Up to date | Target Merge Mode, Apply MT note, wildcard confirmed present |
 | Apply Transforms | `applytransforms.rst` | ⚠️ Needs update | Missing CTRL modifier behavior |
 | Modifier Sync | `modifiersync.rst` | ✅ Up to date | |
 | Apply Modifiers | `applymodifiers.rst` | ✅ Up to date | |
@@ -32,9 +32,9 @@ This file tracks which pages are up to date and what needs to be written or upda
 
 ## Detailed Change Notes Per Page
 
-### `iwversions.rst` — Write single 1.2 release entry
+### `iwversions.rst` — Write v1.2.00 release entry
 
-Do **not** add intermediate 1.1.3x entries. Write a single **Version 1.2** entry that covers all major changes since 1.1.30:
+A v1.2.00 placeholder stub now exists with `Placeholder text.` as the body. The section heading and anchor `.. _version_1_2_00:` are already in place. Replace the placeholder with the real content covering all major changes since 1.1.30:
 
 - **Multi Transform — modifier keys on Set buttons** (Set P / Set R / Set S / Set All):
   - LMB: Apply transform to selection
@@ -50,53 +50,6 @@ Do **not** add intermediate 1.1.3x entries. Write a single **Version 1.2** entry
 - **Advanced Copy collection placement**: `Automatic` and `Scene Collection` explicit options.
 - **Name wildcard**: `*` placeholder in Advanced Copy name field (e.g. `LOD0_*` inserts original object name).
 - **Header toolbar**: IW logo button always visible in the tool header; click to expand toolkit buttons inline.
-
----
-
-### `multitransform.rst` — Include toggles + modifier keys on Set buttons
-
-**What's wrong:** The docs currently describe the Pos/Rot/Scale header buttons as reset shortcuts ("Pos resets to 0,0,0 etc."). This is **incorrect** — they are **include toggles** that control which transforms `Set All` applies. Rewrite the "Header Row" description entirely.
-
-**Include toggles:**
-- `xform_include_pos` — **Pos** toggle: includes/excludes position from Set All
-- `xform_include_rot` — **Rot** toggle: includes/excludes rotation from Set All
-- `xform_include_scale` — **Scale** toggle: includes/excludes scale from Set All
-
-These also affect **Advanced Copy's Apply Multi Transform** option. The individual Set P / Set R / Set S buttons are not affected by include toggles — they always apply their own type.
-
-**Modifier keys — all Set buttons (Set P, Set R, Set S, Set All):**
-
-All four action buttons share the same modifier key pattern. Document these clearly:
-
-| Modifier | Action |
-|---|---|
-| LMB | **Set** — applies the values to the selection |
-| CTRL | **Get** — reads values from the active object (respects axis toggles) |
-| Shift | **Round** — snaps values to nearest step (Pos: 0.5 m, Rot: 1°, Scale: 0.1) |
-| Alt | **Reset** — resets values to default (Pos: 0, Rot: 0°, Scale: 1) |
-
-For **Set All**, CTRL/Shift/Alt also respect the Pos/Rot/Scale include toggles (e.g. Alt only resets the included transform types).
-
-Also not documented: `xform_bypass_children` property. Confirm whether this appears in the UI before writing.
-
----
-
-### `advancedcopy.rst` — Target Merge Mode
-
-**What's missing:** A new "Target Merge Mode" for Merged Copy. This is a significant new workflow:
-
-**UI behavior:**
-- A **"Set Target"** button appears next to the Merged Copy button.
-- Clicking it sets the currently active object as the merge target (stores its name in `advanced_copy_target_object`).
-- Once set, the button changes to **"T: {object_name}"** (clicking it selects & activates the target in the viewport).
-- A **"X"** clear button appears next to it to clear the target.
-
-**Behavior when target is set:**
-- Merged Copy merges the selection **into the existing target object's data-block** instead of creating a new object.
-- All other Advanced Copy Settings are ignored (the redo/F9 panel shows a warning and hides them).
-- This is useful for updating an existing merged asset in-place without changing its name, collection, or parent.
-
-Add a new subsection "Target Merge Mode" under the Merged Copy section. Include the UI flow and describe the use case (updating an existing merged proxy in-place).
 
 ---
 
