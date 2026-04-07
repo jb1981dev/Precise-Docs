@@ -36,6 +36,7 @@ More addons to follow soon!
    instwrangler/linkselected
    instwrangler/unlink
    instwrangler/groupunlink
+   instwrangler/findunlinked
    instwrangler/cycledata
    instwrangler/copyname
    instwrangler/blendermenus

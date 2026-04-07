@@ -25,7 +25,7 @@ This file tracks which pages are up to date and what needs to be written or upda
 | Cycle Data | `cycledata.rst` | ✅ Up to date | |
 | Copy Name | `copyname.rst` | ✅ Up to date | |
 | Blender Menus | `blendermenus.rst` | ✅ Up to date | |
-| Find Unlinked Duplicates | ❌ **Missing page** | ❌ Not written | Entirely new feature, no page exists yet |
+| Find Unlinked Duplicates | `findunlinked.rst` | ⚠️ Needs update | Page created. Needs GIF and YouTube video when available. |
 | Accessing the Addon | ❌ **Missing page** | ❌ Not written | New intro page: N-panel, header toolbar, popup (Ctrl+Y), right-click menu, redo/F9 |
 
 ---
@@ -95,7 +95,7 @@ Add this page and add it to `index.rst` under Instance Management.
 ## Index / Structure Notes
 
 - `index.rst` should add a link to the new `accessing.rst` page as the **first entry** (before Multi Transform).
-- `index.rst` should add a link to the new `findunlinked.rst` page after `groupunlink`.
+- ~~`index.rst` should add a link to the new `findunlinked.rst` page after `groupunlink`.~~ ✅ Done.
 
 ---
 

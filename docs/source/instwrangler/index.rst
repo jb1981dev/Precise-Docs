@@ -19,6 +19,7 @@ Pages
 * :doc:`linkselected`
 * :doc:`unlink`
 * :doc:`groupunlink`
+* :doc:`findunlinked`
 * :doc:`cycledata`
 * :doc:`copyname`
 * :doc:`blendermenus`
