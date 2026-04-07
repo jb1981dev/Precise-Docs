@@ -35,20 +35,17 @@ Modifier Keys
 
 All four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support modifier keys to perform related actions without changing any settings:
 
-.. list-table::
-   :header-rows: 1
-   :widths: 15 85
+:kbd:`LMB`
+    **Set** — applies the current values to the selection.
 
-   * - Key
-     - Action
-   * - :kbd:`LMB`
-     - **Set** — applies the current values to the selection.
-   * - :kbd:`Ctrl`
-     - **Get** — reads the active object's current transform into the value fields (respects axis toggles).
-   * - :kbd:`Shift`
-     - **Round** — snaps the value fields to the nearest clean step: 0.5 m for Position, 1° for Rotation, 0.1 for Scale (respects axis toggles).
-   * - :kbd:`Alt`
-     - **Reset** — resets the value fields to their defaults: Position → 0, Rotation → 0°, Scale → 1 (respects axis toggles).
+:kbd:`Ctrl`
+    **Get** — reads the active object's current transform into the value fields (respects axis toggles).
+
+:kbd:`Shift`
+    **Round** — snaps the value fields to the nearest clean step: 0.5 m for Position, 1° for Rotation, 0.1 for Scale (respects axis toggles).
+
+:kbd:`Alt`
+    **Reset** — resets the value fields to their defaults: Position → 0, Rotation → 0°, Scale → 1 (respects axis toggles).
 
 For **Set All**, :kbd:`Ctrl`, :kbd:`Shift`, and :kbd:`Alt` also respect the **Pos / Rot / Scale include toggles** — only the enabled transform types are affected.
 
