@@ -59,3 +59,32 @@ Redo Panel (F9)
 ^^^^^^^^^^^^^^^
 
 After running any operator, press :kbd:`F9` or expand the **Last Operator** panel in the viewport's bottom-left corner to adjust its settings. Most operators record their options here — for example, Multi Transform records axis toggles and values, and Advanced Copy records all placement and naming settings.
+
+Preferences
+-----------
+
+Open the addon preferences via **Edit > Preferences > Add-ons**, find Instance Wrangler, and expand its entry. The preferences contain two sections.
+
+Toolset Management
+^^^^^^^^^^^^^^^^^^
+
+Each of the five toolsets (**Multi Transform**, **Advanced Copy**, **Instance Management**, **Data Cycler**, **Blender Menus**) has four controls in the preferences table:
+
+:Order:
+    The position of the toolset relative to the others. Use the up/down arrows to reorder. Lower numbers appear higher in the panel.
+
+:N-Panel:
+    Whether the toolset is shown in the N-panel sidebar. Disable to hide a toolset you don't use.
+
+:Popup:
+    Whether the toolset is shown in the :kbd:`Ctrl+Y` popup menu.
+
+:Expanded:
+    Whether the toolset starts expanded or collapsed when opening a new scene.
+
+..
+   IMAGE PLACEHOLDER
+   .. figure:: images/preferences_toolsets.png
+      :align: center
+
+   *The Toolset Management table in addon preferences.*
