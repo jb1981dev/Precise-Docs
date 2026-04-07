@@ -14,7 +14,7 @@ Multi Transform
 * **Include toggles (Pos / Rot / Scale):** Three toggles at the top of each value column now control which transform types are applied by **Set All** and by Advanced Copy's **Apply Multi Transform**. The individual **Set P**, **Set R**, and **Set S** buttons are unaffected — they always apply their own type.
 * **Modifier keys on all Set buttons** — all four buttons (**Set All**, **Set P**, **Set R**, **Set S**) now support: :kbd:`LMB` **Set**, :kbd:`Ctrl` **Get** (read from active object), :kbd:`Shift` **Round** (snap to nearest step), :kbd:`Alt` **Reset** (restore defaults). All three modifier keys respect axis toggles, and on **Set All** they also respect the Pos / Rot / Scale include toggles.
 
-* **Bypass Children:** When a parent and its children are all selected, enabling this option skips the children — only the parent receives the transform.
+* **Bypass Children:** When a parent and its children are all selected, the transform is applied only to the parent — children are automatically skipped.
 * **Redo / F9 panel:** Multi Transform now records its axis toggles, include toggles, and values in the redo panel for post-run adjustment.
 * **Active Leads fix:** Fixed a case where Active Leads mode could silently fail when no valid active object was present.
 
