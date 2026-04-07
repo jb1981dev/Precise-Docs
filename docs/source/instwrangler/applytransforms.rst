@@ -37,3 +37,31 @@ The operator intelligently determines a "leader" object (whose transform will be
 * **If multiple objects are selected from the same group:** The operator checks for ambiguity:
     * If all selected instances have **uniform transforms** (for the Position, Rotation, Scale channels being applied), any one of them is chosen as the leader.
     * If their transforms are **different**, you **must** make one of them the **active object** (select it last) to designate it as the leader.
+
+Modifier Keys
+-------------
+The Apply Transforms button supports a modifier key for an additional workflow:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 85
+
+   * - Key
+     - Action
+   * - :kbd:`LMB`
+     - **Apply** — bakes the selected transform(s) to all instances in the group while keeping them visually in place.
+   * - :kbd:`Ctrl`
+     - **Selective Reset** — resets the toggled transform channels on the non-leader instances in each group to their default values (Position → 0, Rotation → 0°, Scale → 1).
+
+**How Selective Reset works:**
+
+After the apply step runs, :kbd:`Ctrl` triggers an additional reset pass on non-leader instances. The scope of the reset depends on your selection:
+
+* **If 2 or more instances from the same group were selected**, only those selected instances are reset. This lets you target a specific subset of a large instance group.
+* **If only 1 instance from a group was selected**, all instances in that group are reset (excluding the leader).
+
+..
+    .. figure:: images/apply_transform_ctrl.gif
+        :align: center
+
+*Selective Reset resets non-leader instance transforms after applying.*

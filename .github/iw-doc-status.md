@@ -15,7 +15,7 @@ This file tracks which pages are up to date and what needs to be written or upda
 | Version History | `iwversions.rst` | ⚠️ Needs update | v1.2.00 stub exists with placeholder text — content needs to be written. |
 | Multi Transform | `multitransform.rst` | ✅ Up to date | Include toggles and modifier keys confirmed present |
 | Advanced Copy | `advancedcopy.rst` | ✅ Up to date | Target Merge Mode, Apply MT note, wildcard confirmed present |
-| Apply Transforms | `applytransforms.rst` | ⚠️ Needs update | Missing CTRL modifier behavior |
+| Apply Transforms | `applytransforms.rst` | ✅ Up to date | CTRL modifier / Selective Reset section added |
 | Modifier Sync | `modifiersync.rst` | ✅ Up to date | |
 | Apply Modifiers | `applymodifiers.rst` | ✅ Up to date | |
 | Select Linked | `selectlinked.rst` | ✅ Up to date | |
@@ -50,19 +50,6 @@ A v1.2.00 placeholder stub now exists with `Placeholder text.` as the body. The 
 - **Advanced Copy collection placement**: `Automatic` and `Scene Collection` explicit options.
 - **Name wildcard**: `*` placeholder in Advanced Copy name field (e.g. `LOD0_*` inserts original object name).
 - **Header toolbar**: IW logo button always visible in the tool header; click to expand toolkit buttons inline.
-
----
-
-### `applytransforms.rst` — CTRL modifier
-
-**What's missing:** A CTRL+LMB behavior on the Apply Transforms button:
-
-| Modifier | Action |
-|---|---|
-| LMB | **Apply** — bakes the selected transform(s) to all instances in the group while keeping them visually in place |
-| CTRL | **Selective Reset** — resets the transform on all non-leader instances in the group to match the leader; if 2+ instances from the same group are selected, only those are affected |
-
-Add a "Modifier Keys" section or note near the P/R/S toggles description.
 
 ---
 
