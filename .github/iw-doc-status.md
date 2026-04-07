@@ -26,7 +26,7 @@ This file tracks which pages are up to date and what needs to be written or upda
 | Copy Name | `copyname.rst` | ✅ Up to date | |
 | Blender Menus | `blendermenus.rst` | ✅ Up to date | |
 | Find Unlinked Duplicates | `findunlinked.rst` | ⚠️ Needs update | Page created. Needs GIF and YouTube video when available. |
-| Accessing the Addon | ❌ **Missing page** | ❌ Not written | New intro page: N-panel, header toolbar, popup (Ctrl+Y), right-click menu, redo/F9 |
+| Accessing the Addon | `usingtheaddon.rst` | ⚠️ Needs update | Page created as "Using the Addon". Needs screenshots when available. |
 
 ---
 
@@ -94,7 +94,7 @@ Add this page and add it to `index.rst` under Instance Management.
 
 ## Index / Structure Notes
 
-- `index.rst` should add a link to the new `accessing.rst` page as the **first entry** (before Multi Transform).
+- ~~`index.rst` should add a link to the new `accessing.rst` page as the **first entry** (before Multi Transform).~~ ✅ Done (as `usingtheaddon.rst`, listed after Version History).
 - ~~`index.rst` should add a link to the new `findunlinked.rst` page after `groupunlink`.~~ ✅ Done.
 
 ---

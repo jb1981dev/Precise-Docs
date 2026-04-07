@@ -27,6 +27,7 @@ More addons to follow soon!
 
    instwrangler/index
    instwrangler/iwversions
+   instwrangler/usingtheaddon
    instwrangler/multitransform
    instwrangler/advancedcopy
    instwrangler/applytransforms

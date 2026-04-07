@@ -10,6 +10,7 @@ Pages
 """""
 
 * :doc:`iwversions`
+* :doc:`usingtheaddon`
 * :doc:`multitransform`
 * :doc:`advancedcopy`
 * :doc:`applytransforms`
