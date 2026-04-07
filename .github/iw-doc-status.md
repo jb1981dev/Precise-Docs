@@ -12,7 +12,7 @@ This file tracks which pages are up to date and what needs to be written or upda
 
 | Page | File | Status | Notes |
 |---|---|---|---|
-| Version History | `iwversions.rst` | ⚠️ Needs update | v1.2.00 stub exists with placeholder text — content needs to be written. |
+| Version History | `iwversions.rst` | ✅ Up to date | v1.2.00 entry written |
 | Multi Transform | `multitransform.rst` | ✅ Up to date | Include toggles and modifier keys confirmed present |
 | Advanced Copy | `advancedcopy.rst` | ✅ Up to date | Target Merge Mode, Apply MT note, wildcard confirmed present |
 | Apply Transforms | `applytransforms.rst` | ✅ Up to date | CTRL modifier / Selective Reset section added |
@@ -34,22 +34,70 @@ This file tracks which pages are up to date and what needs to be written or upda
 
 ### `iwversions.rst` — Write v1.2.00 release entry
 
-A v1.2.00 placeholder stub now exists with `Placeholder text.` as the body. The section heading and anchor `.. _version_1_2_00:` are already in place. Replace the placeholder with the real content covering all major changes since 1.1.30:
+A v1.2.00 placeholder stub now exists with `Placeholder text.` as the body. The section heading and anchor `.. _version_1_2_00:` are already in place. Replace the placeholder with the real content covering all major changes since 1.1.30.
 
-- **Multi Transform — modifier keys on Set buttons** (Set P / Set R / Set S / Set All):
-  - LMB: Apply transform to selection
-  - CTRL: Get value from active object (respects axis toggles)
-  - Shift: Round values to nearest step (Pos: 0.5 m, Rot: 1°, Scale: 0.1)
-  - Alt: Reset values to default (Pos: 0, Rot: 0°, Scale: 1)
-  - For **Set All**, CTRL/Shift/Alt also respect the Pos/Rot/Scale include toggles
-- **Multi Transform — include toggles** (Pos/Rot/Scale header row): filter which transforms Set All and Advanced Copy's Apply Multi Transform apply.
-- **Advanced Copy — Target Merge Mode**: merge selection into an existing object's data-block in-place without creating a new object.
-- **Find Unlinked Duplicates**: new operator with UV/Material/Attribute comparison options using SHA256 fingerprinting.
-- **Apply Transforms — CTRL modifier**: selective reset on non-leader instances in a group.
-- **Toolset visibility and ordering**: show/hide and reorder toolsets per-panel (N-panel / popup) in preferences.
-- **Advanced Copy collection placement**: `Automatic` and `Scene Collection` explicit options.
-- **Name wildcard**: `*` placeholder in Advanced Copy name field (e.g. `LOD0_*` inserts original object name).
-- **Header toolbar**: IW logo button always visible in the tool header; click to expand toolkit buttons inline.
+Changes are sourced from git tags `1.1.31`, `1.1.32`, and commits on the `header-toolbar` branch (HEAD, no tag yet). Group by feature area, not by internal version number.
+
+---
+
+#### Multi Transform
+
+- **Include toggles (Pos / Rot / Scale):** Three toggle buttons now appear at the top of the Position, Rotation, and Scale columns. They control which transform types are applied by **Set All** and by Advanced Copy's **Apply Multi Transform**. The individual Set P / Set R / Set S buttons are unaffected — they always apply their own type. *(commit 95647ea)*
+- **Modifier keys on all Set buttons** (Set P, Set R, Set S, Set All): *(commit d6edf7b / 95647ea)*
+  - `LMB` → Set (apply values to selection)
+  - `CTRL` → Get (read active object's transform into the fields; respects axis toggles)
+  - `Shift` → Round (snap fields to nearest clean step: 0.5 m / 1° / 0.1; respects axis toggles)
+  - `Alt` → Reset (reset fields to defaults: 0 / 0° / 1; respects axis toggles)
+  - For **Set All**, Ctrl/Shift/Alt also respect the Pos/Rot/Scale include toggles.
+- **Bypass Children option:** When a parent and its children are all selected, enabling Bypass Children skips the children — only the parent receives the transform. *(commit 79e2871)*
+- **Redo / F9 panel support:** Multi Transform now records its axis toggles, include toggles, and values in the redo panel so they can be adjusted and re-run with F9. *(commit d6edf7b)*
+- **Active Leads validation fix:** Fixed a case where Active Leads mode could silently fail; the operator now validates the active object before running. *(commit a43256e)*
+
+---
+
+#### Advanced Copy
+
+- **Target Merge Mode:** A new alternative workflow for Merged Copy. Click **Set Target** to nominate an existing object; running Merged Copy then replaces that object's data-block in-place, updating all its linked instances automatically. A **T: {name}** button re-selects the target; **X** clears it. Redo/F9 is not available in this mode. *(commit b7a89f0)*
+- **Apply Multi Transform — include toggle awareness:** When Apply Multi Transform is on, only the transform types enabled by the Pos/Rot/Scale include toggles in the Multi Transform panel are applied to new copies. *(commit 95647ea)*
+- **Clear Parents before transform apply:** The clear-parents step now reliably runs before Apply Multi Transform, ensuring transforms are applied on a flattened hierarchy for all three copy types (Linked, Unlinked, Merged). *(commits 9c49508, ac21638)*
+- **Redo / F9 panel support:** All Advanced Copy settings (Skip Active, Include Children, Clear Parents, etc.) are now available in the redo panel. *(commit d482e2c)*
+
+---
+
+#### Apply Transforms
+
+- **CTRL modifier — Selective Reset:** Hold Ctrl when clicking Apply Transforms to also reset the toggled transform channels on non-leader instances after applying. If 2+ instances from the same group were selected, only those selected instances are reset; if just 1 was selected, all instances in the group are reset. *(commits e50b510, 905ebbc)*
+- **Cross-scene instance handling:** The operator now searches all scenes for instances of the selected object's data-block, not just the active scene, and temporarily unhides objects in excluded or hidden collections to perform the apply. *(commit 0728691)*
+- **Text and 2D Curve graceful handling:** Text objects and 2D Curve objects only support scale apply. If you select P or R with one of these in your selection, those channels are silently skipped and a warning is shown in the info bar; the scale apply still proceeds. *(commit d7cf965)*
+
+---
+
+#### Find Unlinked Duplicates (new)
+
+- New operator in the Instance Management section. Searches the scene for objects that share the same geometry (via SHA256 fingerprint) as the selected object(s) but are not currently linked. Adds them to the selection so you can follow up with **Link Selected**. *(commit f8b5dd2)*
+- Three comparison toggles control what is included in the fingerprint: **UV** (default on), **Mat** (default off), **Attr** (default off). Available in the panel mini-toggles and in the redo/F9 panel.
+
+---
+
+#### New Access Points
+
+- **Popup Menu (Ctrl+Y):** A new floating popup menu containing all toolsets, accessible with Ctrl+Y in Object Mode or Edit Mode. *(commit 26a116b)*
+- **Right-Click Context Menus:** All major operators now appear in the right-click menu in Object Mode and Edit Mode, including a Multi Transform entry. *(commits 1007ed1, 2acfcc9)*
+- **Header Toolbar:** The IW logo button is permanently visible in the 3D Viewport tool header. Click it to expand/collapse inline icon buttons for each toolkit; each button opens a popover panel anchored below the header bar. *(commits e13391f, 2041364, e08f9f8, 3778946)*
+
+---
+
+#### Preferences
+
+- **Toolset visibility and ordering:** Each toolset now has four per-panel controls in preferences: show/hide in N-panel, show/hide in popup menu, display order (up/down arrows), and default expanded/collapsed state for new scenes. *(commit 4766382, 37eb666)*
+- **Custom icons throughout:** Custom icons are used for each toolset in the preferences table, on the N-panel section headers, in the popup menu header, in the right-click menus, and in the header toolbar. *(commits 2f22ecb, d10b7e9, 38c1a13, 66ba8ef)*
+
+---
+
+#### Internal / Stability
+
+- UI state is now stored using Blender-native properties on WindowManager and Scene instead of a JSON file, improving reliability on file load. *(commit 1ef1b1a)*
+- Panel state persists across file saves and loads; new scenes start from preference defaults. *(commit 1826797)*
 
 ---
 
