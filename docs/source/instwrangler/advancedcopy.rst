@@ -61,7 +61,7 @@ Before clicking **Merged Copy**, click the **Set Target** button. This stores th
 When you run **Merged Copy** with a target set, the merged geometry replaces the target object's data-block. Every other object in the scene that shares the same data-block (i.e. all linked instances of the target) is updated automatically. The target object itself keeps its name, parent, collection, and all other properties — only its mesh data changes.
 
 .. note::
-   The redo/F9 panel is not available when a target is set. All **Advanced Copy Settings** are ignored in this mode — the target's existing properties are preserved as-is.
+   The redo/F9 panel hides all settings when a target is set, to prevent confusion around what each setting does in this mode. The settings are still read from the values last set in the sidebar or popup. Most settings apply normally to the merge operation itself. The two exceptions are **Clear Parents** and **Target Collection**, which have no effect — the merged object container is discarded after the data-block transfer, so parenting and collection placement are irrelevant. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
 
 ..
    IMAGE PLACEHOLDER: advancedcopy_targetmerge.gif
@@ -148,12 +148,19 @@ This field controls the name of the newly created object(s).
 
 * **For Merged Copy:**
     * If the field is empty or contains only spaces, the new object will be named ``MergedCopy``.
-    * Any other text will be used as the exact name for the new object and its data-block.
+    * **Using a wildcard (``*``):** Use an asterisk as a placeholder for the active object's name. For example, entering ``Prop_*_LOD0`` when the active object is named ``Cube`` will produce ``Prop_Cube_LOD0``. If there is no valid active object in the selection, the first selected object is used as the reference instead.
+    * **Any other text:** Used as the exact name for the new object and its data-block.
+    * **In Target Merge Mode:** The name field (including wildcard) is applied to the replaced data-block. If the field is empty, the data-block inherits the target object's original data-block name.
 
-* **For Linked Copy & Unlinked Copy:**
+* **For Unlinked Copy:**
     * **Empty (default):** The new objects will receive default names from Blender (e.g., ``Cube.001``).
-    * **Any text:** This text will be used as the base name for all new objects. Blender will append a number (e.g., ``MyObject.001``, ``MyObject.002``) to ensure a unique name for each.
-    * **Using a wildcard (``*``):** Use an asterisk as a placeholder for the original object's name. For example, entering ``Prop_*_LOD0`` for an object named ``Cube`` will produce ``Prop_Cube_LOD0``. This makes it easy to batch-rename copies while preserving their identity.
+    * **Using a wildcard (``*``):** Use an asterisk as a placeholder for each object's original name. For example, entering ``Prop_*_LOD0`` for an object named ``Cube`` will produce ``Prop_Cube_LOD0``. Both the object and its data-block are renamed.
+    * **Any other text:** This text is used as the name for all new objects and their data-blocks.
+
+* **For Linked Copy:**
+    * **Empty (default):** The new objects will receive default names from Blender (e.g., ``Cube.001``).
+    * **Using a wildcard (``*``):** Works the same as Unlinked Copy for the object name. The data-block name is not changed, since linked copies share their data-block with the original.
+    * **Any other text:** This text is used as the base name for all new objects. The data-block name is not changed.
 
 .. figure:: images/advancedCopy_Name.gif
     :align: center
