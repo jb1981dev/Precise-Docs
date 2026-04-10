@@ -148,13 +148,13 @@ This field controls the name of the newly created object(s).
 
 * **For Merged Copy:**
     * If the field is empty or contains only spaces, the new object will be named ``MergedCopy``.
-    * **Using a wildcard (``*``):** Use an asterisk as a placeholder for the active object's name. For example, entering ``Prop_*_LOD0`` when the active object is named ``Cube`` will produce ``Prop_Cube_LOD0``. If there is no valid active object in the selection, the first selected object is used as the reference instead.
+    * **Using a wildcard** (``*``): Use an asterisk as a placeholder for the active object's name. For example, entering ``Prop_*_LOD0`` when the active object is named ``Cube`` will produce ``Prop_Cube_LOD0``. If there is no valid active object in the selection, the first selected object is used as the reference instead.
     * **Any other text:** Used as the exact name for the new object and its data-block.
     * **In Target Merge Mode:** The name field (including wildcard) is applied to the replaced data-block. If the field is empty, the data-block inherits the target object's original data-block name.
 
 * **For Linked Copy & Unlinked Copy:**
     * **Empty (default):** The new objects will receive default names from Blender (e.g., ``Cube.001``).
-    * **Using a wildcard (``*``):** Use an asterisk as a placeholder for each object's original name. For example, entering ``Prop_*_LOD0`` for an object named ``Cube`` will produce ``Prop_Cube_LOD0``.
+    * **Using a wildcard** (``*``): Use an asterisk as a placeholder for each object's original name. For example, entering ``Prop_*_LOD0`` for an object named ``Cube`` will produce ``Prop_Cube_LOD0``.
     * **Any other text:** This text is used as the base name for all new objects.
     * For **Unlinked Copy**, the data-block is renamed to match the object. For **Linked Copy**, the data-block name is not changed, since the copies share it with the original.
 
