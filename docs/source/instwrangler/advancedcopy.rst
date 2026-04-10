@@ -61,7 +61,7 @@ Before clicking **Merged Copy**, click the **Set Target** button. This stores th
 When you run **Merged Copy** with a target set, the merged geometry replaces the target object's data-block. Every other object in the scene that shares the same data-block (i.e. all linked instances of the target) is updated automatically. The target object itself keeps its name, parent, collection, and all other properties — only its mesh data changes.
 
 .. note::
-   The redo/F9 panel hides all settings when a target is set, to prevent confusion around what each setting does in this mode. The settings are still read from the values last set in the sidebar or popup. Most settings apply normally to the merge operation itself. The two exceptions are **Clear Parents** and **Target Collection**, which have no effect — the merged object container is discarded after the data-block transfer, so parenting and collection placement are irrelevant. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
+   The redo/F9 panel is not compatible when a target is set. The settings are still read from the values last set in the sidebar or popup. Most settings apply normally to the merge operation itself. The two exceptions are **Clear Parents** and **Target Collection**, which have no effect. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
 
 ..
    IMAGE PLACEHOLDER: advancedcopy_targetmerge.gif
