@@ -163,9 +163,9 @@ This field controls the name of the newly created object(s).
     * **In Target Merge Mode:** The name field (including wildcard) is applied to the replaced data-block. If the field is empty, the data-block inherits the target object's original data-block name.
 
 * **For Linked Copy & Unlinked Copy:**
-    * **Empty (default):** The new objects will receive default names from Blender (e.g., ``Cube.001``).
+    * **Empty (default):** If the source object's name ends in a number (e.g. ``Name_LOD0``, ``object_1``, ``prop.001``), the copy is automatically named by incrementing that number — so ``Name_LOD0`` becomes ``Name_LOD1``, ``object_1`` becomes ``object_2``, and so on. If no trailing number is found, Blender's default naming applies (e.g. ``Cube.001``).
     * **Using a wildcard** (``*``): Use an asterisk as a placeholder for each object's original name. For example, entering ``Prop_*_LOD0`` for an object named ``Cube`` will produce ``Prop_Cube_LOD0``.
-    * **Any other text:** This text is used as the base name for all new objects.
+    * **Any other text:** This text is used as the base name for all new objects. No incrementing is applied.
     * For **Unlinked Copy**, the data-block is renamed to match the object. For **Linked Copy**, the data-block name is not changed, since the copies share it with the original.
 
 .. figure:: images/advancedCopy_Name.gif
