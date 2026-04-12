@@ -31,6 +31,11 @@ The **Merged Copy** operator is a comprehensive tool for creating a **single, cl
 
 Its behavior is controlled by its unique options and the settings in the **Advanced Copy Settings** section below.
 
+.. note::
+   All modifiers on source objects are permanently applied (baked) during the merge process. Objects
+   that cannot be converted to mesh — such as empties, lights, and cameras — are automatically
+   excluded from the result and will not appear in the final merge.
+
 Defining the Origin (Pivot Point)
 ---------------------------------
 
@@ -88,6 +93,11 @@ When enabled, the Position, Rotation, and Scale values currently set in the **Mu
 
 * **ON (Default):** Transforms from the Multi Transform panel are applied. Only the transform types that are **included** (via the Pos / Rot / Scale toggles in the Multi Transform panel) are applied — disabled types are left as-is.
 * **OFF:** The new objects are created at the exact location of the originals (or the merged pivot) without any additional transformation.
+
+.. note::
+   For **Merged Copy**, the transform is applied to the final merged object as a whole — after all
+   source objects have been joined. This means the merged mesh moves as one unit from its pivot
+   point, rather than each source piece being positioned individually before joining.
 
 Skip Active
 -----------
