@@ -35,6 +35,8 @@ More addons to follow soon!
    instwrangler/applymodifiers
    instwrangler/selectlinked
    instwrangler/linkselected
+   instwrangler/deselectactive
+   instwrangler/selectchildren
    instwrangler/unlink
    instwrangler/groupunlink
    instwrangler/findunlinked
