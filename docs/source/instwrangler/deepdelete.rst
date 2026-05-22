@@ -9,7 +9,7 @@ The **Deep Delete** tool deletes selected objects and automatically removes any 
 The Problem
 -----------
 
-In Blender, deleting an object does not automatically delete its datablock. If you had five linked instances of a tree mesh and you delete all five objects, the underlying mesh data remains in the file as "orphaned" data — data nobody uses. These orphaned datablocks accumulate over time and bloat your file.
+In Blender, deleting an object does not automatically delete its datablock. If you had five linked instances of a tree mesh and you delete all five objects, the underlying mesh data remains in the file as "orphaned" data — data which is not used anywhere. These orphaned datablocks accumulate over time and bloat your file while working. Blender will eventually clean them up zero user datablocks when you save and reopen the file, but until then they will stick around. This can be inconvenient when using functions like cylcle data, which will still cycle through orphaned datablocks.
 
 **Deep Delete** cleans this up automatically, keeping your scene efficient.
 
@@ -39,17 +39,6 @@ A datablock becomes "orphaned" when no object uses it anymore. For example:
 * Normal Blender delete leaves the datablock behind; **Deep Delete** removes it.
 
 Orphaned datablocks accumulate over the course of a project. While harmless, they increase file size and clutter your datablock list. Regularly running **Deep Delete** on objects you no longer need keeps your file clean.
-
-Standard vs. Linked Deletion
------------------------------
-
-**LMB (Standard Delete)**
-
-Select a single linked instance of a mesh and click **Deep Delete**. The object is removed. Since other instances still use that mesh datablock, the data is preserved. Only the one object is gone.
-
-**Ctrl (Delete All Linked)**
-
-Select a single instance of a mesh and press :kbd:`Ctrl` click **Deep Delete**. The operator finds every other object in the scene using that same mesh, deletes all of them at once, and then removes the orphaned mesh datablock. In one operation, you've purged all instances of that asset from the scene.
 
 Practical Example
 -----------------

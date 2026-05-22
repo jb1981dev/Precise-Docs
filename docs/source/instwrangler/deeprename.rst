@@ -91,9 +91,9 @@ When you have multiple objects sharing the same datablock (linked duplicates), *
 This prevents duplicate data and keeps your scene clean:
 
 * Before: Five instances of a ``Box`` object all point to ``CubeData``
-* After Deep Rename with pattern ``Box_##``: Objects are ``Box_01``, ``Box_02``, ..., ``Box_05``, and they all point to ``Box_01Data``
+* After Deep Rename with pattern ``Box_##``: Objects are ``Box_01``, ``Box_02``, ..., ``Box_05``, and they all point to ``Box_01``
 
 Live Preview
 ------------
 
-The dialog displays a live preview of what the **active object's name** will become. As you type, the preview updates immediately, helping you verify your pattern before committing.
+The dialog displays a live preview of what the **active object's name** will become at both the object and data block level. As you type, the preview updates immediately, helping you verify your pattern before committing.
