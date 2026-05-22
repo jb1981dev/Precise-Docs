@@ -1,8 +1,8 @@
 .. _deepdelete:
 
-==========
+===========
 Deep Delete
-==========
+===========
 
 The **Deep Delete** tool deletes selected objects and automatically removes any datablocks (mesh, curve, etc.) that become orphaned in the process. With the :kbd:`Ctrl` modifier, it also finds and deletes all other objects in the scene that share the same datablocks.
 
