@@ -1,5 +1,3 @@
-.. _advancedcopy:
-
 ==============
 Advanced Copy
 ==============
@@ -8,107 +6,106 @@ Advanced Copy
 
     <iframe width="700" height="395" src="https://www.youtube.com/embed/qatFMOQRPq0?si=e2IZhFL9TTKon3Xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The **Advanced Copy** toolkit provides three powerful operators for creating new objects from your selection: **Merged Copy**, **Linked Copy**, and **Unlinked Copy**.
+The **Advanced Copy** toolkit provides four powerful operators for creating and merging objects:
 
-* **Merged Copy** is used to create a single, new mesh from a potentially diverse selection of objects.
-    * **Target Merge Mode:** An alternative workflow that merges the selection directly into an existing object's data-block, updating all of its linked instances in the scene without creating a new object.
-* **Linked Copy** is used to create new linked duplicates (instances) of your selection, with advanced options for placement and hierarchy.
-* **Unlinked Copy** is used to create new unlinked duplicates (copies) of your selection, with advanced options for placement and hierarchy.
+* **Linked Copy** — creates new linked duplicates (instances) of your selection, with advanced options for placement and hierarchy.
+* **Unlinked Copy** — creates new unlinked duplicates (copies) of your selection, with advanced options for placement and hierarchy.
+* **Merged Copy** — creates a single, new game-ready mesh from a selection of multiple objects by joining and applying modifiers.
+* **H Merge** — batch operation that creates one merged mesh per top-level parent in the selection.
 
-All three operators share a set of common options for controlling the placement, parenting, collection, and final selection state of the newly created objects.
+All four operators share a set of common options for controlling transformation, targeting, naming, hierarchy, and collection placement.
 
 .. figure:: images/advancedCopy_Overview.gif
     :align: center
 
 *Advanced copy will effortlessly copy or merge any type of object with ultimate control over the newly created object.*
 
-.. _mergedcopy:
+Core Operators
+==============
 
 Merged Copy
-===========
+-----------
 
-The **Merged Copy** operator is a comprehensive tool for creating a **single, clean, game-ready mesh** from a selection of multiple, potentially diverse objects (meshes, curves, surfaces, text objects and grease pencil objects). It automates the process of duplicating, converting, joining, and positioning objects. This is ideal for creating simplified proxy models, preparing assets for game engines, or combining parts for 3D printing.
+The **Merged Copy** operator creates a **single, clean, game-ready mesh** from a selection of multiple, potentially diverse objects (meshes, curves, surfaces, text objects and grease pencil objects). It automates the process of duplicating, converting, joining, and positioning objects. This is ideal for creating simplified proxy models, preparing assets for game engines, or combining parts for 3D printing.
 
-Its behavior is controlled by its unique options and the settings in the **Advanced Copy Settings** section below.
-
-.. note::
-   All modifiers on source objects are permanently applied (baked) during the merge process. Objects
-   that cannot be converted to mesh — such as empties, lights, and cameras — are automatically
-   excluded from the result and will not appear in the final merge.
-
-Defining the Origin (Pivot Point)
----------------------------------
-
-The origin of the new merged object is determined by your selection:
-
-* If you have a valid **active object** in your selection, its world-space location is used as the pivot point.
-* If there is no valid active object, the origin is set to the **center of the new mesh's bounding box**.
+**Key behaviors:**
+* All modifiers on source objects are permanently applied (baked) during the merge process.
+* Objects that cannot be converted to mesh — such as empties, lights, and cameras — are automatically excluded from the result.
+* The origin of the new merged object is determined by the active object's world-space location. If no valid active object exists, the origin is set to the center of the new mesh's bounding box.
 
 .. figure:: images/advancedCopy_Merged_Pivot.gif
     :align: center
 
-*The pivot is determined by the active object or lack thereof.*
+*The pivot is determined by the active object or the bounding box center.*
 
-Target Merge Mode
------------------
+Hierarchical Merge (H Merge)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, **Merged Copy** creates a new object. **Target Merge Mode** is an alternative workflow that merges the selection directly *into an existing object's data-block*, updating all of its linked instances in the scene without creating a new object.
+**H Merge** is a batch variant of **Merged Copy** designed to handle multiple hierarchies efficiently. When you select multiple hierarchy groups, it creates one merged mesh per top-level parent, using each root's name and world position to define the result.
 
-**Setting a target:**
+**Key behaviors:**
+* Works with both **Auto** and **Selection** target modes. Manual target mode is not supported.
+* In **Selection** target mode, the active object's hierarchy is preserved as the source; merged copies are placed at each other selected hierarchy's position.
+* In **Auto** target mode, each group's merge can target a separate auto-target location.
 
-Before clicking **Merged Copy**, click the **Set Target** button. This stores the currently active object as the merge target. Once set, the button area changes to show:
-
-* **T: {object name}** — clicking this selects and activates the target object in the viewport.
-* **X** — clears the target, returning to normal Merged Copy behaviour.
-
-**What happens when a target is set:**
-
-When you run **Merged Copy** with a target set, the merged geometry replaces the target object's data-block. Every other object in the scene that shares the same data-block (i.e. all linked instances of the target) is updated automatically. The target object itself keeps its name, parent, collection, and all other properties — only its mesh data changes.
-
-.. note::
-   The redo/F9 panel is not compatible when a target is set. The settings are still read from the values last set in the sidebar or popup. Most settings apply normally to the merge operation itself. The two exceptions are **Clear Parents** and **Target Collection**, which have no effect. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
-
-..
-   IMAGE PLACEHOLDER: advancedcopy_targetmerge.gif
-   Show: setting the target, running merged copy, all instances updating in place.
-
-**Use case:** This is ideal for updating an existing game-ready proxy or LOD mesh in-place. You can adjust your source objects, re-merge them into the existing target, and all instances across your scene instantly reflect the new geometry — without renaming, re-parenting, or reorganising anything.
-
-.. _linkedcopy:
+**Use case:** You have ten separate rig groups in your scene, each with dozens of bones and armor pieces. Select all, click **H Merge**, and get ten optimized proxy meshes — one per rig — ready for export.
 
 Linked Copy & Unlinked Copy
-============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* The **Linked Copy** operator creates new **linked duplicates** (:kbd:`Alt+D` instances) of your selection. It is a non-destructive way to create more instances while keeping them linked to the same underlying object data.
-* The **Unlinked Copy** operator creates new **unlinked duplicates** (:kbd:`Shift+D` copies) of your selection. These are simple duplicates which are no longer related to their originals.
+* **Linked Copy** creates new **linked duplicates** (:kbd:`Alt+D` instances) of your selection. It is a non-destructive way to create more instances while keeping them linked to the same underlying object data.
+* **Unlinked Copy** creates new **unlinked duplicates** (:kbd:`Shift+D` copies) of your selection. These are simple duplicates which are no longer related to their originals.
 
-The behavior of both operators is controlled entirely by the settings in the **Common Options** section below.
+Both operators support targeting, naming, and hierarchy options — see the **Advanced Copy Settings** section below.
 
-Advanced Copy Settings
-======================
+UI Elements and Settings
+========================
+
+Primary Copy Actions
+--------------------
+
+The four main operator buttons: **Linked Copy**, **Unlinked Copy**, **Merged Copy**, and **H Merge**.
+
+When a manual target object is set, the **H Merge** button becomes disabled. Use **Auto** or **Selection** target mode with H Merge instead.
+
+Merge Options (Merged Copy & H Merge only)
+-------------------------------------------
+
+These three controls appear on the same row and control how merged meshes handle their data:
+
+**Clean Geometry** |brush|
+    When enabled, the operator welds overlapping vertices and removes loose geometry from the merged mesh. Useful for cleaning up complex source selections.
+
+**Unify Normals** |normals|
+    When enabled, recalculates the normals of the final mesh to all point outwards. Useful for ensuring consistent shading before export (though Blender's recalculation is not always perfectly reliable — verify results).
+
+**UV Merge Mode**
+    Controls how UV channels from different objects are combined during merge:
+
+    * **Merge by Name** (default) — keeps original channel names; channels with matching names are merged. Unmatched channels are kept separately (result may have more channels than any input).
+    * **Merge by Match** — merges by name but discards any channel not present on *every* object before joining (guarantees no partial UV channels).
+    * **Merge by Index** — renames all channels by position (UVMap, UVMap.001, etc.) before joining. Channels match by slot number regardless of original names.
+
+.. |brush| unicode:: 0x1F4A7
+.. |normals| unicode:: 0x21A9
+
+Settings
+--------
 
 Apply Multi Transform
----------------------
+~~~~~~~~~~~~~~~~~~~~~
+
 When enabled, the Position, Rotation, and Scale values currently set in the **Multi Transform** panel are applied to the newly created objects immediately after they are created.
 
-* **ON (Default):** Transforms from the Multi Transform panel are applied. Only the transform types that are **included** (via the Pos / Rot / Scale toggles in the Multi Transform panel) are applied — disabled types are left as-is.
+* **ON (Default):** Transforms from the Multi Transform panel are applied. Only transform types that are **included** (via the Pos / Rot / Scale toggles) are applied — disabled types are left as-is.
 * **OFF:** The new objects are created at the exact location of the originals (or the merged pivot) without any additional transformation.
 
 .. note::
-   For **Merged Copy**, the transform is applied to the final merged object as a whole — after all
-   source objects have been joined. This means the merged mesh moves as one unit from its pivot
-   point, rather than each source piece being positioned individually before joining.
-
-Skip Active
------------
-This option is useful when you want to use the active object as a reference point (pivot) for the operation, but do not want to duplicate the object itself.
-
-* **ON:** The active object is used to calculate the center of the operation, but is excluded from the final copies.
-    * **Parenting Behavior:** If **Skip Active** and **Include Children** are both enabled, the newly created copies will be automatically parented to the *original* active object.
-* **OFF (Default):** The active object is treated as a normal part of the selection and is copied/merged along with everything else.
+   For **Merged Copy**, the transform is applied to the final merged object as a whole — after all source objects have been joined. This means the merged mesh moves as one unit from its pivot point, rather than each source piece being positioned individually before joining.
 
 Include Children
-----------------
+~~~~~~~~~~~~~~~~
+
 When enabled, the operator will automatically expand your selection to include all (recursive) children of the objects you have selected before running.
 
 * **For Merged Copy:** Requires a selected active object to determine which children to select.
@@ -119,8 +116,26 @@ When enabled, the operator will automatically expand your selection to include a
 
 *Include children makes it very easy to duplicate hierarchies.*
 
+Select New
+~~~~~~~~~~
+
+This toggle controls the final selection state after the operation is complete.
+
+* **ON (Default):** The newly created object(s) will be selected.
+* **OFF:** The original selection will be restored.
+
+Skip Active
+~~~~~~~~~~~
+
+This option is useful when you want to use the active object as a reference point (pivot) for the operation, but do not want to duplicate the object itself.
+
+* **ON:** The active object is used to calculate the center of the operation, but is excluded from the final copies.
+    * **Parenting Behavior:** If **Skip Active** and **Include Children** are both enabled, the newly created copies will be automatically parented to the *original* active object.
+* **OFF (Default):** The active object is treated as a normal part of the selection and is copied/merged along with everything else.
+
 Clear Parents
--------------
+~~~~~~~~~~~~~
+
 This toggle controls how parent-child relationships are handled for the newly created objects. It behaves differently for each operator.
 
 * **For Merged Copy**:
@@ -136,54 +151,153 @@ This toggle controls how parent-child relationships are handled for the newly cr
 
 *Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
 
-Select New
-----------
-This toggle controls the final selection state after the operation is complete.
+Targeting Modes
+===============
 
-* **ON (Default):** The newly created object(s) will be selected.
-* **OFF:** The original selection will be restored.
+**Targeting** allows you to place or merge copies into an existing object or selection instead of creating entirely new objects at the source location.
 
-Unify Normals
---------------
-This only works for merged copies. When enabled, the operator will recalculate the normals of the final mesh to all point outwards. This is useful for cleaning up geometry before export. Be sure to doublecheck your results because blenders "calculate outside" functionality is not entirely intuitively reliable. 
+The **Use Target** toggle (checkbox) enables or disables targeting. When disabled, all copy operations work directly on the selection without any target object.
 
-.. figure:: images/advancedCopy_Merged_Normals.gif
-    :align: center
+Target Mode Selection
+---------------------
 
-*Normals are recalculated to point outwards.*
+When targeting is enabled, three target mode icons appear:
 
-Name
-----
-This field controls the name of the newly created object(s).
+* **Eyedropper** — **Manual (Set Target)** mode
+* **Magnifying Glass** — **Auto** mode
+* **Select Icon** — **Selection** mode
 
-* **For Merged Copy:**
-    * If the field is empty or contains only spaces, the new object will be named ``MergedCopy``.
-    * **Using a wildcard** (``*``): Use an asterisk as a placeholder for the active object's name. For example, entering ``Prop_*_LOD0`` when the active object is named ``Cube`` will produce ``Prop_Cube_LOD0``. If there is no valid active object in the selection, the first selected object is used as the reference instead.
-    * **Any other text:** Used as the exact name for the new object and its data-block.
-    * **In Target Merge Mode:** The name field (including wildcard) is applied to the replaced data-block. If the field is empty, the data-block inherits the target object's original data-block name.
+Target Mode Behaviors
+---------------------
 
-* **For Linked Copy & Unlinked Copy:**
-    * **Empty (default):** If the source object's name ends in a number (e.g. ``Name_LOD0``, ``object_1``, ``prop.001``), the copy is automatically named by incrementing that number — so ``Name_LOD0`` becomes ``Name_LOD1``, ``object_1`` becomes ``object_2``, and so on. If no trailing number is found, Blender's default naming applies (e.g. ``Cube.001``).
-    * **Using a wildcard** (``*``): Use an asterisk as a placeholder for each object's original name. For example, entering ``Prop_*_LOD0`` for an object named ``Cube`` will produce ``Prop_Cube_LOD0``.
-    * **Any other text:** This text is used as the base name for all new objects. No incrementing is applied.
-    * For **Unlinked Copy**, the data-block is renamed to match the object. For **Linked Copy**, the data-block name is not changed, since the copies share it with the original.
+The following table shows how each target mode interacts with each operator:
+
+.. list-table:: Target Mode Reference
+   :widths: 15 20 20 20 25
+   :header-rows: 1
+
+   * - Target Mode
+     - Linked Copy
+     - Unlinked Copy
+     - Merged Copy
+     - H Merge
+   * - **Manual**
+     - Replaces target's data with new linked data; all instances updated
+     - Replaces target's data with new unlinked data; all instances updated
+     - Merged geometry replaces target's data-block; all instances updated in place
+     - **Not supported** (disabled)
+   * - **Auto**
+     - Finds target by name/pattern; replaces it or all objects sharing its data
+     - Finds target by name/pattern; replaces it or all objects sharing its data
+     - Finds target by name/pattern; merged geometry replaces its data-block
+     - Finds target per hierarchy group; each merge targets independently
+   * - **Selection**
+     - Active hierarchy is source; copies replace each other selected hierarchy at its position
+     - Active hierarchy is source; copies replace each other selected hierarchy at its position
+     - **Not available in this mode**
+     - Active hierarchy is source (preserved); merged copies placed at each target hierarchy's position
+
+Manual Target (Set Target)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before running a copy operation, click the **Set Target** button (or eyedropper icon) to store the currently active object as the target. Once set, the button shows **T: {object name}** and an **X** button to clear the target.
+
+**What happens:**
+
+For all operators, the target object's underlying data-block is replaced with the result of the operation. All other objects in the scene that share that same data-block (i.e., all linked instances of the target) are automatically updated without moving, parenting, or renaming.
+
+**Use cases:**
+* Update a game-ready proxy mesh in-place: adjust your source objects, re-merge into the existing target, all instances instantly reflect the new geometry.
+* Swap linked instances to a new data variant: set a target instance, copy to it, and every other linked instance gets the new data instantly.
+
+.. note::
+   The redo/F9 panel is not compatible when a manual target is set. Settings are read from the last values set in the sidebar or popup. **Clear Parents** and **Target Collection** have no effect in this mode. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
+
+Auto Target (Search)
+~~~~~~~~~~~~~~~~~~~~
+
+In **Auto** mode, the operator searches for a target object by name or pattern. The **Search** field lets you specify what to look for.
+
+**Search Syntax:**
+
+* **Empty (default):** For **Linked Copy**, targets all scene objects that share the same data-block as the source object. For **Unlinked Copy** and **Merged Copy**, uses the source object's own name as the search term.
+* **Exact Name:** Enter the exact name of an object (case-insensitive partial match).
+* **Wildcard** ``*`` **:** Use ``*`` as a placeholder for the source object's name. For example, ``*_LOD0`` finds the LOD0 version of each object (e.g., ``Cube_LOD0`` when source is ``Cube``).
+* **Wildcard** ``%`` **:** Use ``%`` as a placeholder for any sequence of characters. For example, ``Prop_%`` finds ``Prop_Cube``, ``Prop_001``, ``Prop_Rock``, etc.
+
+**Multi-Group Handling:** When you have multiple hierarchy groups selected:
+* **Linked Copy** and **Unlinked Copy** apply auto-target per group — each root searches independently for its own target (e.g., ``Cube`` finds ``Cube_Target``, ``Sphere`` finds ``Sphere_Target``).
+* **H Merge** also applies per group — each hierarchy group's merged result targets independently.
+
+**Use case:** Maintain multiple LOD variants: have ``Cube_LOD0``, ``Cube_LOD1``, ``Sphere_LOD0``, ``Sphere_LOD1``, etc. in your scene. Select the LOD0 instances and use **Unlinked Copy** with auto-target set to ``*_LOD1``. All LOD0 objects are replaced with their LOD1 equivalents in one operation.
+
+Selection Target
+~~~~~~~~~~~~~~~~
+
+In **Selection** target mode, the active object's hierarchy is treated as the **source**; all other selected hierarchies are treated as **targets**.
+
+**How it works:**
+
+* Click to select multiple separate hierarchies, keeping one as the active object.
+* Run the copy operation.
+* The source hierarchy is processed as usual (copied or merged), and the result replaces each target hierarchy in-place at the target's position.
+
+**Operator Behavior:**
+
+* **Linked Copy:** Creates a new linked copy of the source. Each target is replaced with that copy at the target's position, rotation, and scale.
+* **Unlinked Copy:** Creates a new unlinked copy of the source. Each target is replaced with that copy.
+* **Merged Copy:** **Not available** in this mode. Use **H Merge** instead.
+* **H Merge:** The source hierarchy is preserved (not merged). A merged copy of the source is created and placed at each target's world position. The source hierarchy remains in place; only the merged results are targeted.
+
+**Use case:** You have a master rig (source) and five different character LOD versions (targets). Select the master rig as active and the five LOD rigs as targets. Click **H Merge**. The master is merged once, and that merged result is placed at each LOD rig's position — instantly creating five proxy meshes at the correct locations.
+
+Naming
+------
+
+The **Name** field controls how the newly created object(s) are named.
+
+**Set Name Toggle**
+
+When the **Set Name** checkbox is enabled, the text in the **Name** field is used. When disabled, the default naming behavior applies (see below).
+
+**Name Patterns**
+
+**For Merged Copy & H Merge:**
+
+* **Empty field (default):** The new object is named ``MergedCopy`` or ``MergedCopy.001``, etc.
+* **Using wildcard** ``*`` **: Use as a placeholder for the active object's name. Example: ``Prop_*_LOD0`` on ``Cube`` produces ``Prop_Cube_LOD0``.
+* **Any other text:** Used as the exact name for the new object.
+* **In Target Merge Mode (Manual):** The name field applies to the replaced data-block. If empty, the data-block keeps its original name.
+
+**For Linked Copy & Unlinked Copy:**
+
+* **Empty (default):** Uses **Smart Numbering** (see below).
+* **Using wildcard** ``*`` **: Use as a placeholder for each object's original name. Example: ``Prop_*_LOD0`` on ``Cube`` produces ``Prop_Cube_LOD0``.
+* **Any other text:** Used as the base name for all new objects.
 
 .. figure:: images/advancedCopy_Name.gif
     :align: center
 
 *Different ways of setting the name of the newly copied objects.*
 
+Smart Numbering
+~~~~~~~~~~~~~~~
+
+When **Set Name** is disabled, the **Smart Numbering** toggle controls automatic naming for Linked Copy and Unlinked Copy.
+
+* **ON (Default):** If the source object's name ends in a number (e.g. ``Name_LOD0``, ``object_1``), the copy is automatically named by incrementing that number — ``Name_LOD0`` becomes ``Name_LOD1``, ``object_1`` becomes ``object_2``. If no trailing number is found, Blender's default naming applies.
+* **OFF:** Blender's default naming (e.g. ``Cube.001``) is always used.
+
 Target Collection
 -----------------
+
 This dropdown menu controls which collection the newly created object(s) will be placed in.
 
-* **Automatic (Default):** The operator intelligently determines the most logical collection based on your original selection. The behavior differs for each operator:
-    * For **Merged Copy**, the new, single mesh is placed according to the following priority:
-        #. It is placed in the **collection of the original active object** (if one was validly selected).
-        #. If there was no valid active object, it is placed in the **Scene Collection** (the root of the outliner).
-    * For **Linked Copy** and **Unlinked Copy**, each new duplicate is placed into the **same collection(s) as its original counterpart**. This preserves your scene's organization.
+* **Automatic (Default):** The operator intelligently determines the most logical collection based on your original selection:
+    * For **Merged Copy** and **H Merge**, the new mesh is placed in the collection of the original active object (or the Scene Collection if no active object exists).
+    * For **Linked Copy** and **Unlinked Copy**, each new duplicate is placed in the **same collection(s) as its original counterpart**, preserving your scene's organization.
 
-* **Explicit Choice:** You can select any collection in the scene (including the root **Scene Collection**) to force all new objects into that specific collection, overriding the automatic behavior.
+* **Explicit Choice:** Select any collection in the scene to force all new objects into that specific collection.
 
 .. figure:: images/advancedCopy_Collections.gif
     :align: center
