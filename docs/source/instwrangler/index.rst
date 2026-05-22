@@ -18,11 +18,11 @@ Pages
 * :doc:`applymodifiers`
 * :doc:`selectlinked`
 * :doc:`linkselected`
-* :doc:`deselectactive`
-* :doc:`selectchildren`
 * :doc:`unlink`
 * :doc:`groupunlink`
 * :doc:`findunlinked`
+* :doc:`deselectactive`
+* :doc:`selectchildren`
 * :doc:`cycledata`
 * :doc:`copyname`
 * :doc:`blendermenus`

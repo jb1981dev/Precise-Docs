@@ -4,23 +4,24 @@
 Select Children
 ===============
 
-The **Select Children** tool additively selects all recursive children of every object currently in your selection — across as many separate hierarchies as you have selected simultaneously.
-
-The Blender Limitation
-----------------------
-
-Vanilla Blender provides two ways to select child objects: :menuselection:`Select --> Select Grouped --> Children Recursive`, and the Select Hierarchy shortcut. Both work only from the **active object**. No matter how many hierarchy roots you have selected, Blender will only expand children for the single active one.
-
-If your scene has ten separately parented groups and you want to select all of their children, you would need to either process each root one by one, or write a custom script. Instance Wrangler handles this in a single click.
+The **Select Children** tool additively selects all recursive children of every object currently in your selection — across as many separate hierarchies as you have selected simultaneously. This is an improvement over Blender's built-in child selection (:menuselection:`Select --> Select Grouped --> Children`), which only works from the active object and requires multiple steps to cover multiple hierarchies.
 
 How to Use
 ----------
 
-#. Select one or more parent objects in the viewport.
-#. Click **Select Children**.
-#. All recursive children of every selected object are added to the selection.
+#. Select one or more objects in the viewport.
+#. Click **Select Children** to add all recursive children to the selection.
 
 The operation is **additive** — nothing is deselected. The active object is also preserved exactly as it was.
+
+Modifier Keys
+-------------
+
+:kbd:`LMB`
+    **Select Children** — recursively adds all children of every selected object.
+
+:kbd:`Ctrl`
+    **Select Full Hierarchy** — walks up to the root ancestor of each selected object first, then selects that root and its entire subtree. Useful when you have a mid-hierarchy object selected and want to grab everything above and below it in one click.
 
 Key Behavior
 ------------
