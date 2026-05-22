@@ -170,32 +170,67 @@ When targeting is enabled, three target mode icons appear:
 Target Mode Behaviors
 ---------------------
 
-The following table shows how each target mode interacts with each operator:
+The tables below show how each target mode works with each operator:
 
-.. list-table:: Target Mode Reference
-   :widths: 15 20 20 20 25
+**Linked Copy**
+
+.. list-table::
+   :widths: 20 80
    :header-rows: 1
 
    * - Target Mode
-     - Linked Copy
-     - Unlinked Copy
-     - Merged Copy
-     - H Merge
+     - Behavior
    * - **Manual**
      - Replaces target's data with new linked data; all instances updated
-     - Replaces target's data with new unlinked data; all instances updated
-     - Merged geometry replaces target's data-block; all instances updated in place
-     - **Not supported** (disabled)
    * - **Auto**
      - Finds target by name/pattern; replaces it or all objects sharing its data
-     - Finds target by name/pattern; replaces it or all objects sharing its data
-     - Finds target by name/pattern; merged geometry replaces its data-block
-     - Finds target per hierarchy group; each merge targets independently
    * - **Selection**
      - Active hierarchy is source; copies replace each other selected hierarchy at its position
+
+**Unlinked Copy**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Target Mode
+     - Behavior
+   * - **Manual**
+     - Replaces target's data with new unlinked data; all instances updated
+   * - **Auto**
+     - Finds target by name/pattern; replaces it or all objects sharing its data
+   * - **Selection**
      - Active hierarchy is source; copies replace each other selected hierarchy at its position
-     - **Not available in this mode**
-     - Active hierarchy is source (preserved); merged copies placed at each target hierarchy's position
+
+**Merged Copy**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Target Mode
+     - Behavior
+   * - **Manual**
+     - Merged geometry replaces target's data-block; all instances updated in place
+   * - **Auto**
+     - Finds target by name/pattern; merged geometry replaces its data-block
+   * - **Selection**
+     - Not available in this mode
+
+**H Merge**
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Target Mode
+     - Behavior
+   * - **Manual**
+     - Not supported (disabled)
+   * - **Auto**
+     - Finds target per hierarchy group; each merge targets independently
+   * - **Selection**
+     - Source hierarchy is preserved; merged copies placed at each target hierarchy's position
 
 Manual Target (Set Target)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
