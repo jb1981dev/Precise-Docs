@@ -265,14 +265,14 @@ When the **Set Name** checkbox is enabled, the text in the **Name** field is use
 **For Merged Copy & H Merge:**
 
 * **Empty field (default):** The new object is named ``MergedCopy`` or ``MergedCopy.001``, etc.
-* **Using wildcard** ``*`` **: Use as a placeholder for the active object's name. Example: ``Prop_*_LOD0`` on ``Cube`` produces ``Prop_Cube_LOD0``.
+* **Using wildcard** ``*``: Use as a placeholder for the active object's name. Example: ``Prop_*_LOD0`` on ``Cube`` produces ``Prop_Cube_LOD0``.
 * **Any other text:** Used as the exact name for the new object.
 * **In Target Merge Mode (Manual):** The name field applies to the replaced data-block. If empty, the data-block keeps its original name.
 
 **For Linked Copy & Unlinked Copy:**
 
 * **Empty (default):** Uses **Smart Numbering** (see below).
-* **Using wildcard** ``*`` **: Use as a placeholder for each object's original name. Example: ``Prop_*_LOD0`` on ``Cube`` produces ``Prop_Cube_LOD0``.
+* **Using wildcard** ``*``: Use as a placeholder for each object's original name. Example: ``Prop_*_LOD0`` on ``Cube`` produces ``Prop_Cube_LOD0``.
 * **Any other text:** Used as the base name for all new objects.
 
 .. figure:: images/advancedCopy_Name.gif
