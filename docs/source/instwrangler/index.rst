@@ -21,7 +21,7 @@ Pages
 * :doc:`unlink`
 * :doc:`groupunlink`
 * :doc:`findunlinked`
-* :doc:`deselectactive`
+* :doc:`deactivateselected`
 * :doc:`selectchildren`
 * :doc:`cycledata`
 * :doc:`copyname`

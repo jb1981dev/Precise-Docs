@@ -28,6 +28,7 @@ More addons to follow soon!
    instwrangler/index
    instwrangler/iwversions
    instwrangler/usingtheaddon
+
    instwrangler/multitransform
    instwrangler/advancedcopy
    instwrangler/applytransforms
@@ -35,11 +36,11 @@ More addons to follow soon!
    instwrangler/applymodifiers
    instwrangler/selectlinked
    instwrangler/linkselected
-   instwrangler/deselectactive
-   instwrangler/selectchildren
    instwrangler/unlink
    instwrangler/groupunlink
    instwrangler/findunlinked
+   instwrangler/deactivateselected
+   instwrangler/selectchildren
    instwrangler/cycledata
    instwrangler/copyname
    instwrangler/blendermenus
