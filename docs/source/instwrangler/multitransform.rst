@@ -14,9 +14,9 @@ UI Controls Explained
 
 The panel is organized as a grid. On the left is a column of **axis toggles**. To the right are three value columns — one each for **Position**, **Rotation**, and **Scale**.
 
-* **Include Toggles (Pos / Rot / Scale):** The top cell of each value column is a toggle that controls whether that transform type is included in **Set All** operations. For example, disabling **Rot** means clicking **Set All** will only apply Position and Scale, leaving each object's rotation untouched. These toggles also affect the **Apply Multi Transform** option in :doc:`advancedcopy`.
-* **Axis Toggles (X / Y / Z):** Each row on the left side filters which axes are affected. Disabling **Z** means the Z-axis value will never be written, regardless of which Set button you click.
-* **Value Fields:** The nine input fields in the grid hold the target values for each axis and transform type.
+* **Include Toggles (Pos / Rot / Scale):** The top cell of each value column is a toggle button that controls whether that transform type is included in **Set All** operations. For example, disabling **Rot** means clicking **Set All** will only apply Position and Scale, leaving each object's rotation untouched. These toggles also affect the **Apply Multi Transform** option in :doc:`advancedcopy`. The buttons also support modifier keys for quick value operations — see `Toggle Button Shortcuts`_ below.
+* **Axis Toggles (X / Y / Z):** Each row on the left side filters which axes are affected. Disabling **Z** means the Z-axis value will never be written, regardless of which Set button you click. These buttons also support modifier keys — see `Toggle Button Shortcuts`_ below.
+* **Value Fields:** The nine input fields in the grid hold the target values for each axis and transform type. Right-click any field for per-cell operations — see `Right-Click Menu`_ below.
 * **Set Buttons:** The row below the grid contains the action buttons:
     * **Set All:** Applies all included transform types to the selection at once.
     * **Set P / Set R / Set S:** Applies only Position, Rotation, or Scale respectively, ignoring the Pos/Rot/Scale include toggles.
@@ -30,10 +30,10 @@ The panel is organized as a grid. On the left is a column of **axis toggles**. T
 
 Using "Set All" to apply position, rotation and scale at the same time.
 
-Modifier Keys
---------------
+Set Button Shortcuts
+---------------------
 
-All four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support modifier keys to perform related actions without changing any settings:
+The four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support two modifier keys:
 
 :kbd:`LMB`
     **Set** — applies the current values to the selection.
@@ -41,13 +41,39 @@ All four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support modi
 :kbd:`Ctrl`
     **Get** — reads the active object's current transform into the value fields (respects axis toggles).
 
+For **Set All**, both shortcuts also respect the **Pos / Rot / Scale include toggles** — only the enabled transform types are affected.
+
+Toggle Button Shortcuts
+------------------------
+
+The six toggle buttons — **X**, **Y**, **Z** (row toggles) and **Pos**, **Rot**, **Scale** (column toggles) — are operator buttons that support modifier keys operating directly on their associated value fields, without changing the toggle state:
+
+:kbd:`LMB`
+    **Toggle** — enables or disables the row or column.
+
 :kbd:`Shift`
-    **Round** — snaps the value fields to the nearest clean step: 0.5 m for Position, 1° for Rotation, 0.1 for Scale (respects axis toggles).
+    **Round** — snaps the associated value fields to the nearest clean step: 0.5 m for Position, 1° for Rotation, 0.1 for Scale.
+
+:kbd:`Ctrl`
+    **Invert** — negates the associated values (sign flip for Position and Rotation).
 
 :kbd:`Alt`
-    **Reset** — resets the value fields to their defaults: Position → 0, Rotation → 0°, Scale → 1 (respects axis toggles).
+    **Reset** — resets the associated value fields to their defaults: Position → 0, Rotation → 0°, Scale → 1.
 
-For **Set All**, :kbd:`Ctrl`, :kbd:`Shift`, and :kbd:`Alt` also respect the **Pos / Rot / Scale include toggles** — only the enabled transform types are affected.
+For the **axis row buttons** (X / Y / Z), Round / Invert / Reset apply across all three transform types for that axis, but only the columns currently enabled by the Pos / Rot / Scale include toggles are affected.
+
+For the **column buttons** (Pos / Rot / Scale), Round / Invert / Reset apply to all three values in that column, but only the rows currently enabled by the X / Y / Z axis toggles are affected.
+
+Right-Click Menu
+-----------------
+
+Right-clicking any of the nine value fields opens a context menu with per-cell operations:
+
+* **Set** *field* **to Selection** — applies this single value to all selected objects (respects Relative and Active Leads modes).
+* **Get** *field* **from Active** — reads this single value from the active object into the field.
+* **Round** *field* — snaps the value to the nearest clean step.
+* **Invert** *field* — negates the value.
+* **Reset** *field* — resets the value to its default (0 for Position and Rotation, 1 for Scale).
 
 Relative Toggle
 ------------------
