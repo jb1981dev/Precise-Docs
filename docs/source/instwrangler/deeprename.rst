@@ -1,8 +1,8 @@
 .. _deeprename:
 
-==========
+===========
 Deep Rename
-==========
+===========
 
 The **Deep Rename** tool renames both the selected objects **and** their underlying datablocks (mesh, curve, etc.) simultaneously using a flexible naming pattern. This "deep" behavior makes it ideal for batch-renaming assets while keeping the object names and data names in sync.
 
