@@ -24,5 +24,7 @@ Pages
 * :doc:`deactivateselected`
 * :doc:`selectchildren`
 * :doc:`cycledata`
+* :doc:`deeprename`
+* :doc:`deepdelete`
 * :doc:`copyname`
 * :doc:`blendermenus`

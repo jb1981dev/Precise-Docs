@@ -42,6 +42,8 @@ More addons to follow soon!
    instwrangler/deactivateselected
    instwrangler/selectchildren
    instwrangler/cycledata
+   instwrangler/deeprename
+   instwrangler/deepdelete
    instwrangler/copyname
    instwrangler/blendermenus
 
