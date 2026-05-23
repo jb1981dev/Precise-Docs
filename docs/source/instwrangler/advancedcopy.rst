@@ -226,9 +226,9 @@ H Merge
 
 **Use cases:**
 
-* An incredibly powerful workflow is to update the hierarchies of other linked instances. For example, you have a spaceship asset which is instanced multiple times in your scene. You added some objects to the original linked as child objects, but they don't appear in the other instances. Use Auto Target mode (but keep it empty to affect all other instances) with Linked Copy to search for all other instances and replace them with new linked copies of the updated source — now all your instances have the new children objects.
-* Another powerful workflow is to merge a hierarchy or selection of meshes into other existing objects in the scene. If you search for a common pattern in the target objects' names, you can target multiple objects in the scene to receive a merged copy of the source hierarchy in one click.
-* Building on that, you can use H Merge with auto-targeting to merge multiple hierarchies at once, each targeting a different object in the scene based on their name. For example, you have 10 assembled spaceships in your scene, each with a different name. You want to create a merged mesh for each assembly, and you want each merged copy to replace an existing placeholder mesh in the scene. Select all 10 spaceship assemblies, choose H Merge with auto-targeting, enter a search pattern that matches the placeholder meshes (e.g. ``*_LOD0``, the asterisk will insert the original name, letting the tool search for the corresponding placeholder, for example ``Spaceship1_LOD0``), and instantly get 10 merged meshes placed perfectly at the location of each placeholder — all in one operation.
+* You updated a spaceship asset by adding child objects to the original, but the other instances in your scene don't reflect those changes. Leave the search empty and run **Linked Copy** with Auto Target — all other objects sharing the same data-block are replaced with fresh linked copies of the updated source.
+* Use a name pattern to replace multiple scene objects with a merged copy of your source in one click — useful for pushing a merged result into a set of existing placeholders.
+* You have 10 assembled spaceships and matching placeholder meshes named ``Spaceship1_LOD0``, ``Spaceship2_LOD0``, etc. Select all 10 assemblies, run **H Merge** with Auto Target, and enter ``*_LOD0`` as the search pattern — each assembly is merged and placed at its corresponding placeholder in one operation.
 
 Selection Target
 ^^^^^^^^^^^^^^^^
@@ -244,9 +244,9 @@ In **Selection** target mode, the active object's hierarchy is treated as the **
 
 **Use cases:**
 
-* *Linked Copy:* You assembled a modular shelf unit from several objects — frame, shelves, books, decorations — organized as a hierarchy. The same shelf needs to appear in multiple spots in your scene, currently occupied by simple placeholder hierarchies. Select all the placeholder hierarchies, make your shelf assembly the active object, and run **Linked Copy** with Selection Target. Each placeholder is removed and replaced with a new linked instance of the shelf hierarchy at its exact position, all sharing the same underlying data.
+* *Linked Copy:* You have a modular shelf hierarchy and placeholder hierarchies scattered around your scene marking where it should appear. Make the shelf the active object, select all the placeholders, and run **Linked Copy** with Selection Target — each placeholder is replaced with a linked instance of the shelf at its exact position.
 
-* *H Merge:* You have a detailed vehicle assembly with dozens of parts spread across a hierarchy. Scattered around your scene are simple marker hierarchies, each indicating where a merged proxy mesh should be placed. Select all the marker hierarchies, make the vehicle assembly the active object, and run **H Merge** with Selection Target. The vehicle is merged into a single mesh, and that result is placed at each marker's position — the original assembly remains untouched.
+* *H Merge:* You have a detailed vehicle hierarchy and marker hierarchies placed where a merged proxy should go. Make the vehicle the active object, select all the markers, and run **H Merge** with Selection Target — a merged proxy is placed at each marker's position while the original assembly stays intact.
 
 Naming
 ------
