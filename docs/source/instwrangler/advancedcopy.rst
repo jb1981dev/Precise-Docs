@@ -68,10 +68,10 @@ Merge Options (Merged Copy & H Merge only)
 
 These three controls appear on the same row and control how merged meshes handle their data:
 
-**Clean Geometry** |brush|
+**Clean Geometry** |icon_clean|
     When enabled, the operator welds overlapping vertices and removes loose geometry from the merged mesh. Useful for cleaning up complex source selections.
 
-**Unify Normals** |normals|
+**Unify Normals** |icon_normals|
     When enabled, recalculates the normals of the final mesh to all point outwards. Useful for ensuring consistent shading before export (though Blender's recalculation is not always perfectly reliable — verify results).
 
 **UV Merge Mode**
@@ -81,8 +81,14 @@ These three controls appear on the same row and control how merged meshes handle
     * **Merge by Match** — merges by name but discards any channel not present on *every* object before joining (guarantees no partial UV channels).
     * **Merge by Index** — renames all channels by position (UVMap, UVMap.001, etc.) before joining. Channels match by slot number regardless of original names.
 
-.. |brush| unicode:: 0x1F4A7
-.. |normals| unicode:: 0x21A9
+.. |icon_clean| image:: images/Icon_Clean.png
+   :height: 42px
+   :width: 42px
+   :align: middle
+.. |icon_normals| image:: images/Icon_Normals.png
+   :height: 42px
+   :width: 42px
+   :align: middle
 
 Operation Settings
 --------
