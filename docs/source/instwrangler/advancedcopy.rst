@@ -24,7 +24,7 @@ Core Operators
 ==============
 
 Linked Copy & Unlinked Copy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 * **Linked Copy** creates new **linked duplicates** (:kbd:`Alt+D` instances) of your selection. It is a non-destructive way to create more instances while keeping them linked to the same underlying object data.
 * **Unlinked Copy** creates new **unlinked duplicates** (:kbd:`Shift+D` copies) of your selection. These are simple duplicates which are no longer related to their originals.
@@ -47,14 +47,14 @@ The **Merged Copy** operator creates a **single, clean, game-ready mesh** from a
 *The pivot is determined by the active object or the bounding box center.*
 
 Hierarchical Merge (H Merge)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 **H Merge** is a batch variant of **Merged Copy** designed to handle multiple hierarchies efficiently. When you select multiple hierarchy groups, it creates one merged mesh per top-level parent, using each root's name and world position to define the result.
 
 **Use case:** You have ten separate rig groups in your scene, each with dozens of bones and armor pieces. Select all, click **H Merge**, and get ten optimized proxy meshes — one per rig — ready for export.
 
 Smart Numbering
-~~~~~~~~~~~~~~~
+---------------
 Every mode will attempt to increment new object names in an elegant way, following the pattern of the source object's name. 
 * If the source object's name ends in a number (e.g. ``Name_LOD0``, ``object_001``), the copy is automatically named by incrementing that number — ``Name_LOD0`` becomes ``Name_LOD1``, ``object_001`` becomes ``object_002``. If no trailing number is found, Blender's default naming applies.
 * For merged copies, the suffix _merged is added, if more merged copies are made following the same naming pattern, a numbered suffix is added (e.g. _merged.001, _merged.002, etc.)
@@ -94,7 +94,7 @@ Operation Settings
 ==================
 
 Apply Multi Transform
---------------------
+---------------------
 
 When enabled, the Position, Rotation, and Scale values currently set in the **Multi Transform** panel are applied to the newly created objects immediately after they are created.
 
@@ -160,7 +160,7 @@ Target Settings
 The **Use Target** toggle (checkbox) enables or disables targeting. When disabled, all copy operations work directly on the selection without any target object.
 
 Target Mode Selection
---------------------
+---------------------
 
 When targeting is enabled, three target mode icons appear:
 
@@ -169,7 +169,7 @@ When targeting is enabled, three target mode icons appear:
 * **Select Icon** — **Selection** mode
 
 Target Mode Behaviors
---------------------
+---------------------
 
 The tables below show how each target mode works with each operator:
 
@@ -234,7 +234,7 @@ The tables below show how each target mode works with each operator:
      - Source hierarchy is preserved; merged copies placed at each target hierarchy's position
 
 Manual Target (Set Target)
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 Before running a copy operation, click the **Set Target** button (or eyedropper icon) to store the currently active object as the target. Once set, the button shows **T: {object name}** and an **X** button to clear the target.
 
@@ -250,7 +250,7 @@ For all operators, the target object's underlying data-block is replaced with th
    The redo/F9 panel is not compatible when a manual target is set. Settings are read from the last values set in the sidebar or popup. **Clear Parents** and **Target Collection** have no effect in this mode. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
 
 Auto Target (Search)
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 In **Auto** mode, the operator searches for a target object by name or pattern. The **Search** field lets you specify what to look for.
 
@@ -268,7 +268,7 @@ In **Auto** mode, the operator searches for a target object by name or pattern. 
 **Use case:** Maintain multiple LOD variants: have ``Cube_LOD0``, ``Cube_LOD1``, ``Sphere_LOD0``, ``Sphere_LOD1``, etc. in your scene. Select the LOD0 instances and use **Unlinked Copy** with auto-target set to ``*_LOD1``. All LOD0 objects are replaced with their LOD1 equivalents in one operation.
 
 Selection Target
-~~~~~~~~~~~~~~~~
+----------------
 
 In **Selection** target mode, the active object's hierarchy is treated as the **source**; all other selected hierarchies are treated as **targets**.
 
