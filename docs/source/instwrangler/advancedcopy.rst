@@ -172,67 +172,51 @@ When targeting is enabled, three target mode icons appear:
 Target Mode Behaviors
 ^^^^^^^^^^^^^^^^^^^^^
 
-The tables below show how each target mode works with each operator:
+The following shows how each target mode works with each operator:
 
 **Linked Copy**
 
-.. list-table::
-   :widths: 20 80
-   :header-rows: 1
+Manual
+   The stored target object is removed and replaced with a linked copy of the source at its position. Parent relationships of the target are preserved. Other objects sharing the same data-block are not affected.
 
-   * - Target Mode
-     - Behavior
-   * - **Manual**
-     - The stored target object is removed and replaced with a linked copy of the source at its position. Parent relationships of the target are preserved. Other objects sharing the same data-block are not affected.
-   * - **Auto**
-     - Empty search: replaces all other objects in the scene sharing the source's data-block, each with a linked copy at their positions. With a search pattern: replaces each matching object with a linked copy.
-   * - **Selection**
-     - Active hierarchy is source; each other selected hierarchy is removed and replaced with a linked copy at its position.
+Auto
+   Empty search: replaces all other objects in the scene sharing the source's data-block, each with a linked copy at their positions. With a search pattern: replaces each matching object with a linked copy.
+
+Selection
+   Active hierarchy is source; each other selected hierarchy is removed and replaced with a linked copy at its position.
 
 **Unlinked Copy**
 
-.. list-table::
-   :widths: 20 80
-   :header-rows: 1
+Manual
+   The stored target object is removed and replaced with an unlinked copy of the source at its position. Parent relationships of the target are preserved. No other objects are affected.
 
-   * - Target Mode
-     - Behavior
-   * - **Manual**
-     - The stored target object is removed and replaced with an unlinked copy of the source at its position. Parent relationships of the target are preserved. No other objects are affected.
-   * - **Auto**
-     - Finds the object matching the source's name (or search pattern) and replaces it with an unlinked copy of the source at its position.
-   * - **Selection**
-     - Active hierarchy is source; each other selected hierarchy is removed and replaced with an unlinked copy at its position.
+Auto
+   Finds the object matching the source's name (or search pattern) and replaces it with an unlinked copy of the source at its position.
+
+Selection
+   Active hierarchy is source; each other selected hierarchy is removed and replaced with an unlinked copy at its position.
 
 **Merged Copy**
 
-.. list-table::
-   :widths: 20 80
-   :header-rows: 1
+Manual
+   The merged mesh data-block is swapped into the stored target; all objects in the scene sharing that data-block are updated in-place. Modifiers on those objects are cleared.
 
-   * - Target Mode
-     - Behavior
-   * - **Manual**
-     - The merged mesh data-block is swapped into the stored target; all objects in the scene sharing that data-block are updated in-place. Modifiers on those objects are cleared.
-   * - **Auto**
-     - Finds target(s) by name/pattern. For mesh targets: swaps merged data-block into all objects sharing the old one (all updated in-place). For non-mesh targets: the target object is replaced with a new mesh object.
-   * - **Selection**
-     - Not available in this mode.
+Auto
+   Finds target(s) by name/pattern. For mesh targets: swaps merged data-block into all objects sharing the old one (all updated in-place). For non-mesh targets: the target object is replaced with a new mesh object.
+
+Selection
+   Not available in this mode.
 
 **H Merge**
 
-.. list-table::
-   :widths: 20 80
-   :header-rows: 1
+Manual
+   Not supported (operator cancels with a warning)
 
-   * - Target Mode
-     - Behavior
-   * - **Manual**
-     - Not supported (operator cancels with a warning)
-   * - **Auto**
-     - Per hierarchy group, each group independently searches for a target by the root's name and swaps the merged data-block into all matching instances.
-   * - **Selection**
-     - Source hierarchy is preserved. A merged copy of the source is placed at each other selected hierarchy's position; those hierarchies are removed.
+Auto
+   Per hierarchy group, each group independently searches for a target by the root's name and swaps the merged data-block into all matching instances.
+
+Selection
+   Source hierarchy is preserved. A merged copy of the source is placed at each other selected hierarchy's position; those hierarchies are removed.
 
 Manual Target (Set Target)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
