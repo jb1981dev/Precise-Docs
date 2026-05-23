@@ -90,8 +90,10 @@ These three controls appear on the same row and control how merged meshes handle
    :width: 42px
    :align: middle
 
-Operation Settings
+Common Settings
 ==================
+
+Advanced copy operators share a common set of options for controlling the behavior of the copy or merge process. These settings are designed to give you ultimate control over how new objects are created, named, transformed, and organized in your scene.
 
 Apply Multi Transform
 ---------------------
@@ -155,12 +157,14 @@ This toggle controls how parent-child relationships are handled for the newly cr
 Target Settings
 ===============
 
+Target Settings allow you how the new copies or merged meshes are placed in the scene, whether they replace existing objects, which collection they go in to and how the objects are named. These settings work together to give you precise control over the final result of your copy or merge operation.
+
+Target Mode
+-----------
+
 **Targeting** allows you to place or merge copies into an existing object or selection instead of creating entirely new objects at the source location.
 
 The **Use Target** toggle (checkbox) enables or disables targeting. When disabled, all copy operations work directly on the selection without any target object.
-
-Target Mode Selection
----------------------
 
 When targeting is enabled, three target mode icons appear:
 
@@ -169,7 +173,7 @@ When targeting is enabled, three target mode icons appear:
 * **Select Icon** — **Selection** mode
 
 Target Mode Behaviors
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 The tables below show how each target mode works with each operator:
 
@@ -234,7 +238,7 @@ The tables below show how each target mode works with each operator:
      - Source hierarchy is preserved; merged copies placed at each target hierarchy's position
 
 Manual Target (Set Target)
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Before running a copy operation, click the **Set Target** button (or eyedropper icon) to store the currently active object as the target. Once set, the button shows **T: {object name}** and an **X** button to clear the target.
 
@@ -250,7 +254,7 @@ For all operators, the target object's underlying data-block is replaced with th
    The redo/F9 panel is not compatible when a manual target is set. Settings are read from the last values set in the sidebar or popup. **Clear Parents** and **Target Collection** have no effect in this mode. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
 
 Auto Target (Search)
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 In **Auto** mode, the operator searches for a target object by name or pattern. The **Search** field lets you specify what to look for.
 
@@ -268,7 +272,7 @@ In **Auto** mode, the operator searches for a target object by name or pattern. 
 **Use case:** Maintain multiple LOD variants: have ``Cube_LOD0``, ``Cube_LOD1``, ``Sphere_LOD0``, ``Sphere_LOD1``, etc. in your scene. Select the LOD0 instances and use **Unlinked Copy** with auto-target set to ``*_LOD1``. All LOD0 objects are replaced with their LOD1 equivalents in one operation.
 
 Selection Target
-----------------
+^^^^^^^^^^^^^^^^
 
 In **Selection** target mode, the active object's hierarchy is treated as the **source**; all other selected hierarchies are treated as **targets**.
 
