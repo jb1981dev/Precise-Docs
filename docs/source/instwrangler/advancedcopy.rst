@@ -169,55 +169,6 @@ When targeting is enabled, three target mode icons appear:
 * **Magnifying Glass** — **Auto** mode
 * **Select Icon** — **Selection** mode
 
-Target Mode Behaviors
-^^^^^^^^^^^^^^^^^^^^^
-
-The following shows how each target mode works with each operator:
-
-**Linked Copy**
-
-Manual
-   The stored target object is removed and replaced with a linked copy of the source at its position. Parent relationships of the target are preserved. Other objects sharing the same data-block are not affected.
-
-Auto
-   Empty search: replaces all other objects in the scene sharing the source's data-block, each with a linked copy at their positions. With a search pattern: replaces each matching object with a linked copy.
-
-Selection
-   Active hierarchy is source; each other selected hierarchy is removed and replaced with a linked copy at its position.
-
-**Unlinked Copy**
-
-Manual
-   The stored target object is removed and replaced with an unlinked copy of the source at its position. Parent relationships of the target are preserved. No other objects are affected.
-
-Auto
-   Finds the object matching the source's name (or search pattern) and replaces it with an unlinked copy of the source at its position.
-
-Selection
-   Active hierarchy is source; each other selected hierarchy is removed and replaced with an unlinked copy at its position.
-
-**Merged Copy**
-
-Manual
-   The merged mesh data-block is swapped into the stored target; all objects in the scene sharing that data-block are updated in-place. Modifiers on those objects are cleared.
-
-Auto
-   Finds target(s) by name/pattern. For mesh targets: swaps merged data-block into all objects sharing the old one (all updated in-place). For non-mesh targets: the target object is replaced with a new mesh object.
-
-Selection
-   Not available in this mode.
-
-**H Merge**
-
-Manual
-   Not supported (operator cancels with a warning)
-
-Auto
-   Per hierarchy group, each group independently searches for a target by the root's name and swaps the merged data-block into all matching instances.
-
-Selection
-   Source hierarchy is preserved. A merged copy of the source is placed at each other selected hierarchy's position; those hierarchies are removed.
-
 Manual Target (Set Target)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -230,6 +181,10 @@ The stored target object is **removed** from the scene. A new duplicate of the s
 **For Merged Copy:**
 
 The merged mesh **data-block** is swapped into the target object. The target itself is not moved or removed — only its mesh data is replaced. All other objects in the scene sharing that same data-block are automatically updated to use the new mesh, in-place without moving or renaming.
+
+**For H Merge:**
+
+Not supported. The operator cancels with a warning when a manual target is set.
 
 **Use cases:**
 
@@ -244,39 +199,48 @@ Auto Target (Search)
 
 In **Auto** mode, the operator searches for a target object by name or pattern. The **Search** field lets you specify what to look for.
 
+**Per-Operator Behavior:**
+
+Linked Copy
+   Replaces each found object with a linked copy of the source at its position. With an empty search, all other objects in the scene sharing the source's data-block are targeted.
+
+Unlinked Copy
+   Replaces the found object with an unlinked copy of the source at its position. With an empty search, the source object's own name is used as the search term.
+
+Merged Copy
+   With an empty search, uses the resolved output name (e.g. ``SourceName_Merged``) as the search term. For mesh targets: swaps the merged data-block into all objects sharing the old one (all updated in-place). For non-mesh targets: the target object is replaced with a new mesh object.
+
+H Merge
+   Per hierarchy group, each group independently searches for a target by the root's name and swaps the merged data-block into all matching instances.
+
 **Search Syntax:**
 
-* **Empty (default):** For **Linked Copy**, targets all other scene objects that share the same data-block as the source. For **Unlinked Copy**, uses the source object's own name as the search term. For **Merged Copy**, uses the resolved output name (e.g. ``SourceName_Merged``) as the search term.
 * **Exact Name:** Enter the exact name of an object (case-insensitive partial match).
 * **Wildcard** ``*`` **:** Use ``*`` as a placeholder for the source object's name. For example, ``*_LOD0`` finds the LOD0 version of each object (e.g., ``Cube_LOD0`` when source is ``Cube``).
 * **Wildcard** ``%`` **:** Use ``%`` as a placeholder for any sequence of characters. For example, ``Prop_%`` finds ``Prop_Cube``, ``Prop_001``, ``Prop_Rock``, etc.
 
-**Multi-Group Handling:** When you have multiple hierarchy groups selected, this combination results in the most complex but powerful operation in the tool, allowing you to merge or copy multiple hierarchies at once, each targeting a different object in the scene based on their name:
+**Multi-Group Handling:** When you have multiple hierarchy groups selected, each group targets independently — each root searches for its own target based on its name. This enables merging or replacing multiple hierarchies in one operation:
+
 * **Linked Copy** and **Unlinked Copy** apply auto-target per group — each root searches independently for its own target (e.g., ``Cube`` finds ``Cube_Target``, ``Sphere`` finds ``Sphere_Target``).
 * **H Merge** also applies per group — each hierarchy group's merged result targets independently.
 
-**Use case:** 
-* An incredibly powerful workflow is to update the hierarchies of other linked instances. For example, you have a spaceship asset which is instanced multiple times in your scene. You added some objects to the original linked as child objects, but they don't appear in the other instances. Use Auto Target mode (but keep it empty to affect all other instances) with Linked Copy to search for all other instances and replace them with new linked copies of the updated source — now all your instances have the new children objects. 
-* Another powerful workflow, is to merge a hierarchy or selection of meshes into other existing objects in the scene. If you search for a common pattern in the target objects' names, you can target multiple objects in the scene receive a merged copy of the source hierarchy in one click.
-* Building on that, you can use H Merge with auto-targeting to merge multiple hierarchies at once, each targeting a different object in the scene based on their name. For example, you have 10 assembled spaceships in your scene, each with a different name. You want to create a merged mesh for each assembly, and you want each merged copy to replace an existing placeholder mesh in the scene. Select all 10 spaceship assemblies, choose H Merge with auto-targeting, enter a search pattern that matches the placeholder meshes (e.g. ``*_LOD0``,  the asterisk will insert the original name, letting the tool search for the corresponding placeholder, for example ``Spaceship1_LOD0``), and instantly get 10 merged meshes placed perfectly at the location of each placeholder — all in one operation.
+**Use cases:**
+
+* An incredibly powerful workflow is to update the hierarchies of other linked instances. For example, you have a spaceship asset which is instanced multiple times in your scene. You added some objects to the original linked as child objects, but they don't appear in the other instances. Use Auto Target mode (but keep it empty to affect all other instances) with Linked Copy to search for all other instances and replace them with new linked copies of the updated source — now all your instances have the new children objects.
+* Another powerful workflow is to merge a hierarchy or selection of meshes into other existing objects in the scene. If you search for a common pattern in the target objects' names, you can target multiple objects in the scene to receive a merged copy of the source hierarchy in one click.
+* Building on that, you can use H Merge with auto-targeting to merge multiple hierarchies at once, each targeting a different object in the scene based on their name. For example, you have 10 assembled spaceships in your scene, each with a different name. You want to create a merged mesh for each assembly, and you want each merged copy to replace an existing placeholder mesh in the scene. Select all 10 spaceship assemblies, choose H Merge with auto-targeting, enter a search pattern that matches the placeholder meshes (e.g. ``*_LOD0``, the asterisk will insert the original name, letting the tool search for the corresponding placeholder, for example ``Spaceship1_LOD0``), and instantly get 10 merged meshes placed perfectly at the location of each placeholder — all in one operation.
 
 Selection Target
 ^^^^^^^^^^^^^^^^
 
-In **Selection** target mode, the active object's hierarchy is treated as the **source**; all other selected hierarchies are treated as **targets**.
+In **Selection** target mode, the active object's hierarchy is treated as the **source**; all other selected hierarchies are treated as **targets**. Select multiple separate hierarchies, keep one as the active object, and run the copy operation — the result replaces each target hierarchy in-place at its position.
 
-**How it works:**
+**Per-Operator Behavior:**
 
-* Click to select multiple separate hierarchies, keeping one as the active object.
-* Run the copy operation.
-* The source hierarchy is processed as usual (copied or merged), and the result replaces each target hierarchy in-place at the target's position.
-
-**Operator Behavior:**
-
-* **Linked Copy:** Creates a new linked copy of the source. Each target is replaced with that copy at the target's position, rotation, and scale.
-* **Unlinked Copy:** Creates a new unlinked copy of the source. Each target is replaced with that copy.
+* **Linked Copy:** Creates a new linked copy of the source. Each target hierarchy is removed and replaced with that copy at the target's position, rotation, and scale.
+* **Unlinked Copy:** Creates a new unlinked copy of the source. Each target hierarchy is removed and replaced with that copy.
 * **Merged Copy:** **Not available** in this mode. Use **H Merge** instead.
-* **H Merge:** The source hierarchy is preserved (not merged). A merged copy of the source is created and placed at each target's world position. The source hierarchy remains in place; only the merged results are targeted.
+* **H Merge:** The source hierarchy is preserved (not merged). A merged copy of the source is created and placed at each target's world position; the source hierarchy remains in place.
 
 **Use cases:**
 
