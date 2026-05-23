@@ -60,10 +60,10 @@ Every mode will attempt to increment new object names in an elegant way, followi
 * For merged copies, the suffix _merged is added, if more merged copies are made following the same naming pattern, a numbered suffix is added (e.g. _merged.001, _merged.002, etc.)
 * If set name is enabled, Smart Numbering will work as usual as long as the naming pattern ends in numbers.
 
-Merge Options (Merged Copy & H Merge only)
+Merge Options
 ------------------------------------------
 
-These three controls appear on the same row and control how merged meshes handle their data:
+These three controls appear on the same row and control how merged meshes handle their data. They are only relevant for **Merged Copy** and **H Merge**.
 
 **Clean Geometry** |icon_clean|
     When enabled, the operator welds overlapping vertices and removes loose geometry from the merged mesh. Useful for cleaning up complex source selections.
