@@ -61,10 +61,10 @@ Every mode will attempt to increment new object names in an elegant way, followi
 * If set name is enabled, Smart Numbering will work as usual as long as the naming pattern ends in numbers.
 
 Settings
---------
+========
 
 Merge Options (Merged Copy & H Merge only)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------
 
 These three controls appear on the same row and control how merged meshes handle their data:
 
@@ -91,10 +91,10 @@ These three controls appear on the same row and control how merged meshes handle
    :align: middle
 
 Operation Settings
-~~~~~~~~~~~~~~~~~~
+==================
 
 Apply Multi Transform
-~~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 When enabled, the Position, Rotation, and Scale values currently set in the **Multi Transform** panel are applied to the newly created objects immediately after they are created.
 
@@ -105,7 +105,7 @@ When enabled, the Position, Rotation, and Scale values currently set in the **Mu
    For **Merged Copy**, the transform is applied to the final merged object as a whole — after all source objects have been joined. This means the merged mesh moves as one unit from its pivot point, rather than each source piece being positioned individually before joining.
 
 Include Children
-~~~~~~~~~~~~~~~~
+----------------
 
 When enabled, the operator will automatically expand your selection to include all (recursive) children of the objects you have selected before running.
 
@@ -118,7 +118,7 @@ When enabled, the operator will automatically expand your selection to include a
 *Include children makes it very easy to duplicate hierarchies.*
 
 Select New
-~~~~~~~~~~
+----------
 
 This toggle controls the final selection state after the operation is complete.
 
@@ -126,7 +126,7 @@ This toggle controls the final selection state after the operation is complete.
 * **OFF:** The original selection will be restored.
 
 Skip Active
-~~~~~~~~~~~
+-----------
 
 This option is useful when you want to use the active object as a reference point (pivot) for the operation, but do not want to duplicate the object itself.
 
@@ -135,7 +135,7 @@ This option is useful when you want to use the active object as a reference poin
 * **OFF (Default):** The active object is treated as a normal part of the selection and is copied/merged along with everything else.
 
 Clear Parents
-~~~~~~~~~~~~~
+-------------
 
 This toggle controls how parent-child relationships are handled for the newly created objects. It behaves differently for each operator.
 
@@ -153,14 +153,14 @@ This toggle controls how parent-child relationships are handled for the newly cr
 *Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
 
 Target Settings
-----------------
+===============
 
 **Targeting** allows you to place or merge copies into an existing object or selection instead of creating entirely new objects at the source location.
 
 The **Use Target** toggle (checkbox) enables or disables targeting. When disabled, all copy operations work directly on the selection without any target object.
 
 Target Mode Selection
-~~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 When targeting is enabled, three target mode icons appear:
 
@@ -169,7 +169,7 @@ When targeting is enabled, three target mode icons appear:
 * **Select Icon** — **Selection** mode
 
 Target Mode Behaviors
-~~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 The tables below show how each target mode works with each operator:
 
