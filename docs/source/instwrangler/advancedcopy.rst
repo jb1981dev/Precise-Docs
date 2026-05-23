@@ -61,10 +61,10 @@ Every mode will attempt to increment new object names in an elegant way, followi
 * If set name is enabled, Smart Numbering will work as usual as long as the naming pattern ends in numbers.
 
 Settings
-========================
+========
 
 Merge Options (Merged Copy & H Merge only)
--------------------------------------------
+------------------------------------------
 
 These three controls appear on the same row and control how merged meshes handle their data:
 
