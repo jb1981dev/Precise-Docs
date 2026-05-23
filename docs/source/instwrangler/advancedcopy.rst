@@ -91,7 +91,7 @@ These three controls appear on the same row and control how merged meshes handle
    :align: middle
 
 Operation Settings
---------
+------------------
 
 Apply Multi Transform
 ~~~~~~~~~~~~~~~~~~~~~
