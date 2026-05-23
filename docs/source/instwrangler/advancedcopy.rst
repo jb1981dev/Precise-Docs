@@ -11,7 +11,7 @@ The **Advanced Copy** toolkit provides four powerful operators for creating and 
 * **Linked Copy** — creates new linked duplicates (instances) of your selection, with advanced options for placement and hierarchy.
 * **Unlinked Copy** — creates new unlinked duplicates (copies) of your selection, with advanced options for placement and hierarchy.
 * **Merged Copy** — creates a single, new game-ready mesh from a selection of multiple objects by joining and applying modifiers.
-* **H Merge** — batch operation that creates one merged mesh per top-level parent in the selection.
+* **H Merge** — (Hierarchical Merge) batch operation that creates one merged mesh per top-level parent in the selection.
 
 All four operators share a set of common options for controlling transformation, targeting, naming, hierarchy, and collection placement.
 
@@ -22,6 +22,14 @@ All four operators share a set of common options for controlling transformation,
 
 Core Operators
 ==============
+
+Linked Copy & Unlinked Copy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **Linked Copy** creates new **linked duplicates** (:kbd:`Alt+D` instances) of your selection. It is a non-destructive way to create more instances while keeping them linked to the same underlying object data.
+* **Unlinked Copy** creates new **unlinked duplicates** (:kbd:`Shift+D` copies) of your selection. These are simple duplicates which are no longer related to their originals.
+
+Both operators support targeting, naming, and hierarchy options — see the **Advanced Copy Settings** section below.
 
 Merged Copy
 -----------
@@ -43,30 +51,17 @@ Hierarchical Merge (H Merge)
 
 **H Merge** is a batch variant of **Merged Copy** designed to handle multiple hierarchies efficiently. When you select multiple hierarchy groups, it creates one merged mesh per top-level parent, using each root's name and world position to define the result.
 
-**Key behaviors:**
-* Works with both **Auto** and **Selection** target modes. Manual target mode is not supported.
-* In **Selection** target mode, the active object's hierarchy is preserved as the source; merged copies are placed at each other selected hierarchy's position.
-* In **Auto** target mode, each group's merge can target a separate auto-target location.
-
 **Use case:** You have ten separate rig groups in your scene, each with dozens of bones and armor pieces. Select all, click **H Merge**, and get ten optimized proxy meshes — one per rig — ready for export.
 
-Linked Copy & Unlinked Copy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Smart Numbering
+~~~~~~~~~~~~~~~
+Every mode will attempt to increment new object names in an elegant way, following the pattern of the source object's name. 
+* If the source object's name ends in a number (e.g. ``Name_LOD0``, ``object_001``), the copy is automatically named by incrementing that number — ``Name_LOD0`` becomes ``Name_LOD1``, ``object_001`` becomes ``object_002``. If no trailing number is found, Blender's default naming applies.
+* For merged copies, the suffix _merged is added, if more merged copies are made following the same naming pattern, a numbered suffix is added (e.g. _merged.001, _merged.002, etc.)
+* If set name is enabled, Smart Numbering will work as usual as long as the naming pattern ends in numbers.
 
-* **Linked Copy** creates new **linked duplicates** (:kbd:`Alt+D` instances) of your selection. It is a non-destructive way to create more instances while keeping them linked to the same underlying object data.
-* **Unlinked Copy** creates new **unlinked duplicates** (:kbd:`Shift+D` copies) of your selection. These are simple duplicates which are no longer related to their originals.
-
-Both operators support targeting, naming, and hierarchy options — see the **Advanced Copy Settings** section below.
-
-UI Elements and Settings
+Settings
 ========================
-
-Primary Copy Actions
---------------------
-
-The four main operator buttons: **Linked Copy**, **Unlinked Copy**, **Merged Copy**, and **H Merge**.
-
-When a manual target object is set, the **H Merge** button becomes disabled. Use **Auto** or **Selection** target mode with H Merge instead.
 
 Merge Options (Merged Copy & H Merge only)
 -------------------------------------------
@@ -89,7 +84,7 @@ These three controls appear on the same row and control how merged meshes handle
 .. |brush| unicode:: 0x1F4A7
 .. |normals| unicode:: 0x21A9
 
-Settings
+Operation Settings
 --------
 
 Apply Multi Transform
@@ -151,7 +146,7 @@ This toggle controls how parent-child relationships are handled for the newly cr
 
 *Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
 
-Targeting Modes
+Target Settings
 ===============
 
 **Targeting** allows you to place or merge copies into an existing object or selection instead of creating entirely new objects at the source location.
@@ -314,14 +309,6 @@ When the **Set Name** checkbox is enabled, the text in the **Name** field is use
     :align: center
 
 *Different ways of setting the name of the newly copied objects.*
-
-Smart Numbering
-~~~~~~~~~~~~~~~
-
-When **Set Name** is disabled, the **Smart Numbering** toggle controls automatic naming for Linked Copy and Unlinked Copy.
-
-* **ON (Default):** If the source object's name ends in a number (e.g. ``Name_LOD0``, ``object_1``), the copy is automatically named by incrementing that number — ``Name_LOD0`` becomes ``Name_LOD1``, ``object_1`` becomes ``object_2``. If no trailing number is found, Blender's default naming applies.
-* **OFF:** Blender's default naming (e.g. ``Cube.001``) is always used.
 
 Target Collection
 -----------------
