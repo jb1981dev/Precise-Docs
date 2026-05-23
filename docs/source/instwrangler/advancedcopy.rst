@@ -61,10 +61,10 @@ Every mode will attempt to increment new object names in an elegant way, followi
 * If set name is enabled, Smart Numbering will work as usual as long as the naming pattern ends in numbers.
 
 Settings
-========
+--------
 
 Merge Options (Merged Copy & H Merge only)
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These three controls appear on the same row and control how merged meshes handle their data:
 
@@ -91,7 +91,7 @@ These three controls appear on the same row and control how merged meshes handle
    :align: middle
 
 Operation Settings
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Apply Multi Transform
 ~~~~~~~~~~~~~~~~~~~~~
@@ -153,14 +153,14 @@ This toggle controls how parent-child relationships are handled for the newly cr
 *Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
 
 Target Settings
-===============
+----------------
 
 **Targeting** allows you to place or merge copies into an existing object or selection instead of creating entirely new objects at the source location.
 
 The **Use Target** toggle (checkbox) enables or disables targeting. When disabled, all copy operations work directly on the selection without any target object.
 
 Target Mode Selection
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 When targeting is enabled, three target mode icons appear:
 
@@ -169,7 +169,7 @@ When targeting is enabled, three target mode icons appear:
 * **Select Icon** — **Selection** mode
 
 Target Mode Behaviors
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 The tables below show how each target mode works with each operator:
 
