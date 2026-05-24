@@ -13,7 +13,7 @@ The **Advanced Copy** toolkit provides four powerful operators for creating and 
 * **Merged Copy** — creates a single, new game-ready mesh from a selection of multiple objects by joining and applying modifiers.
 * **H Merge** — (Hierarchical Merge) batch operation that creates one merged mesh per top-level parent in the selection.
 
-All four operators share a set of common options for controlling transformation, targeting, `naming <Naming>`_, hierarchy, and collection placement.
+All four operators share a set of common options for controlling `transformation`_, `targeting`_, `Naming`_, `hierarchy`_, and `Target Collection`_.
 
 .. figure:: images/advancedCopy_Overview.gif
     :align: center
@@ -29,7 +29,7 @@ Linked Copy & Unlinked Copy
 * **Linked Copy** creates new **linked duplicates** (:kbd:`Alt+D` instances) of your selection. It is a non-destructive way to create more instances while keeping them linked to the same underlying object data.
 * **Unlinked Copy** creates new **unlinked duplicates** (:kbd:`Shift+D` copies) of your selection. These are simple duplicates which are no longer related to their originals.
 
-Both operators support targeting, `naming <Naming>`_, and hierarchy options — see the **Advanced Copy Settings** section below.
+Both operators support `targeting`_, `Naming`_, and `hierarchy`_ options — see the  `Common Settings`_ section below.
 
 Merged Copy
 -----------
@@ -58,7 +58,9 @@ Hierarchical Merge (H Merge)
 
 Smart Numbering
 ---------------
+
 Every mode will attempt to increment new object names in an elegant way, following the pattern of the source object's name. 
+
 * If the source object's name ends in a number (e.g. ``Name_LOD0``, ``object_001``), the copy is automatically named by incrementing that number — ``Name_LOD0`` becomes ``Name_LOD1``, ``object_001`` becomes ``object_002``. If no trailing number is found, Blender's default naming applies.
 * For merged copies, the suffix _merged is added, if more merged copies are made following the same naming pattern, a numbered suffix is added (e.g. _merged.001, _merged.002, etc.)
 * If set name is enabled, Smart Numbering will work as usual as long as the naming pattern ends in numbers.
@@ -90,10 +92,14 @@ These three controls appear on the same row and control how merged meshes handle
    :width: 30px
    :align: middle
 
+.. _Common Settings:
+
 Common Settings
 ===============
 
 Advanced copy operators share a common set of options for controlling the behavior of the copy or merge process. These settings are designed to give you ultimate control over how new objects are created, named, transformed, and organized in your scene.
+
+.. _transformation:
 
 Apply Multi Transform
 ---------------------
@@ -105,6 +111,8 @@ When enabled, the Position, Rotation, and Scale values currently set in the **Mu
 
 .. note::
    For **Merged Copy**, the transform is applied to the final merged object as a whole — after all source objects have been joined. This means the merged mesh moves as one unit from its pivot point, rather than each source piece being positioned individually before joining.
+
+.. _hierarchy:
 
 Include Children
 ----------------
@@ -158,6 +166,8 @@ Target Settings
 ===============
 
 Target Settings allow you how the new copies or merged meshes are placed in the scene, whether they replace existing objects, which collection they go in to and how the objects are named. These settings work together to give you precise control over the final result of your copy or merge operation.
+
+.. _targeting:
 
 Target Mode
 -----------
@@ -275,6 +285,8 @@ The **Name** field controls how newly created objects are named. Enable the **Se
     :align: center
 
 *Different ways of setting the name of the newly copied objects.*
+
+.. _Target Collection:
 
 Target Collection
 -----------------
