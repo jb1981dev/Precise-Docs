@@ -62,8 +62,8 @@ Smart Numbering
 Every mode will attempt to increment new object names in an elegant way, following the pattern of the source object's name. 
 
 * If the source object's name ends in a number (e.g. ``Name_LOD0``, ``object_001``), the copy is automatically named by incrementing that number — ``Name_LOD0`` becomes ``Name_LOD1``, ``object_001`` becomes ``object_002``. If no trailing number is found, Blender's default naming applies.
-* For merged copies, the suffix _merged is added, if more merged copies are made following the same naming pattern, a numbered suffix is added (e.g. _merged.001, _merged.002, etc.)
-* If set name is enabled, Smart Numbering will work as usual as long as the naming pattern ends in numbers.
+* For merged copies, a ``_Merged`` suffix is added. If that name already exists, a numbered suffix is appended (e.g. ``Cube_Merged.001``, ``Cube_Merged.002``).
+* If set name is enabled, Smart Numbering applies as usual as long as the resolved name ends in a number.
 
 Merge Options
 ------------------------------------------

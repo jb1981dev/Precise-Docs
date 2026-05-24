@@ -10,8 +10,6 @@ The **Apply Modifiers** operator is a powerful tool designed to permanently "bak
 
    <iframe width="700" height="395" src="https://www.youtube.com/embed/AJv1jw-AsZY?si=_gWLXcfPBoblbn24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The primary function is to provide a one-click solution to apply a modifier setup and then clean up the stack across an entire instance group.
-
 .. important::
    This is a **destructive** operation. For non-mesh objects like **Curves** or **Text**, this operator will permanently convert them into **Mesh** objects to apply the modifiers.
 
