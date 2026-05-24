@@ -15,14 +15,7 @@ Think of it as quickly trying on different versions of an asset without ever mov
 How It Works
 ------------
 
-When you click **Next**, **Prev**, or **Random**, the operator performs the following steps for each selected object (and optionally their children):
-
-#. It identifies the object's type (e.g., ``Mesh``, ``Curve``, ``Text``).
-#. It finds all other data-blocks of that same type currently in your ``.blend`` file.
-#. For curve-based types, it intelligently pre-filters the list to only include compatible data (e.g., a Text object will only cycle with other data-blocks that are also text).
-#. It sorts the valid data-blocks **alphabetically** by name.
-#. The list is then narrowed down by the **Filter** settings (if enabled).
-#. Finally, it replaces the object's current data with the next, previous, or a random choice from the filtered list.
+When you click **Next**, **Prev**, or **Random**, the tool collects all data-blocks of the same type as the selected object(s) from your ``.blend`` file, sorts them **alphabetically**, applies any active **Filter**, and swaps each object's data to the chosen entry. Each selected object cycles independently within its own type.
 
 The Next/Prev cycle behavior depends on the filter mode (see `Filter Modes`_ below).
 
@@ -54,7 +47,7 @@ Settings and Controls
     Enables or disables the filter field. When off, the tool cycles through every data-block of the same type. When on, the filter narrows the candidates.
 
 **Filter Field**
-    See `Filter Modes`_ below for detailed syntax and behavior.
+    A text pattern that narrows which data-blocks are available to cycle through. Supports plain substring matching or group-based cycling using ``%``. See `Filter Modes`_ below for details.
 
 Filter Modes
 ------------
@@ -107,12 +100,6 @@ Blocks named ``Prop_v1``, ``Prop_v2``, ``Prop_v3``, ``Asset_v1``, ``Asset_v2``:
     * ``Asset`` objects cycle through ``v1 → v2``
     * Each object stays within its own version group
 
-**Pattern: ``%_hi``**
-
-Blocks named ``Char_hi``, ``Prop_hi``, ``Mesh_hi``:
-    * All objects using any ``*_hi`` block cycle through the shared pool (since the suffix is fixed and prefix is variable)
-    * No per-object grouping occurs
-
 Filter Examples
 ---------------
 
@@ -123,10 +110,6 @@ Filter: ``_LOD0`` → cycle through only LOD0 meshes across your scene. Useful f
 **Browsing versions of one asset:**
 
 Filter: ``Prop_`` → cycle through all versions of ``Prop_*`` blocks. Other assets are excluded.
-
-**Managing multiple LOD sets per object:**
-
-Filter: ``_LOD%`` → each object auditions LODs independently, syncing to the same level when you hit **Prev** repeatedly.
 
 **Random button with filtering:**
 

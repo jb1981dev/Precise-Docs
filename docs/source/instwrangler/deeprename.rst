@@ -6,9 +6,6 @@ Deep Rename
 
 The **Deep Rename** tool renames both the selected objects **and** their underlying datablocks (mesh, curve, etc.) simultaneously using a flexible naming pattern. This "deep" behavior makes it ideal for batch-renaming assets while keeping the object names and data names in sync.
 
-The Problem
------------
-
 In Blender, object names and datablock names are independent. If you rename an object via the outliner, the underlying mesh/curve data keeps its old name. This leads to scenes where the object is called ``Tree_01`` but its mesh data is still called ``Cube.001``.
 
 **Deep Rename** solves this by renaming both at once, in a single operation.

@@ -6,10 +6,7 @@ Deep Delete
 
 The **Deep Delete** tool deletes selected objects and automatically removes any datablocks (mesh, curve, etc.) that become orphaned in the process. With the :kbd:`Ctrl` modifier, it also finds and deletes all other objects in the scene that share the same datablocks.
 
-The Problem
------------
-
-In Blender, deleting an object does not automatically delete its datablock. If you had five linked instances of a tree mesh and you delete all five objects, the underlying mesh data remains in the file as "orphaned" data — data which is not used anywhere. These orphaned datablocks accumulate over time and bloat your file while working. Blender will eventually clean them up zero user datablocks when you save and reopen the file, but until then they will stick around. This can be inconvenient when using functions like cylcle data, which will still cycle through orphaned datablocks.
+In Blender, deleting an object does not automatically delete its datablock. If you had three linked instances of a mesh and you delete all three objects, the underlying mesh data remains in the file as "orphaned" data — data which is not used anywhere. Blender will eventually clean them up zero user datablocks when you save and reopen the file, but until then they will stick around. This can be inconvenient when using functions like cylcle data, which will still cycle through orphaned datablocks.
 
 **Deep Delete** cleans this up automatically, keeping your scene efficient.
 
