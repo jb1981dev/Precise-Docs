@@ -251,26 +251,22 @@ In **Selection** target mode, the active object's hierarchy is treated as the **
 Naming
 ------
 
-The **Name** field controls how the newly created object(s) are named.
+The **Name** field controls how newly created objects are named. Enable the **Set Name** checkbox to activate it; when disabled, default naming applies automatically.
 
-**Set Name Toggle**
+**Default naming (Set Name off)**
 
-When the **Set Name** checkbox is enabled, the text in the **Name** field is used. When disabled, the default naming behavior applies (see below).
+* **Linked Copy & Unlinked Copy:** Smart Numbering increments the trailing number in each source object's name (e.g. ``Cube_01`` → ``Cube_02``). See `Smart Numbering`_ above for details.
+* **Merged Copy & H Merge:** The result is named ``{source}_Merged``. If that name already exists, Smart Numbering finds the next available slot.
 
-**Name Patterns**
+**Custom name patterns**
 
-**For Merged Copy & H Merge:**
+* **Plain text:** Used as the name for all new objects. If Smart Numbering is enabled and the name already exists with a trailing number, the next free slot is used instead of letting Blender append ``.001``.
+* **Wildcard** ``*`` **:** Replaced with each source object's name at copy time. Example: ``Prop_*_LOD0`` on ``Cube`` → ``Prop_Cube_LOD0``. Smart Numbering applies to the final expanded name.
 
-* **Empty field (default):** The new object is named ``MergedCopy`` or ``MergedCopy.001``, etc.
-* **Using wildcard** ``*``: Use as a placeholder for the active object's name. Example: ``Prop_*_LOD0`` on ``Cube`` produces ``Prop_Cube_LOD0``.
-* **Any other text:** Used as the exact name for the new object.
-* **In Target Merge Mode (Manual):** The name field applies to the replaced data-block. If empty, the data-block keeps its original name.
+.. note::
+   If a wildcard pattern's prefix or suffix is already present in the source name, the duplicate part is automatically dropped and Smart Numbering is applied instead — preventing names like ``New_New_Cube`` (from ``New_*`` on ``New_Cube``) or ``Cube_02_01`` (from ``*_01`` on ``Cube_02``).
 
-**For Linked Copy & Unlinked Copy:**
-
-* **Empty (default):** Uses **Smart Numbering** (see below).
-* **Using wildcard** ``*``: Use as a placeholder for each object's original name. Example: ``Prop_*_LOD0`` on ``Cube`` produces ``Prop_Cube_LOD0``.
-* **Any other text:** Used as the base name for all new objects.
+* **Manual Target mode (Merged Copy):** The Name field applies to the replaced data-block rather than a new object. Wildcard ``*`` is supported. If left empty, the data-block keeps its original name.
 
 .. figure:: images/advancedCopy_Name.gif
     :align: center
