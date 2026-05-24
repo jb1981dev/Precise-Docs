@@ -13,7 +13,7 @@ The **Advanced Copy** toolkit provides four powerful operators for creating and 
 * **Merged Copy** — creates a single, new game-ready mesh from a selection of multiple objects by joining and applying modifiers.
 * **H Merge** — (Hierarchical Merge) batch operation that creates one merged mesh per top-level parent in the selection.
 
-All four operators share a set of common options for controlling transformation, targeting, naming, hierarchy, and collection placement.
+All four operators share a set of common options for controlling transformation, targeting, `naming <Naming>`_, hierarchy, and collection placement.
 
 .. figure:: images/advancedCopy_Overview.gif
     :align: center
@@ -29,14 +29,15 @@ Linked Copy & Unlinked Copy
 * **Linked Copy** creates new **linked duplicates** (:kbd:`Alt+D` instances) of your selection. It is a non-destructive way to create more instances while keeping them linked to the same underlying object data.
 * **Unlinked Copy** creates new **unlinked duplicates** (:kbd:`Shift+D` copies) of your selection. These are simple duplicates which are no longer related to their originals.
 
-Both operators support targeting, naming, and hierarchy options — see the **Advanced Copy Settings** section below.
+Both operators support targeting, `naming <Naming>`_, and hierarchy options — see the **Advanced Copy Settings** section below.
 
 Merged Copy
 -----------
 
-The **Merged Copy** operator creates a **single, clean, game-ready mesh** from a selection of multiple, potentially diverse objects (meshes, curves, surfaces, text objects and grease pencil objects). It automates the process of duplicating, converting, joining, and positioning objects. This is ideal for creating simplified proxy models, preparing assets for game engines, or combining parts for 3D printing.
+The **Merged Copy** operator creates a **single, clean, game-ready mesh** from a selection of multiple, potentially diverse objects (meshes, curves, surfaces, grease pencil and text objects). It automates the process of duplicating, converting, joining, and positioning objects. This is ideal for creating simplified proxy models, preparing assets for game engines, or combining parts for 3D printing.
 
 **Key behaviors:**
+
 * All modifiers on source objects are permanently applied (baked) during the merge process.
 * Objects that cannot be converted to mesh — such as empties, lights, and cameras — are automatically excluded from the result.
 * The origin of the new merged object is determined by the active object's world-space location. If no valid active object exists, the origin is set to the center of the new mesh's bounding box.
@@ -46,10 +47,12 @@ The **Merged Copy** operator creates a **single, clean, game-ready mesh** from a
 
 *The pivot is determined by the active object or the bounding box center.*
 
+.. _H Merge:
+
 Hierarchical Merge (H Merge)
 ----------------------------
 
-**H Merge** is a batch variant of **Merged Copy** designed to handle multiple hierarchies efficiently. When you select multiple hierarchy groups, it creates one merged mesh per top-level parent, using each root's name and world position to define the result.
+**H Merge** is a batch variant of `Merged Copy`_ designed to handle multiple hierarchies efficiently. When you select multiple hierarchy groups, it creates one merged mesh per top-level parent, using each root's name and world position to define the result.
 
 **Use case:** You have ten separate rig groups in your scene, each with dozens of bones and armor pieces. Select all, click **H Merge**, and get ten optimized proxy meshes — one per rig — ready for export.
 
@@ -63,7 +66,7 @@ Every mode will attempt to increment new object names in an elegant way, followi
 Merge Options
 ------------------------------------------
 
-These three controls appear on the same row and control how merged meshes handle their data. They are only relevant for **Merged Copy** and **H Merge**.
+These three controls appear on the same row and control how merged meshes handle their data. They are only relevant for `Merged Copy`_ and `H Merge`_.
 
 **Clean Geometry** |icon_clean|
     When enabled, the operator welds overlapping vertices and removes loose geometry from the merged mesh. Useful for cleaning up complex source selections.
@@ -130,7 +133,7 @@ Skip Active
 This option is useful when you want to use the active object as a reference point (pivot) for the operation, but do not want to duplicate the object itself.
 
 * **ON:** The active object is used to calculate the center of the operation, but is excluded from the final copies.
-    * **Parenting Behavior:** If **Skip Active** and **Include Children** are both enabled, the newly created copies will be automatically parented to the *original* active object.
+    * **Parenting Behavior:** If **Skip Active** and `Include Children`_ are both enabled, the newly created copies will be automatically parented to the *original* active object.
 * **OFF (Default):** The active object is treated as a normal part of the selection and is copied/merged along with everything else.
 
 Clear Parents
@@ -192,7 +195,7 @@ Not supported. The operator cancels with a warning when a manual target is set.
 * Update a game-ready proxy mesh in-place: adjust your source objects, re-merge into the existing target, and all instances instantly reflect the new geometry (Merged Copy).
 
 .. note::
-   The redo/F9 panel is not compatible when a manual target is set. Settings are read from the last values set in the sidebar or popup. **Clear Parents** and **Target Collection** have no effect in this mode. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
+   The redo/F9 panel is not compatible when a manual target is set. Settings are read from the last values set in the sidebar or popup. `Clear Parents`_ and `Target Collection`_ have no effect in this mode. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
 
 Auto Target (Search)
 ^^^^^^^^^^^^^^^^^^^^
@@ -239,7 +242,7 @@ In **Selection** target mode, the active object's hierarchy is treated as the **
 
 * **Linked Copy:** Creates a new linked copy of the source. Each target hierarchy is removed and replaced with that copy at the target's position, rotation, and scale.
 * **Unlinked Copy:** Creates a new unlinked copy of the source. Each target hierarchy is removed and replaced with that copy.
-* **Merged Copy:** **Not available** in this mode. Use **H Merge** instead.
+* **Merged Copy:** **Not available** in this mode. Use `H Merge`_ instead.
 * **H Merge:** The source hierarchy is preserved (not merged). A merged copy of the source is created and placed at each target's world position; the source hierarchy remains in place.
 
 **Use cases:**
