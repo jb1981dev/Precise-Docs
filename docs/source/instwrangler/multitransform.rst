@@ -14,8 +14,8 @@ UI Controls Explained
 
 The panel is organized as a grid. On the left is a column of **axis toggles**. To the right are three value columns — one each for **Position**, **Rotation**, and **Scale**.
 
-* **Include Toggles (Pos / Rot / Scale):** The top cell of each value column is a toggle button that controls whether that transform type is included in **Set All** operations. For example, disabling **Rot** means clicking **Set All** will only apply Position and Scale, leaving each object's rotation untouched. These toggles also affect the **Apply Multi Transform** option in :doc:`advancedcopy`. The buttons also support modifier keys for quick value operations — see `Toggle Button Shortcuts`_ below.
-* **Axis Toggles (X / Y / Z):** Each row on the left side filters which axes are affected. Disabling **Z** means the Z-axis value will never be written, regardless of which Set button you click. These buttons also support modifier keys — see `Toggle Button Shortcuts`_ below.
+* **Include Toggles (Pos / Rot / Scale):** The top cell of each value column is a toggle button that controls whether that transform type is included in **Set All** operations. For example, disabling **Rot** means clicking **Set All** will only apply Position and Scale, leaving each object's rotation untouched. These toggles also affect the **Apply Multi Transform** option in :doc:`advancedcopy`. The buttons also support modifier keys for quick value operations — see `Toggle Buttons`_ below.
+* **Axis Toggles (X / Y / Z):** Each row on the left side filters which axes are affected. Disabling **Z** means the Z-axis value will never be written, regardless of which Set button you click. These buttons also support modifier keys.
 * **Value Fields:** The nine input fields in the grid hold the target values for each axis and transform type. Right-click any field for per-cell operations — see `Right-Click Menu`_ below.
 * **Set Buttons:** The row below the grid contains the action buttons:
     * **Set All:** Applies all included transform types to the selection at once.
@@ -30,7 +30,7 @@ The panel is organized as a grid. On the left is a column of **axis toggles**. T
 Using Set All to set position, rotation and scale at the same time (IW v1.0).
 
 Set Buttons
----------------------
+-----------
 
 The four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support two modifier keys:
 
@@ -43,7 +43,7 @@ The four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support two 
 For **Set All**, both shortcuts also respect the **Pos / Rot / Scale include toggles** — only the enabled transform types are affected.
 
 Toggle Buttons
-------------------------
+--------------
 
 The six toggle buttons — **X**, **Y**, **Z** (row toggles) and **Pos**, **Rot**, **Scale** (column toggles) — are operator buttons that support modifier keys operating directly on their associated value fields, without changing the toggle state:
 
