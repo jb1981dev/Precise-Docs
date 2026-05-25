@@ -26,11 +26,10 @@ The panel is organized as a grid. On the left is a column of **axis toggles**. T
 
 .. figure:: images/multitransform_setall.gif
    :align: center
-   :alt: Using Set All to set position, rotation and scale at the same time.
 
-Using "Set All" to apply position, rotation and scale at the same time.
+Using Set All to set position, rotation and scale at the same time (IW v1.0).
 
-Set Button Shortcuts
+Set Buttons
 ---------------------
 
 The four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support two modifier keys:
@@ -43,7 +42,7 @@ The four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support two 
 
 For **Set All**, both shortcuts also respect the **Pos / Rot / Scale include toggles** — only the enabled transform types are affected.
 
-Toggle Button Shortcuts
+Toggle Buttons
 ------------------------
 
 The six toggle buttons — **X**, **Y**, **Z** (row toggles) and **Pos**, **Rot**, **Scale** (column toggles) — are operator buttons that support modifier keys operating directly on their associated value fields, without changing the toggle state:
@@ -64,6 +63,11 @@ For the **axis row buttons** (X / Y / Z), Round / Invert / Reset apply across al
 
 For the **column buttons** (Pos / Rot / Scale), Round / Invert / Reset apply to all three values in that column, but only the rows currently enabled by the X / Y / Z axis toggles are affected.
 
+.. figure:: images/multitransform_gridoperations.gif
+   :align: center
+
+Using various Toggle Button modifier key operations (round, invert, reset) (IW v1.2).
+
 Right-Click Menu
 -----------------
 
@@ -74,6 +78,12 @@ Right-clicking any of the nine value fields opens a context menu with per-cell o
 * **Round** *field* — snaps the value to the nearest clean step.
 * **Invert** *field* — negates the value.
 * **Reset** *field* — resets the value to its default (0 for Position and Rotation, 1 for Scale).
+
+.. figure:: images/multitransform_rightmouse.gif
+   :align: center
+
+Using per-cell operations in the right-click menu (IW v1.2).
+
 
 Relative Toggle
 ------------------
@@ -88,17 +98,17 @@ The **Relative** toggle lets you switch between relative and absolute transform 
 .. figure:: images/multitransform_position.gif
    :align: center
 
-Setting the position in absolute and relative mode and using the axis rows.
+Setting the position in absolute and relative mode and using the axis rows (IW v1.0).
 
 .. figure:: images/multitransform_rotation.gif
    :align: center
 
-Setting the rotation in absolute and relative mode and using the axis rows.
+Setting the rotation in absolute and relative mode and using the axis rows (IW v1.0).
 
 .. figure:: images/multitransform_scale.gif
    :align: center
 
-Setting the scale in absolute and relative mode and using the axis rows.
+Setting the scale in absolute and relative mode and using the axis rows (IW v1.0).
 
 Active Leads Mode
 ----------------------
@@ -117,14 +127,14 @@ Enabling **Active Leads** makes the **active object** the pivot point for the en
 .. figure:: images/multitransform_activeleadspos.gif
    :align: center
 
-Use Active Leads to move objects as a group, using the active object as the group pivot.
+Use Active Leads to move objects as a group, using the active object as the group pivot (IW v1.0).
 
 .. figure:: images/multitransform_activeleadsrot.gif
    :align: center
 
-Use Active Leads to rotate objects as a group, using the active object as the group pivot.
+Use Active Leads to rotate objects as a group, using the active object as the group pivot (IW v1.0).
 
 .. figure:: images/multitransform_activeleadsscale.gif
    :align: center
 
-Use Active Leads to scale objects as a group, using the active object as the group pivot.
+Use Active Leads to scale objects as a group, using the active object as the group pivot (IW v1.0).
