@@ -25,6 +25,7 @@ The panel is organized as a grid. On the left is a column of **axis toggles**. T
     * **Active Leads:** Switches to a mode where the active object acts as a pivot for the selection. See `Active Leads Mode`_ below.
 
 .. dropdown:: Animation: Set All
+   :open:
 
    .. figure:: images/multitransform_setall.gif
       :align: center
@@ -66,6 +67,7 @@ For the **axis row buttons** (X / Y / Z), Round / Invert / Reset apply across al
 For the **column buttons** (Pos / Rot / Scale), Round / Invert / Reset apply to all three values in that column, but only the rows currently enabled by the X / Y / Z axis toggles are affected.
 
 .. dropdown:: Animation: Toggle button operations
+   :open:
 
    .. figure:: images/multitransform_gridoperations.gif
       :align: center
@@ -84,6 +86,7 @@ Right-clicking any of the nine value fields opens a context menu with per-cell o
 * **Reset** *field* — resets the value to its default (0 for Position and Rotation, 1 for Scale).
 
 .. dropdown:: Animation: Right-click menu
+   :open:
 
    .. figure:: images/multitransform_rightmouse.gif
       :align: center
@@ -102,6 +105,7 @@ The **Relative** toggle lets you switch between relative and absolute transform 
     * Example: To move all selected objects 2 units to the right, you would enable ``Relative``, enter ``2.0`` in the X position field, and click **Set**.
 
 .. dropdown:: Animations: Position, Rotation & Scale
+   :open:
 
    .. figure:: images/multitransform_position.gif
       :align: center
@@ -133,6 +137,7 @@ Enabling **Active Leads** makes the **active object** the pivot point for the en
 * **Relative Mode On:** In this mode, the UI values represent an **incremental change** that is applied to the active object, and the followers move with it in a parented fashion with each click.	
 
 .. dropdown:: Animations: Active Leads
+   :open:
 
    .. figure:: images/multitransform_activeleadspos.gif
       :align: center
