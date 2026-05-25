@@ -10,10 +10,13 @@ These two buttons are powerful utilities for managing the names of your objects 
 * **← Object:** This copies the name of the object's data-block to the object itself. This is used to propagate or "sync" that master name across multiple selected instances.
 * **→ Data-Block:** This copies the name of the selected object to its underlying data-block. This is useful for establishing the "master" name for an entire set of instances.
 
-.. figure:: images/copy_name.gif
-   :align: center
+.. dropdown:: Animation: Copy Name
+   :open:
 
-*Using Copy Name to sync names of objects and data blocks across multiple instances.*
+   .. figure:: images/copy_name.gif
+      :align: center
+
+   *Using Copy Name to sync names of objects and data blocks across multiple instances.*
 
 Workflow: Consistent Naming for Instances
 -------------------------------------------
@@ -36,7 +39,10 @@ Let's say you have dozens of linked rocks named ``Sphere.001``, ``Sphere.034``, 
 
 In just a few clicks, you have synced the names of all your instances, creating a much cleaner and more organized scene.
 
-.. figure:: images/copy_name_advanced.gif
-   :align: center
+.. dropdown:: Animation: Copy Name workflow
+   :open:
 
-*Demonstrating a scenario similar to what is described in the workflow example above.*
+   .. figure:: images/copy_name_advanced.gif
+      :align: center
+
+   *Demonstrating a scenario similar to what is described in the workflow example above.*

@@ -15,10 +15,13 @@ The **Advanced Copy** toolkit provides four powerful operators for creating and 
 
 All four operators share a set of common options for controlling `transformation`_, `targeting`_, `Naming`_, `hierarchy`_, and `Target Collection`_.
 
-.. figure:: images/advancedCopy_Overview.gif
-    :align: center
+.. dropdown:: Animation: Overview
+   :open:
 
-*Advanced copy will effortlessly copy or merge any type of object with ultimate control over the newly created object.*
+   .. figure:: images/advancedCopy_Overview.gif
+      :align: center
+
+   *Advanced copy will effortlessly copy or merge any type of object with ultimate control over the newly created object.*
 
 Core Operators
 ==============
@@ -42,10 +45,13 @@ The **Merged Copy** operator creates a **single, clean, game-ready mesh** from a
 * Objects that cannot be converted to mesh — such as empties, lights, and cameras — are automatically excluded from the result.
 * The origin of the new merged object is determined by the active object's world-space location. If no valid active object exists, the origin is set to the center of the new mesh's bounding box.
 
-.. figure:: images/advancedCopy_Merged_Pivot.gif
-    :align: center
+.. dropdown:: Animation: Merged pivot
+   :open:
 
-*The pivot is determined by the active object or the bounding box center.*
+   .. figure:: images/advancedCopy_Merged_Pivot.gif
+      :align: center
+
+   *The pivot is determined by the active object or the bounding box center.*
 
 .. _H Merge:
 
@@ -122,10 +128,13 @@ When enabled, the operator will automatically expand your selection to include a
 * **For Merged Copy:** Requires a selected active object to determine which children to select.
 * **For Linked Copy & Unlinked Copy:** Will find the children of all selected objects.
 
-.. figure:: images/advancedCopy_IncludeChildren.gif
-    :align: center
+.. dropdown:: Animation: Include Children
+   :open:
 
-*Include children makes it very easy to duplicate hierarchies.*
+   .. figure:: images/advancedCopy_IncludeChildren.gif
+      :align: center
+
+   *Include children makes it very easy to duplicate hierarchies.*
 
 Select New
 ----------
@@ -157,10 +166,13 @@ This toggle controls how parent-child relationships are handled for the newly cr
     * **ON (Default):** The new duplicates are unparented from each other, creating a 'flat' selection of new instances.
     * **OFF:** The original parent-child hierarchy is preserved in the duplicated set.
 
-.. figure:: images/advancedCopy_ClearParents.gif
-    :align: center
+.. dropdown:: Animation: Clear Parents
+   :open:
 
-*Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
+   .. figure:: images/advancedCopy_ClearParents.gif
+      :align: center
+
+   *Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
 
 Target Settings
 ===============
@@ -281,10 +293,13 @@ The **Name** field controls how newly created objects are named. Enable the **Se
 
 * **Manual Target mode (Merged Copy):** The Name field applies to the replaced data-block rather than a new object. Wildcard ``*`` is supported. If left empty, the data-block keeps its original name.
 
-.. figure:: images/advancedCopy_Name.gif
-    :align: center
+.. dropdown:: Animation: Naming
+   :open:
 
-*Different ways of setting the name of the newly copied objects.*
+   .. figure:: images/advancedCopy_Name.gif
+      :align: center
+
+   *Different ways of setting the name of the newly copied objects.*
 
 .. _Target Collection:
 
@@ -299,7 +314,10 @@ This dropdown menu controls which collection the newly created object(s) will be
 
 * **Explicit Choice:** Select any collection in the scene to force all new objects into that specific collection.
 
-.. figure:: images/advancedCopy_Collections.gif
-    :align: center
+.. dropdown:: Animation: Target Collection
+   :open:
 
-*You can target collections for the new copies or handle it automatically in a reliable way.*
+   .. figure:: images/advancedCopy_Collections.gif
+      :align: center
+
+   *You can target collections for the new copies or handle it automatically in a reliable way.*

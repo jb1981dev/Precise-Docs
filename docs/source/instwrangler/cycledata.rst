@@ -19,10 +19,13 @@ When you click **Next**, **Prev**, or **Random**, the tool collects all data-blo
 
 The Next/Prev cycle behavior depends on the filter mode (see `Filter Modes`_ below).
 
-.. figure:: images/cycledata.gif
-   :align: center
+.. dropdown:: Animation: Cycle Data
+   :open:
 
-*Cycling through object data on one or more objects.*
+   .. figure:: images/cycledata.gif
+      :align: center
+
+   *Cycling through object data on one or more objects.*
 
 How to Use
 ----------
@@ -115,10 +118,13 @@ Filter: ``Prop_`` → cycle through all versions of ``Prop_*`` blocks. Other ass
 
 Select ten objects, set filter to ``Rock_``, and click **Random** → each object gets a random rock variant. The **Random** button respects both plain text and group mode filters, and avoids assigning an object its current data-block.
 
-.. figure:: images/cycledata_filter.gif
-   :align: center
+.. dropdown:: Animation: Filter
+   :open:
 
-*Using a filter to limit the range of cycled objects.*
+   .. figure:: images/cycledata_filter.gif
+      :align: center
+
+   *Using a filter to limit the range of cycled objects.*
 
 Example Workflows
 -----------------
@@ -126,10 +132,13 @@ Example Workflows
 **Auditioning Assets**
     This tool is invaluable for tasks like set dressing. If you have a ``Tree_Placeholder`` object, you can select it and click **Next** repeatedly to cycle through all available tree models (``Tree_Oak``, ``Tree_Pine``, etc.) to see which one fits best in your scene.
 
-.. figure:: images/cycledata_staging.gif
-   :align: center
+.. dropdown:: Animation: Auditioning assets
+   :open:
 
-*Auditioning trees and rocks and using the randomize and filter functionality.*
+   .. figure:: images/cycledata_staging.gif
+      :align: center
+
+   *Auditioning trees and rocks and using the randomize and filter functionality.*
 
 **Swapping Levels of Detail (LODs)**
     This tool is also ideal for managing **LODs**. If your assets are named alphabetically (e.g., ``MyAsset_LOD0``, ``MyAsset_LOD1``), you can select all ``_LOD0`` instances and click **Next** to switch them all to ``_LOD1`` instantly. You can also use the **Filter** field: typing ``LOD2`` and clicking **Next** will jump all selected objects directly to their ``_LOD2`` version.

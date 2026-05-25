@@ -23,10 +23,13 @@ Next to the button, you have three toggles to control exactly which transforms a
 
 You can use any combination of these toggles. For example, you can apply the scale of several objects while leaving their unique positions and rotations untouched.
 
-.. figure:: images/apply_transform_general.gif
-   :align: center
+.. dropdown:: Animation: Apply Transforms
+   :open:
 
-Applying transforms for rotation, scale and position on multiple instances.
+   .. figure:: images/apply_transform_general.gif
+      :align: center
+
+   Applying transforms for rotation, scale and position on multiple instances.
 
 Usage with Selections
 ---------------------

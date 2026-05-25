@@ -21,10 +21,13 @@ The process is very simple:
 
 Each selected object will now be a "single user," meaning it no longer shares its data with any other objects in your selection.
 
-.. figure:: images/unlink.gif
-   :align: center
+.. dropdown:: Animation: Unlink
+   :open:
 
-*Unlinking one or multiple objects from the rest of their instance groups*
+   .. figure:: images/unlink.gif
+      :align: center
+
+   *Unlinking one or multiple objects from the rest of their instance groups*
 
 Key Feature: Intelligent Reporting
 ----------------------------------

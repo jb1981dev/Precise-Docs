@@ -22,10 +22,13 @@ Global Sync (Default Behavior)
 
 In most cases, the operator performs a **global sync**. It identifies a "leader" object for an instance group and copies its modifier stack to **every other instance** of that object in the entire scene, whether it's selected or not. This can be performed on multiple different instance groups in a single operation.
 
-.. figure:: images/modifier_sync_general.gif
-   :align: center
+.. dropdown:: Animation: Global Sync
+   :open:
 
-*Global sync on groups of different types of instanced objects.*
+   .. figure:: images/modifier_sync_general.gif
+      :align: center
+
+   *Global sync on groups of different types of instanced objects.*
 
 Limited Sync (Special Case)
 ---------------------------
@@ -38,10 +41,13 @@ A special, limited sync mode is triggered if your selection meets these specific
 
 When this condition is met, the sync is **limited to your selection**. The active object's modifiers will only be copied to the *other selected objects*, leaving any unselected instances of that group untouched. This is useful for creating a unique variation from a subset of instances.
 
-.. figure:: images/modifier_sync_limited.gif
-   :align: center
+.. dropdown:: Animation: Limited Sync
+   :open:
 
-*Limited sync on different groups of instances.*
+   .. figure:: images/modifier_sync_limited.gif
+      :align: center
+
+   *Limited sync on different groups of instances.*
 
 Selection Rules (Determining the Leader)
 ========================================

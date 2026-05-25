@@ -20,10 +20,13 @@ The operator is straightforward:
 
 This is an **additive** process; the newly found objects will be added to your current selection without deselecting what you already have.
 
-.. figure:: images/select_linked.gif
-   :align: center
+.. dropdown:: Animation: Select Linked
+   :open:
 
-*Selecting one or multiple instance groups using Select Linked*
+   .. figure:: images/select_linked.gif
+      :align: center
+
+   *Selecting one or multiple instance groups using Select Linked*
 
 Key Behavior
 ------------
