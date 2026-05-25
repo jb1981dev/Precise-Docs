@@ -24,10 +24,12 @@ The panel is organized as a grid. On the left is a column of **axis toggles**. T
     * **Relative:** Switches between Absolute and Relative modes. See `Relative Toggle`_ below.
     * **Active Leads:** Switches to a mode where the active object acts as a pivot for the selection. See `Active Leads Mode`_ below.
 
-.. figure:: images/multitransform_setall.gif
-   :align: center
+.. dropdown:: Animation: Set All
 
-Using Set All to set position, rotation and scale at the same time (IW v1.0).
+   .. figure:: images/multitransform_setall.gif
+      :align: center
+
+   Using Set All to set position, rotation and scale at the same time (IW v1.0).
 
 Set Buttons
 -----------
@@ -63,10 +65,12 @@ For the **axis row buttons** (X / Y / Z), Round / Invert / Reset apply across al
 
 For the **column buttons** (Pos / Rot / Scale), Round / Invert / Reset apply to all three values in that column, but only the rows currently enabled by the X / Y / Z axis toggles are affected.
 
-.. figure:: images/multitransform_gridoperations.gif
-   :align: center
+.. dropdown:: Animation: Toggle button operations
 
-Using various Toggle Button modifier key operations (round, invert, reset) (IW v1.2).
+   .. figure:: images/multitransform_gridoperations.gif
+      :align: center
+
+   Using various Toggle Button modifier key operations (round, invert, reset) (IW v1.2).
 
 Right-Click Menu
 -----------------
@@ -79,10 +83,12 @@ Right-clicking any of the nine value fields opens a context menu with per-cell o
 * **Invert** *field* — negates the value.
 * **Reset** *field* — resets the value to its default (0 for Position and Rotation, 1 for Scale).
 
-.. figure:: images/multitransform_rightmouse.gif
-   :align: center
+.. dropdown:: Animation: Right-click menu
 
-Using per-cell operations in the right-click menu (IW v1.2).
+   .. figure:: images/multitransform_rightmouse.gif
+      :align: center
+
+   Using per-cell operations in the right-click menu (IW v1.2).
 
 
 Relative Toggle
@@ -95,20 +101,22 @@ The **Relative** toggle lets you switch between relative and absolute transform 
 * **Relative Mode** (``Relative`` enabled): This mode **adds** (or multiplies for scale) the entered values to each object's current transform. It's ideal for nudging a selection of objects while preserving their existing arrangement.
     * Example: To move all selected objects 2 units to the right, you would enable ``Relative``, enter ``2.0`` in the X position field, and click **Set**.
 
-.. figure:: images/multitransform_position.gif
-   :align: center
+.. dropdown:: Animations: Position, Rotation & Scale
 
-Setting the position in absolute and relative mode and using the axis rows (IW v1.0).
+   .. figure:: images/multitransform_position.gif
+      :align: center
 
-.. figure:: images/multitransform_rotation.gif
-   :align: center
+   Setting the position in absolute and relative mode and using the axis rows (IW v1.0).
 
-Setting the rotation in absolute and relative mode and using the axis rows (IW v1.0).
+   .. figure:: images/multitransform_rotation.gif
+      :align: center
 
-.. figure:: images/multitransform_scale.gif
-   :align: center
+   Setting the rotation in absolute and relative mode and using the axis rows (IW v1.0).
 
-Setting the scale in absolute and relative mode and using the axis rows (IW v1.0).
+   .. figure:: images/multitransform_scale.gif
+      :align: center
+
+   Setting the scale in absolute and relative mode and using the axis rows (IW v1.0).
 
 Active Leads Mode
 ----------------------
@@ -124,17 +132,19 @@ Enabling **Active Leads** makes the **active object** the pivot point for the en
 * **Relative Mode Off (Absolute Mode):** You are setting an **absolute target** for the leader, and the followers will arrange themselves around it.
 * **Relative Mode On:** In this mode, the UI values represent an **incremental change** that is applied to the active object, and the followers move with it in a parented fashion with each click.	
 
-.. figure:: images/multitransform_activeleadspos.gif
-   :align: center
+.. dropdown:: Animations: Active Leads
 
-Use Active Leads to move objects as a group, using the active object as the group pivot (IW v1.0).
+   .. figure:: images/multitransform_activeleadspos.gif
+      :align: center
 
-.. figure:: images/multitransform_activeleadsrot.gif
-   :align: center
+   Use Active Leads to move objects as a group, using the active object as the group pivot (IW v1.0).
 
-Use Active Leads to rotate objects as a group, using the active object as the group pivot (IW v1.0).
+   .. figure:: images/multitransform_activeleadsrot.gif
+      :align: center
 
-.. figure:: images/multitransform_activeleadsscale.gif
-   :align: center
+   Use Active Leads to rotate objects as a group, using the active object as the group pivot (IW v1.0).
 
-Use Active Leads to scale objects as a group, using the active object as the group pivot (IW v1.0).
+   .. figure:: images/multitransform_activeleadsscale.gif
+      :align: center
+
+   Use Active Leads to scale objects as a group, using the active object as the group pivot (IW v1.0).
