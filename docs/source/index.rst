@@ -14,9 +14,13 @@ Addon Projects:
 
 * :doc:`Instance Wrangler <instwrangler/index>`
 
-Instance Wrangler is an addon for Blender which assists the user in managing instances and copies in complex scenes. 
+Instance Wrangler is an addon for Blender which assists the user in managing instances and copies in complex scenes.
 
-More addons to follow soon!
+.. rst-class:: large-link
+
+* :doc:`Game Asset Toolkit <gameassettoolkit/index>`
+
+Game Asset Toolkit is a Blender addon for game asset creation: LOD management, collider generation, mesh cleanup, and validated batch FBX export.
 
 
 .. The following Toctree will populate the Sidebar. For the table of contents on Page, go to instwrangler/index
@@ -46,6 +50,18 @@ More addons to follow soon!
    instwrangler/deepdelete
    instwrangler/copyname
    instwrangler/blendermenus
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Game Asset Toolkit
+   :hidden:
+
+   gameassettoolkit/index
+   gameassettoolkit/smartexporter
+   gameassettoolkit/showhidelod
+   gameassettoolkit/assettools
+   gameassettoolkit/collidertools
+   gameassettoolkit/cleanuptool
 
 ..
    .. toctree::
