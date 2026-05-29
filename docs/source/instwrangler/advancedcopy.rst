@@ -74,13 +74,16 @@ Every mode will attempt to increment new object names in an elegant way, followi
 Merge Options
 ------------------------------------------
 
-These three controls appear on the same row and control how merged meshes handle their data. They are only relevant for `Merged Copy`_ and `H Merge`_.
+These controls appear on the same row and control how merged meshes handle their data. They are only relevant for `Merged Copy`_ and `H Merge`_.
 
 **Clean Geometry** |icon_clean|
     When enabled, the operator welds overlapping vertices and removes loose geometry from the merged mesh. Useful for cleaning up complex source selections.
 
 **Unify Normals** |icon_normals|
     When enabled, recalculates the normals of the final mesh to all point outwards. Useful for ensuring consistent shading before export (though Blender's recalculation is not always perfectly reliable — verify results).
+
+**Keep Target Modifiers** |icon_modifiers|
+    When enabled, if a target object is used, any modifiers on the target are preserved and applied on top of the merged result. This allows you to maintain non-destructive modifier setups on the target while still updating the underlying mesh with new merged geometry.    
 
 **UV Merge Mode**
     Controls how UV channels from different objects are combined during merge:
@@ -97,6 +100,10 @@ These three controls appear on the same row and control how merged meshes handle
    :height: 30px
    :width: 30px
    :align: middle
+.. |icon_modifiers| image:: images/Icon_Modifiers.png
+   :height: 30px
+   :width: 30px
+   :align: middle   
 
 .. _Common Settings:
 
