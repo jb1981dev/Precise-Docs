@@ -35,7 +35,10 @@ Display Mode
 ------------
 
 **Solid / Wire**
-   Sets the viewport display mode for **all** objects with a ``_Collider`` suffix in the scene. Wire mode is useful for inspecting collision geometry without it obscuring the visual mesh.
+   Sets the viewport display mode for all objects with a ``_Collider`` suffix in the scene. Wire mode is useful for inspecting collision geometry without it obscuring the visual mesh.
+
+   * :kbd:`LMB` — Apply to all collider objects in the scene.
+   * :kbd:`Ctrl` — Apply to all currently selected objects instead.
 
 Visibility
 ----------
