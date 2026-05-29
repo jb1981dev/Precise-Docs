@@ -224,7 +224,7 @@ Not supported. The operator cancels with a warning when a manual target is set.
 * Update a game-ready proxy mesh in-place: adjust your source objects, re-merge into the existing target, and all instances instantly reflect the new geometry (Merged Copy).
 
 .. note::
-   The redo/F9 panel is not compatible when a manual target is set. Settings are read from the last values set in the sidebar or popup. `Clear Parents`_ and `Target Collection`_ have no effect in this mode. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
+   The redo/F9 panel is not compatible when a manual target is set. Settings are read from the last values set in the sidebar or popup. `Clear Parents`_ has no effect in this mode. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
 
 Auto Target (Search)
 ^^^^^^^^^^^^^^^^^^^^
@@ -313,13 +313,13 @@ The **Name** field controls how newly created objects are named. Enable the **Se
 Target Collection
 -----------------
 
-This dropdown menu controls which collection the newly created object(s) will be placed in.
+The **Collection** checkbox and dropdown control which collection the newly created object(s) are placed in.
 
-* **Automatic (Default):** The operator intelligently determines the most logical collection based on your original selection:
+* **Checkbox off (Default):** The operator automatically determines the most logical collection based on your original selection:
     * For **Merged Copy** and **H Merge**, the new mesh is placed in the collection of the original active object (or the Scene Collection if no active object exists).
     * For **Linked Copy** and **Unlinked Copy**, each new duplicate is placed in the **same collection(s) as its original counterpart**, preserving your scene's organization.
 
-* **Explicit Choice:** Select any collection in the scene to force all new objects into that specific collection.
+* **Checkbox on:** The dropdown becomes active — select any collection in the scene to force all new objects into that specific collection.
 
 .. dropdown:: Animation: Target Collection
    :open:
