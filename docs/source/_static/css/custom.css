@@ -32,3 +32,8 @@ readthedocs-flyout {
 .wy-nav-content {
     max-width: 1000px;
 }
+
+/* Force figure captions to appear below the image, not beside it */
+figure {
+    clear: both;
+}
