@@ -19,6 +19,14 @@ Installation
 Accessing the Tools
 -------------------
 
+.. dropdown:: Animation: The User Interface
+   :open:
+
+   .. figure:: images/user_interface.gif
+      :align: center
+
+   *The different areas of the Instance Wrangler user interface.*
+
 Instance Wrangler's tools are available from four different locations. All of them share the same operators, so you can use whichever fits your workflow.
 
 N-Panel (Sidebar)
@@ -26,24 +34,10 @@ N-Panel (Sidebar)
 
 Open the sidebar with :kbd:`N` in the 3D Viewport and navigate to the **Precise** tab. This is the main persistent panel and is always available. Toolsets can be shown, hidden, and reordered in the addon preferences.
 
-..
-   IMAGE PLACEHOLDER
-   .. figure:: images/accessing_npanel.png
-      :align: center
-
-   *The Instance Wrangler N-panel in the Precise tab.*
-
 Header Toolbar
 ^^^^^^^^^^^^^^
 
 The **IW logo button** is permanently present in the 3D Viewport's tool header — the same bar as the transform orientation dropdown, pivot point, and snap controls. Click the logo to expand the toolkit buttons inline. Each button opens a floating panel with the same layout as the corresponding N-panel section.
-
-..
-   IMAGE PLACEHOLDER
-   .. figure:: images/accessing_header.png
-      :align: center
-
-   *The header toolbar with toolkit buttons expanded.*
 
 Popup Menu
 ^^^^^^^^^^
