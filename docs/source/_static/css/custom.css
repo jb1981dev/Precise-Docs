@@ -30,5 +30,5 @@ readthedocs-flyout {
 
 /* Widen the main content area on larger screens (default is 800px) */
 .wy-nav-content {
-    max-width: 1100px;
+    max-width: 1000px;
 }
