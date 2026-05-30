@@ -33,7 +33,9 @@ readthedocs-flyout {
     max-width: 1000px;
 }
 
-/* Force figure captions to appear below the image, not beside it */
-figure figcaption {
+/* Force figure captions to appear below the image, not beside it.
+   The italic text after each figure is a sibling <p>, not a <figcaption>,
+   so we clear the float on any paragraph that immediately follows a figure. */
+figure + p {
     clear: both;
 }
