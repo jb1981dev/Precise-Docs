@@ -18,7 +18,7 @@ In Blender, you cannot directly link a Curve's data to a Mesh object. You would 
    :open:
 
    .. figure:: images/link_selected.gif
-      :align: center
+      :align: left
 
    *Linking object data from one object to one or more others, even between different object types.*
 

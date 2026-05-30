@@ -23,7 +23,7 @@ The Next/Prev cycle behavior depends on the filter mode (see `Filter Modes`_ bel
    :open:
 
    .. figure:: images/cycledata.gif
-      :align: center
+      :align: left
 
    *Cycling through object data on one or more objects.*
 
@@ -122,7 +122,7 @@ Select ten objects, set filter to ``Rock_``, and click **Random** → each objec
    :open:
 
    .. figure:: images/cycledata_filter.gif
-      :align: center
+      :align: left
 
    *Using a filter to limit the range of cycled objects.*
 
@@ -136,7 +136,7 @@ Example Workflows
    :open:
 
    .. figure:: images/cycledata_staging.gif
-      :align: center
+      :align: left
 
    *Auditioning trees and rocks and using the randomize and filter functionality.*
 

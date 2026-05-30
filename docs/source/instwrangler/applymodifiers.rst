@@ -26,7 +26,7 @@ To understand this tool, it's best to think of it as an automated two-step proce
    :open:
 
    .. figure:: images/apply_modifiers.gif
-      :align: center
+      :align: left
 
    *Applying modifiers on different object types, first a single instance group, then two groups at once*
 

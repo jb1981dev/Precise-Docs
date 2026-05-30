@@ -27,7 +27,7 @@ You can use any combination of these toggles. For example, you can apply the sca
    :open:
 
    .. figure:: images/apply_transform_general.gif
-      :align: center
+      :align: left
 
    Applying transforms for rotation, scale and position on multiple instances.
 
@@ -60,6 +60,6 @@ After the apply step runs, :kbd:`Ctrl` triggers an additional reset pass on non-
 
 ..
     .. figure:: images/apply_transform_ctrl.gif
-        :align: center
+        :align: left
 
 *Selective Reset resets non-leader instance transforms after applying.*

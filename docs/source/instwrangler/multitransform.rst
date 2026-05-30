@@ -28,7 +28,7 @@ The panel is organized as a grid. On the left is a column of **axis toggles**. T
    :open:
 
    .. figure:: images/multitransform_setall.gif
-      :align: center
+      :align: left
 
    Using Set All to set position, rotation and scale at the same time (IW v1.0).
 
@@ -70,7 +70,7 @@ For the **column buttons** (Pos / Rot / Scale), Round / Invert / Reset apply to 
    :open:
 
    .. figure:: images/multitransform_gridoperations.gif
-      :align: center
+      :align: left
 
    Using various Toggle Button modifier key operations (round, invert, reset) (IW v1.2).
 
@@ -89,7 +89,7 @@ Right-clicking any of the nine value fields opens a context menu with per-cell o
    :open:
 
    .. figure:: images/multitransform_rightmouse.gif
-      :align: center
+      :align: left
 
    Using per-cell operations in the right-click menu (IW v1.2).
 
@@ -108,17 +108,17 @@ The **Relative** toggle lets you switch between relative and absolute transform 
    :open:
 
    .. figure:: images/multitransform_position.gif
-      :align: center
+      :align: left
 
    Setting the position in absolute and relative mode and using the axis rows (IW v1.0).
 
    .. figure:: images/multitransform_rotation.gif
-      :align: center
+      :align: left
 
    Setting the rotation in absolute and relative mode and using the axis rows (IW v1.0).
 
    .. figure:: images/multitransform_scale.gif
-      :align: center
+      :align: left
 
    Setting the scale in absolute and relative mode and using the axis rows (IW v1.0).
 
@@ -140,16 +140,16 @@ Enabling **Active Leads** makes the **active object** the pivot point for the en
    :open:
 
    .. figure:: images/multitransform_activeleadspos.gif
-      :align: center
+      :align: left
 
    Use Active Leads to move objects as a group, using the active object as the group pivot (IW v1.0).
 
    .. figure:: images/multitransform_activeleadsrot.gif
-      :align: center
+      :align: left
 
    Use Active Leads to rotate objects as a group, using the active object as the group pivot (IW v1.0).
 
    .. figure:: images/multitransform_activeleadsscale.gif
-      :align: center
+      :align: left
 
    Use Active Leads to scale objects as a group, using the active object as the group pivot (IW v1.0).

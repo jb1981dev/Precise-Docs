@@ -24,7 +24,7 @@ This is an **additive** process; the newly found objects will be added to your c
    :open:
 
    .. figure:: images/select_linked.gif
-      :align: center
+      :align: left
 
    *Selecting one or multiple instance groups using Select Linked*
 

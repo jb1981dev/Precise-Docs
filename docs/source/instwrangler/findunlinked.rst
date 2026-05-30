@@ -31,7 +31,7 @@ The comparison can optionally include additional data layers to make the fingerp
 ..
    IMAGE PLACEHOLDER
    .. figure:: images/findunlinked_overview.gif
-      :align: center
+      :align: left
 
    *Find Unlinked Duplicates selects all scene objects that share geometry with the selection.*
 

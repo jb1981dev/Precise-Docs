@@ -14,7 +14,7 @@ These two buttons are powerful utilities for managing the names of your objects 
    :open:
 
    .. figure:: images/copy_name.gif
-      :align: center
+      :align: left
 
    *Using Copy Name to sync names of objects and data blocks across multiple instances.*
 
@@ -43,6 +43,6 @@ In just a few clicks, you have synced the names of all your instances, creating 
    :open:
 
    .. figure:: images/copy_name_advanced.gif
-      :align: center
+      :align: left
 
    *Demonstrating a scenario similar to what is described in the workflow example above.*

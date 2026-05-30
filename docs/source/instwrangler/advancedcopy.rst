@@ -19,7 +19,7 @@ All four operators share a set of common options for controlling `transformation
    :open:
 
    .. figure:: images/advancedCopy_Overview.gif
-      :align: center
+      :align: left
 
    *Advanced copy will effortlessly copy or merge any type of object with ultimate control over the newly created object.*
 
@@ -49,7 +49,7 @@ The **Merged Copy** operator creates a **single, clean, game-ready mesh** from a
    :open:
 
    .. figure:: images/advancedCopy_Merged_Pivot.gif
-      :align: center
+      :align: left
 
    *The pivot is determined by the active object or the bounding box center.*
 
@@ -139,7 +139,7 @@ When enabled, the operator will automatically expand your selection to include a
    :open:
 
    .. figure:: images/advancedCopy_IncludeChildren.gif
-      :align: center
+      :align: left
 
    *Include children makes it very easy to duplicate hierarchies.*
 
@@ -177,7 +177,7 @@ This toggle controls how parent-child relationships are handled for the newly cr
    :open:
 
    .. figure:: images/advancedCopy_ClearParents.gif
-      :align: center
+      :align: left
 
    *Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
 
@@ -304,7 +304,7 @@ The **Name** field controls how newly created objects are named. Enable the **Se
    :open:
 
    .. figure:: images/advancedCopy_Name.gif
-      :align: center
+      :align: left
 
    *Different ways of setting the name of the newly copied objects.*
 
@@ -325,6 +325,6 @@ The **Collection** checkbox and dropdown control which collection the newly crea
    :open:
 
    .. figure:: images/advancedCopy_Collections.gif
-      :align: center
+      :align: left
 
    *You can target collections for the new copies or handle it automatically in a reliable way.*

@@ -23,7 +23,7 @@ Accessing the Tools
    :open:
 
    .. figure:: images/user_interface.gif
-      :align: center
+      :align: left
 
    *The different areas of the Instance Wrangler user interface.*
 
@@ -79,6 +79,6 @@ Each of the five toolsets (**Multi Transform**, **Advanced Copy**, **Instance Ma
 ..
    IMAGE PLACEHOLDER
    .. figure:: images/preferences_toolsets.png
-      :align: center
+      :align: left
 
    *The Toolset Management table in addon preferences.*

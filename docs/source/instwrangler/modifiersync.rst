@@ -26,7 +26,7 @@ In most cases, the operator performs a **global sync**. It identifies a "leader"
    :open:
 
    .. figure:: images/modifier_sync_general.gif
-      :align: center
+      :align: left
 
    *Global sync on groups of different types of instanced objects.*
 
@@ -45,7 +45,7 @@ When this condition is met, the sync is **limited to your selection**. The activ
    :open:
 
    .. figure:: images/modifier_sync_limited.gif
-      :align: center
+      :align: left
 
    *Limited sync on different groups of instances.*
 

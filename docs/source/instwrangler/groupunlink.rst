@@ -21,7 +21,7 @@ How to Use
    :open:
 
    .. figure:: images/groupunlink.gif
-      :align: center
+      :align: left
 
    *Unlinking multiple instances from the rest of their instance groups while still keeping links between each other.*
 

@@ -25,7 +25,7 @@ Each selected object will now be a "single user," meaning it no longer shares it
    :open:
 
    .. figure:: images/unlink.gif
-      :align: center
+      :align: left
 
    *Unlinking one or multiple objects from the rest of their instance groups*
 
