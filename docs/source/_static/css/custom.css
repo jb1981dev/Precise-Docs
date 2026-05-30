@@ -34,6 +34,6 @@ readthedocs-flyout {
 }
 
 /* Force figure captions to appear below the image, not beside it */
-figure {
+figure figcaption {
     clear: both;
 }
