@@ -25,6 +25,14 @@ Modifier Keys
 :kbd:`Ctrl`
     **Delete Linked** — deletes the selected objects **and** finds every other object in the scene that shares the same datablocks, then deletes all of them together. Also cleans up orphaned datablocks afterward.
 
+.. dropdown:: Animation: Deep Delete
+   :open:
+
+   .. figure:: images/deepdelete.gif
+      :align: left
+
+   *Demonstration of Deep Delete in action. (IW v1.2)*
+
 Orphaned Datablocks
 -------------------
 
