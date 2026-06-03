@@ -4,49 +4,106 @@
 Deep Rename
 ===========
 
-The **Deep Rename** tool renames both the selected objects **and** their underlying datablocks (mesh, curve, etc.) simultaneously using a flexible naming pattern. This "deep" behavior makes it ideal for batch-renaming assets while keeping the object names and data names in sync.
+The **Deep Rename** tool renames selected objects **and** their underlying
+datablocks (mesh, curve, etc.) simultaneously using a flexible naming pattern.
+This keeps object names and data names in sync during batch-renaming.
 
-In Blender, object names and datablock names are independent. If you rename an object via the outliner, the underlying mesh/curve data keeps its old name. This leads to scenes where the object is called ``Tree_01`` but its mesh data is still called ``Cube.001``.
-
-**Deep Rename** solves this by renaming both at once, in a single operation.
+In Blender, object names and datablock names are independent — renaming an
+object via the outliner leaves its mesh/curve data with the old name. Deep Rename
+solves this by updating both at once.
 
 How to Use
 ----------
 
-#. Select one or more objects in the viewport. The active object will be treated as #1.
+#. Select one or more objects. The active object is always treated as #1.
 #. Click **Deep Rename**.
-#. A dialog appears with a text field for your naming pattern. The dialog shows a live preview of what the active object's new name will be.
-#. Type your pattern using tokens (see below), or click the **\*** and **#** buttons to insert tokens at the cursor.
-#. Click **OK** or press :kbd:`Enter` to apply the new names to all selected objects and their datablocks.
+#. A dialog opens with a text field pre-filled with the active object's name.
+   A **live preview** shows the resulting object and datablock name as you type.
+#. Build your pattern by typing directly or clicking the token buttons
+   (Clear ×, \*, %, #). The **Clear** button resets the pattern to blank.
+#. Choose the **Separator** character used between token elements
+   (Blank, Underscore, Dash, Dot, or Tilde).
+#. Choose the **Numbering** scope — across the full selection, or restarting
+   within each shared datablock group.
+#. Optionally enable **Extend to all datablock users** to also rename
+   non-selected scene objects sharing the same datablocks.
+#. Click **OK** or press :kbd:`Enter` to apply.
 
 Naming Pattern Tokens
 ---------------------
 
+The text field supports tokens that are replaced with actual names at runtime.
+Click the **\***, **%**, or **#** buttons to insert them, or type them directly.
+Token buttons use the current **Separator** setting to join elements.
+
 ``*`` (Asterisk)
-    Expands to the **original name** of each object (the name before the rename). Useful for preserving the base name and adding a suffix or prefix.
-    
-    *Example:* The pattern ``*_MID`` on an object originally named ``Tree`` produces ``Tree_MID``.
+    Replaced with each object's **original object name** (before the rename).
+
+    *Example:* ``*_MID`` on an object named ``Tree`` → ``Tree_MID``.
+
+``%`` (Percent)
+    Replaced with each object's **original datablock name** (mesh, curve, etc.).
+
+    *Example:* ``%_##`` on two objects with datablocks ``Cube`` and ``Sphere``
+    → ``Cube_01``, ``Sphere_01``.
 
 ``#``, ``##``, ``###``, etc. (Hash signs)
-    Expands to the **1-based index** of each object in the selection, zero-padded to match the number of hash signs.
-    The **active object is always #1**, regardless of its position in the selection.
-    
-    * ``#`` → ``1``, ``2``, ``3``, ... (no padding)
-    * ``##`` → ``01``, ``02``, ``03``, ... (padded to 2 digits)
-    * ``###`` → ``001``, ``002``, ``003``, ... (padded to 3 digits)
-    
-    *Example:* The pattern ``Asset_###`` produces ``Asset_001``, ``Asset_002``, ``Asset_003``, etc.
+    A 1-based index, zero-padded to the number of hash characters. The
+    active object is always #1.
 
-You can combine both tokens in a single pattern, or use neither and provide a static name.
+    * ``#`` → ``1``, ``2``, ``3``, ...
+    * ``##`` → ``01``, ``02``, ``03``, ...
+    * ``###`` → ``001``, ``002``, ``003``, ...
+
+    *Example:* ``Asset_###`` → ``Asset_001``, ``Asset_002``, ``Asset_003``.
+
+You can combine all three tokens in one pattern, or provide a static name
+with no tokens at all.
+
+.. note::
+
+   The token buttons also act as **toggles**: clicking ``*`` or ``%``
+   again removes the token from the pattern if it already exists.
+   The ``#`` button stacks additional hash characters for deeper padding.
+
+Numbering Scope
+---------------
+
+Two numbering modes control how the ``#`` token resolves:
+
+``Selection``
+    ``#`` counts across the full ordered selection. The active object is #1.
+
+``Datablock Group``
+    ``#`` restarts for each shared datablock group. Ideal for renaming linked
+    instances like ``Cube_01``, ``Cube_02``, ``Sphere_01``, ``Sphere_02``
+    within one multi-selection.
+
+Separator Control
+-----------------
+
+The **Separator** dropdown controls which character is inserted between
+tokens when using the \*, %, and # buttons. The separator only affects
+button-inserted tokens — text you type manually is untouched.
+
+Choices: **Blank** (no separator), **Underscore** (``_``), **Dash** (``-``),
+**Dot** (``.``), and **Tilde** (``~``). Default is Underscore.
+
+Extend to All Datablock Users
+-----------------------------
+
+When enabled, the operation also includes scene objects that share datablocks
+with the selected objects but are not themselves selected. This ensures all
+users of a shared datablock get consistent names.
 
 Examples
 --------
 
 **Example 1: Rename with Index**
 
-Pattern: ``Prop_##``
+Pattern: ``Prop_##``  — Numbering: Selection
 
-Result on three selected objects:
+Result on three objects:
     * ``Prop_01``
     * ``Prop_02``
     * ``Prop_03``
@@ -55,42 +112,38 @@ Result on three selected objects:
 
 Pattern: ``*_Collision``
 
-If the selected objects are named ``Box``, ``Sphere``, and ``Cone``:
+If the objects are named ``Box``, ``Sphere``, and ``Cone``:
 
 Result:
     * ``Box_Collision``
     * ``Sphere_Collision``
     * ``Cone_Collision``
 
-**Example 3: Combine Tokens**
+**Example 3: Datablock Token + Group Numbering**
 
-Pattern: ``Asset_*_###``
+Pattern: ``%_##``  — Numbering: Datablock Group
 
-If the selected objects are named ``Rock``, ``Rock``, and ``Rock`` (three linked duplicates):
+If the selection contains two ``Cube`` instances and two ``Sphere`` instances:
 
 Result:
-    * ``Asset_Rock_001``
-    * ``Asset_Rock_002``
-    * ``Asset_Rock_003``
+    * ``Cube_01``, ``Cube_02``
+    * ``Sphere_01``, ``Sphere_02``
 
-Active Object Behavior
-----------------------
+**Example 4: Static Name (No Tokens)**
 
-The **active object is always treated as #1**, regardless of which object you click or the order of selection. This ensures predictable numbering. If you re-select the objects in a different order, the active object still gets index 1.
+Pattern: ``MyProp``
 
-This is particularly useful when working with linked duplicates — select all instances, make one the active object, and Deep Rename will respect that choice.
+All objects and datablocks are renamed to ``MyProp``. If name conflicts
+occur, implicit numbers are added automatically (e.g., ``MyProp_1``,
+``MyProp_2``).
 
-Linked Duplicates and Datablocks
----------------------------------
+Live Preview & Warnings
+-----------------------
 
-When you have multiple objects sharing the same datablock (linked duplicates), **Deep Rename only renames the datablock once**. All objects pointing to that shared datablock will have their names updated independently, but the datablock gets only one new name (from whichever object is processed first).
+The dialog shows a live preview of the active object's new **Object** and
+**Data** names, updating as you type or change settings.
 
-This prevents duplicate data and keeps your scene clean:
-
-* Before: Five instances of a ``Box`` object all point to ``CubeData``
-* After Deep Rename with pattern ``Box_##``: Objects are ``Box_01``, ``Box_02``, ..., ``Box_05``, and they all point to ``Box_01``
-
-Live Preview
-------------
-
-The dialog displays a live preview of what the **active object's name** will become at both the object and data block level. As you type, the preview updates immediately, helping you verify your pattern before committing.
+If the pattern causes datablock name conflicts (for example, a static name
+that collides with an existing datablock), a warning appears indicating
+that implicit numbering will be added to resolve the conflict. The preview
+reflects these resolved names so you can verify them before committing.
