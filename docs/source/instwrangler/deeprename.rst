@@ -12,6 +12,19 @@ In Blender, object names and datablock names are independent — renaming an
 object via the outliner leaves its mesh/curve data with the old name. Deep Rename
 solves this by updating both at once.
 
+.. dropdown:: Animation: Deep Rename Basics and UI
+   :open:
+
+   .. figure:: images/deeprename_basics.gif
+      :align: left
+
+   *Basic operations using Deep Rename (IW v1.2)*
+
+   .. figure:: images/deeprename_ui.gif
+      :align: left
+
+   *Deep Rename User Interface (IW v1.2)*
+
 How to Use
 ----------
 
@@ -22,7 +35,7 @@ How to Use
 #. Build your pattern by typing directly or clicking the token buttons
    (Clear ×, \*, %, #). The **Clear** button resets the pattern to blank.
 #. Choose the **Separator** character used between token elements
-   (Blank, Underscore, Dash, Dot, or Tilde).
+   (None, Underscore, Dash, Dot, or Tilde).
 #. Choose the **Numbering** scope — across the full selection, or restarting
    within each shared datablock group.
 #. Optionally enable **Extend to all datablock users** to also rename
@@ -36,16 +49,37 @@ The text field supports tokens that are replaced with actual names at runtime.
 Click the **\***, **%**, or **#** buttons to insert them, or type them directly.
 Token buttons use the current **Separator** setting to join elements.
 
-``*`` (Asterisk)
-    Replaced with each object's **original object name** (before the rename).
+.. dropdown:: Animation: Deep Rename Wildcards
+   :open:
 
-    *Example:* ``*_MID`` on an object named ``Tree`` → ``Tree_MID``.
+   .. figure:: images/deeprename_wildcards.gif
+      :align: left
+
+   *Deep Rename Wildcards (IW v1.2)*
+
+``*`` (Asterisk)
+    For **object names**: replaced with the object's original name.
+
+    For **datablock names**: replaced with the datablock's own original name
+    (not an arbitrary object's name). This ensures shared datablocks get
+    predictable names regardless of which object is active.
+
+    *Example:* ``*_Dead`` on object ``Tree`` → object ``Tree_Dead``,
+    datablock ``Tree_Dead`` (or ``Shrub_Dead`` if the data was named
+    ``Shrub``).
 
 ``%`` (Percent)
-    Replaced with each object's **original datablock name** (mesh, curve, etc.).
+    Replaced with the **original datablock name**, both for object and
+    datablock names. Useful for inserting the data name into object names.
 
     *Example:* ``%_##`` on two objects with datablocks ``Cube`` and ``Sphere``
     → ``Cube_01``, ``Sphere_01``.
+
+.. warning::
+
+   Using both ``*`` and ``%`` in the same pattern causes a warning:
+   they are redundant for datablock names and only ``%`` is applied
+   at the data level. Object names still use both as expected.
 
 ``#``, ``##``, ``###``, etc. (Hash signs)
     A 1-based index, zero-padded to the number of hash characters. The
@@ -56,6 +90,14 @@ Token buttons use the current **Separator** setting to join elements.
     * ``###`` → ``001``, ``002``, ``003``, ...
 
     *Example:* ``Asset_###`` → ``Asset_001``, ``Asset_002``, ``Asset_003``.
+
+    .. dropdown:: Animation: Deep Rename Numbering using hash signs
+   :open:
+
+   .. figure:: images/deeprename_numbering.gif
+      :align: left
+
+   *Deep Rename numbering (IW v1.2)*
 
 You can combine all three tokens in one pattern, or provide a static name
 with no tokens at all.
@@ -83,10 +125,16 @@ Separator Control
 -----------------
 
 The **Separator** dropdown controls which character is inserted between
-tokens when using the \*, %, and # buttons. The separator only affects
-button-inserted tokens — text you type manually is untouched.
+tokens when using the \*, %, and # buttons, and is also used to render
+separators in the pattern itself. Changing the separator updates the
+text field in real time — switching to **None** strips separators
+adjacent to wildcards, and switching to any real separator re-inserts
+them at the correct positions.
 
-Choices: **Blank** (no separator), **Underscore** (``_``), **Dash** (``-``),
+The separator only affects button-inserted tokens — text you type
+manually is untouched.
+
+Choices: **None** (no separator), **Underscore** (``_``), **Dash** (``-``),
 **Dot** (``.``), and **Tilde** (``~``). Default is Underscore.
 
 Extend to All Datablock Users
