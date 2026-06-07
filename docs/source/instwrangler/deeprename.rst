@@ -91,7 +91,7 @@ Token buttons use the current **Separator** setting to join elements.
 
     *Example:* ``Asset_###`` → ``Asset_001``, ``Asset_002``, ``Asset_003``.
 
-    .. dropdown:: Animation: Deep Rename Numbering using hash signs
+.. dropdown:: Animation: Deep Rename Numbering using hash signs
    :open:
 
    .. figure:: images/deeprename_numbering.gif
