@@ -22,7 +22,6 @@ Pages
 """""
 
 * :doc:`smartexporter`
-* :doc:`showhidelod`
+* :doc:`assetpreview`
 * :doc:`assettools`
-* :doc:`collidertools`
 * :doc:`cleanuptool`
