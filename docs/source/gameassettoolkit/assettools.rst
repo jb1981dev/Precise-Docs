@@ -2,7 +2,7 @@
 Asset Tools
 ===========
 
-The **Asset Tools** section contains operators for building and managing LOD asset hierarchies and UV channels.
+The **Asset Tools** section contains operators for building and managing LOD asset hierarchies, collider creation, UV channels, and geometry operations.
 
 Create Asset Collection
 -----------------------
@@ -13,6 +13,11 @@ Copy as Next LOD
 ----------------
 
 Duplicates each selected mesh object and increments its LOD number in the name (e.g. ``Chair_LOD0`` → ``Chair_LOD1``). The copy is placed in the same collection(s) as the source. The source object must already have a ``_LOD#`` suffix.
+
+Copy as Collider
+----------------
+
+Duplicates each selected mesh object and creates a collider copy. The ``_LOD#`` suffix in the name is replaced with ``_Collider``; if no LOD suffix is present, ``_Collider`` is appended. All modifiers on the source are applied to the copy before it is created.
 
 Decimate
 --------
@@ -63,3 +68,25 @@ Like Offset Instance UVs, but groups by LOD asset base name instead of by mesh d
 Re-clicking is idempotent.
 
 * :kbd:`Alt` — Remove all UVWarp modifiers from selected objects.
+
+Convex Hull
+-----------
+
+Replaces the geometry of selected mesh objects with a convex hull.
+
+* :kbd:`LMB` — Replace the object's geometry with its convex hull in-place.
+* :kbd:`Shift` — Create a copy with a ``_Hull`` suffix instead of modifying the original.
+* :kbd:`Ctrl` — Combine all selected objects into a single convex hull.
+
+Works in Edit Mode: if faces are selected, only those faces are used as input.
+
+Bounding Box
+------------
+
+Replaces the geometry of selected mesh objects with an axis-aligned bounding box.
+
+* :kbd:`LMB` — Replace the object's geometry with its bounding box in-place.
+* :kbd:`Shift` — Create a copy with a ``_BBox`` suffix instead of modifying the original.
+* :kbd:`Ctrl` — Combine all selected objects into a single bounding box.
+
+Works in Edit Mode: if faces are selected, only those faces are used as input.
