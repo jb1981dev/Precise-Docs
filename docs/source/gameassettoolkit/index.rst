@@ -25,3 +25,4 @@ Pages
 * :doc:`assetpreview`
 * :doc:`assettools`
 * :doc:`cleanuptool`
+* :doc:`preferences`
