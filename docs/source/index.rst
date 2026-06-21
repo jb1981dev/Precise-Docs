@@ -61,6 +61,7 @@ Game Asset Toolkit is a Blender addon for game asset creation: LOD management, c
    gameassettoolkit/assetpreview
    gameassettoolkit/assettools
    gameassettoolkit/cleanuptool
+   gameassettoolkit/preferences
 
 ..
    .. toctree::

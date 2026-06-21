@@ -41,17 +41,35 @@ Toolset Management Table
 
 Control which toolsets appear in the three UI surfaces, and in what order:
 
-+---------+----------+----------+--------+
-| Toolset | Order    | N-Panel  | Popup  | Header |
-+=========+==========+==========+========+========+
-| Smart Exporter | ⬆⬇ | ✓/✗ | ✓/✗ | ✓/✗ |
-+---------+----------+----------+--------+--------+
-| Asset Preview  | ⬆⬇ | ✓/✗ | ✓/✗ | ✓/✗ |
-+---------+----------+----------+--------+--------+
-| Asset Tools    | ⬆⬇ | ✓/✗ | ✓/✗ | ✓/✗ |
-+---------+----------+----------+--------+--------+
-| Cleanup        | ⬆⬇ | ✓/✗ | ✓/✗ | ✓/✗ |
-+---------+----------+----------+--------+--------+
+.. list-table::
+   :widths: 20 10 12 12 12
+   :header-rows: 1
+
+   * - Toolset
+     - Order
+     - N-Panel
+     - Popup
+     - Header
+   * - Smart Exporter
+     - ⬆⬇
+     - ✓/✗
+     - ✓/✗
+     - ✓/✗
+   * - Asset Preview
+     - ⬆⬇
+     - ✓/✗
+     - ✓/✗
+     - ✓/✗
+   * - Asset Tools
+     - ⬆⬇
+     - ✓/✗
+     - ✓/✗
+     - ✓/✗
+   * - Cleanup
+     - ⬆⬇
+     - ✓/✗
+     - ✓/✗
+     - ✓/✗
 
 - **Order** — Click the up/down arrows to swap the position of two adjacent toolsets.
   The number updates automatically. Toolsets in the N-panel, popup, and header toolbar
@@ -74,10 +92,13 @@ above.
 How to Find the Addon
 ---------------------
 
-+-------------+------------------------------------------+
-| N-Panel     | View3D Sidebar → Precise tab             |
-+-------------+------------------------------------------+
-| Popup Menu  | Press :kbd:`Ctrl+T` in Object Mode       |
-+-------------+------------------------------------------+
-| Header Bar  | Click the GAT icon (top-right toolbar)   |
-+-------------+------------------------------------------+
+.. list-table::
+   :widths: 15 85
+   :header-rows: 0
+
+   * - N-Panel
+     - View3D Sidebar → Precise tab
+   * - Popup Menu
+     - Press :kbd:`Ctrl+T` in Object Mode
+   * - Header Bar
+     - Click the GAT icon (top-right toolbar)
