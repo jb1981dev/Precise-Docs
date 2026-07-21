@@ -197,9 +197,9 @@ The **Use Target** toggle (checkbox) enables or disables targeting. When disable
 
 When targeting is enabled, three target mode icons appear:
 
-* **Eyedropper** — **Manual (Set Target)** mode
-* **Magnifying Glass** — **Auto** mode
-* **Select Icon** — **Selection** mode
+* **Select Icon** — **Selection** mode (left)
+* **Eyedropper** — **Manual (Set Target)** mode (center)
+* **Magnifying Glass** — **Auto** mode (right)
 
 Manual Target (Set Target)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -208,7 +208,9 @@ Before running a copy operation, click the **Set Target** button (or eyedropper 
 
 **For Linked Copy and Unlinked Copy:**
 
-The stored target object is **removed** from the scene. A new duplicate of the source is created and placed at the target's world position, inheriting its parent relationship. Only the single stored target is affected — no other objects in the scene are changed.
+The stored target object is **removed** from the scene. A new duplicate of the source is created and placed at the target's world position, inheriting its parent relationship.
+
+If the target is the **same object as the source** (self-target), the operator will replace every other instance in the scene sharing the source's data-block with a fresh copy of the source. This syncs all linked instances at once.
 
 **For Merged Copy:**
 
@@ -273,6 +275,11 @@ In **Selection** target mode, the active object's hierarchy is treated as the **
 * **Unlinked Copy:** Creates a new unlinked copy of the source. Each target hierarchy is removed and replaced with that copy.
 * **Merged Copy:** **Not available** in this mode. Use `H Merge`_ instead.
 * **H Merge:** The source hierarchy is preserved (not merged). A merged copy of the source is created and placed at each target's world position; the source hierarchy remains in place.
+
+**Self-target:** If only one hierarchy is selected (no other targets), the selection is treated as a self-target:
+
+* **Linked/Unlinked Copy:** Same as `Auto Target`_ with an empty search — all other instances sharing the source's data-block are replaced with new copies and children. Only other instances are affected; the source object itself is unchanged. Be careful when using Unlinked copy, as this will update other instances but will do so as unlinked copies, essentially breaking the link.
+* **H Merge:** A destructive self-merge. The selected hierarchy is permanently replaced with a merged copy. If `Skip Active`_ is enabled, the root object is preserved and its children are replaced with the merged result as a new child. When `Skip Active`_ is off, the root itself is replaced with the merged mesh data.
 
 **Use cases:**
 
