@@ -278,7 +278,7 @@ In **Selection** target mode, the active object's hierarchy is treated as the **
 
 **Self-target:** If only one hierarchy is selected (no other targets), the selection is treated as a self-target:
 
-* **Linked/Unlinked Copy:** Same as `Auto Target`_ with an empty search — all other instances sharing the source's data-block are replaced with new copies and children. Only other instances are affected; the source object itself is unchanged. Be careful when using Unlinked copy, as this will update other instances but will do so as unlinked copies, essentially breaking the link.
+* **Linked/Unlinked Copy:** Same as `Auto Target (Search)`_ with an empty search — all other instances sharing the source's data-block are replaced with new copies and children. Only other instances are affected; the source object itself is unchanged. Be careful when using Unlinked copy, as this will update other instances but will do so as unlinked copies, essentially breaking the link.
 * **H Merge:** A destructive self-merge. The selected hierarchy is permanently replaced with a merged copy. If `Skip Active`_ is enabled, the root object is preserved and its children are replaced with the merged result as a new child. When `Skip Active`_ is off, the root itself is replaced with the merged mesh data.
 
 **Use cases:**
