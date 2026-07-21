@@ -201,6 +201,29 @@ When targeting is enabled, three target mode icons appear:
 * **Eyedropper** — **Manual (Set Target)** mode (center)
 * **Magnifying Glass** — **Auto** mode (right)
 
+Selection Target
+^^^^^^^^^^^^^^^^
+
+In **Selection** target mode, the active object's hierarchy is treated as the **source**; all other selected hierarchies are treated as **targets**. Select multiple separate hierarchies, keep one as the active object, and run the copy operation — the result replaces each target hierarchy in-place at its position.
+
+**Per-Operator Behavior:**
+
+* **Linked Copy:** Creates a new linked copy of the source. Each target hierarchy is removed and replaced with that copy at the target's position, rotation, and scale.
+* **Unlinked Copy:** Creates a new unlinked copy of the source. Each target hierarchy is removed and replaced with that copy.
+* **Merged Copy:** **Not available** in this mode. Use `H Merge`_ instead.
+* **H Merge:** The source hierarchy is preserved (not merged). A merged copy of the source is created and placed at each target's world position; the source hierarchy remains in place.
+
+**Self-target:** If only one hierarchy is selected (no other targets), the selection is treated as a self-target:
+
+* **Linked/Unlinked Copy:** Same as `Auto Target (Search)`_ with an empty search — all other instances sharing the source's data-block are replaced with new copies and children. Only other instances are affected; the source object itself is unchanged. Be careful when using Unlinked copy, as this will update other instances but will do so as unlinked copies, essentially breaking the link.
+* **H Merge:** A destructive self-merge. The selected hierarchy is permanently replaced with a merged copy. If `Skip Active`_ is enabled, the root object is preserved and its children are replaced with the merged result as a new child. When `Skip Active`_ is off, the root itself is replaced with the merged mesh data.
+
+**Use cases:**
+
+* *Linked Copy:* You have a modular shelf hierarchy and placeholder hierarchies scattered around your scene marking where it should appear. Make the shelf the active object, select all the placeholders, and run **Linked Copy** with Selection Target — each placeholder is replaced with a linked instance of the shelf at its exact position.
+
+* *H Merge:* You have a detailed vehicle hierarchy and marker hierarchies placed where a merged proxy should go. Make the vehicle the active object, select all the markers, and run **H Merge** with Selection Target — a merged proxy is placed at each marker's position while the original assembly stays intact.
+
 Manual Target (Set Target)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -263,29 +286,6 @@ H Merge
 * You updated a spaceship asset by adding child objects to the original, but the other instances in your scene don't reflect those changes. Leave the search empty and run **Linked Copy** with Auto Target — all other objects sharing the same data-block are replaced with fresh linked copies of the updated source.
 * Use a name pattern to replace multiple scene objects with a merged copy of your source in one click — useful for pushing a merged result into a set of existing placeholders.
 * You have 10 assembled spaceships and matching placeholder meshes named ``Spaceship1_LOD0``, ``Spaceship2_LOD0``, etc. Select all 10 assemblies, run **H Merge** with Auto Target, and enter ``*_LOD0`` as the search pattern — each assembly is merged and placed at its corresponding placeholder in one operation.
-
-Selection Target
-^^^^^^^^^^^^^^^^
-
-In **Selection** target mode, the active object's hierarchy is treated as the **source**; all other selected hierarchies are treated as **targets**. Select multiple separate hierarchies, keep one as the active object, and run the copy operation — the result replaces each target hierarchy in-place at its position.
-
-**Per-Operator Behavior:**
-
-* **Linked Copy:** Creates a new linked copy of the source. Each target hierarchy is removed and replaced with that copy at the target's position, rotation, and scale.
-* **Unlinked Copy:** Creates a new unlinked copy of the source. Each target hierarchy is removed and replaced with that copy.
-* **Merged Copy:** **Not available** in this mode. Use `H Merge`_ instead.
-* **H Merge:** The source hierarchy is preserved (not merged). A merged copy of the source is created and placed at each target's world position; the source hierarchy remains in place.
-
-**Self-target:** If only one hierarchy is selected (no other targets), the selection is treated as a self-target:
-
-* **Linked/Unlinked Copy:** Same as `Auto Target (Search)`_ with an empty search — all other instances sharing the source's data-block are replaced with new copies and children. Only other instances are affected; the source object itself is unchanged. Be careful when using Unlinked copy, as this will update other instances but will do so as unlinked copies, essentially breaking the link.
-* **H Merge:** A destructive self-merge. The selected hierarchy is permanently replaced with a merged copy. If `Skip Active`_ is enabled, the root object is preserved and its children are replaced with the merged result as a new child. When `Skip Active`_ is off, the root itself is replaced with the merged mesh data.
-
-**Use cases:**
-
-* *Linked Copy:* You have a modular shelf hierarchy and placeholder hierarchies scattered around your scene marking where it should appear. Make the shelf the active object, select all the placeholders, and run **Linked Copy** with Selection Target — each placeholder is replaced with a linked instance of the shelf at its exact position.
-
-* *H Merge:* You have a detailed vehicle hierarchy and marker hierarchies placed where a merged proxy should go. Make the vehicle the active object, select all the markers, and run **H Merge** with Selection Target — a merged proxy is placed at each marker's position while the original assembly stays intact.
 
 Naming
 ------
