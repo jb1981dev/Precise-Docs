@@ -199,7 +199,7 @@ When targeting is enabled, three target mode icons appear:
 
 * **Select Icon** — **Selection** mode (left)
 * **Eyedropper** — **Manual (Set Target)** mode (center)
-* **Magnifying Glass** — **Auto** mode (right)
+* **Magnifying Glass** — **Find** mode (right)
 
 Selection Target
 ^^^^^^^^^^^^^^^^
@@ -215,7 +215,7 @@ In **Selection** target mode, the active object's hierarchy is treated as the **
 
 **Self-target:** If only one hierarchy is selected (no other targets), the selection is treated as a self-target:
 
-* **Linked/Unlinked Copy:** Same as `Auto Target (Search)`_ with an empty search — all other instances sharing the source's data-block are replaced with new copies and children. Only other instances are affected; the source object itself is unchanged. Be careful when using Unlinked copy, as this will update other instances but will do so as unlinked copies, essentially breaking the link.
+* **Linked/Unlinked Copy:** Same as `Find Target (Search)`_ with an empty search — all other instances sharing the source's data-block are replaced with new copies and children. Only other instances are affected; the source object itself is unchanged. Be careful when using Unlinked copy, as this will update other instances but will do so as unlinked copies, essentially breaking the link.
 * **H Merge:** A destructive self-merge. The selected hierarchy is permanently replaced with a merged copy. If `Skip Active`_ is enabled, the root object is preserved and its children are replaced with the merged result as a new child. When `Skip Active`_ is off, the root itself is replaced with the merged mesh data.
 
 **Use cases:**
@@ -251,10 +251,10 @@ Not supported. The operator cancels with a warning when a manual target is set.
 .. note::
    The redo/F9 panel is not compatible when a manual target is set. Settings are read from the last values set in the sidebar or popup. `Clear Parents`_ has no effect in this mode. The **Name** field controls the name of the replaced data-block (wildcard ``*`` is supported).
 
-Auto Target (Search)
+Find Target (Search)
 ^^^^^^^^^^^^^^^^^^^^
 
-In **Auto** mode, the operator searches for a target object by name or pattern. The **Search** field lets you specify what to look for.
+In **Find** mode, the operator searches for a target object by name or pattern. The **Search** field lets you specify what to look for. Two small buttons next to the search field — ``*`` and ``%`` — insert the corresponding wildcard tokens, each with a descriptive tooltip explaining its behavior.
 
 **Per-Operator Behavior:**
 
@@ -278,14 +278,14 @@ H Merge
 
 **Multi-Group Handling:** When you have multiple hierarchy groups selected, each group targets independently — each root searches for its own target based on its name. This enables merging or replacing multiple hierarchies in one operation:
 
-* **Linked Copy** and **Unlinked Copy** apply auto-target per group — each root searches independently for its own target (e.g., ``Cube`` finds ``Cube_Target``, ``Sphere`` finds ``Sphere_Target``).
+* **Linked Copy** and **Unlinked Copy** apply Find Target per group — each root searches independently for its own target (e.g., ``Cube`` finds ``Cube_Target``, ``Sphere`` finds ``Sphere_Target``).
 * **H Merge** also applies per group — each hierarchy group's merged result targets independently.
 
 **Use cases:**
 
-* You updated a spaceship asset by adding child objects to the original, but the other instances in your scene don't reflect those changes. Leave the search empty and run **Linked Copy** with Auto Target — all other objects sharing the same data-block are replaced with fresh linked copies of the updated source.
+* You updated a spaceship asset by adding child objects to the original, but the other instances in your scene don't reflect those changes. Leave the search empty and run **Linked Copy** with Find Target — all other objects sharing the same data-block are replaced with fresh linked copies of the updated source.
 * Use a name pattern to replace multiple scene objects with a merged copy of your source in one click — useful for pushing a merged result into a set of existing placeholders.
-* You have 10 assembled spaceships and matching placeholder meshes named ``Spaceship1_LOD0``, ``Spaceship2_LOD0``, etc. Select all 10 assemblies, run **H Merge** with Auto Target, and enter ``*_LOD0`` as the search pattern — each assembly is merged and placed at its corresponding placeholder in one operation.
+* You have 10 assembled spaceships and matching placeholder meshes named ``Spaceship1_LOD0``, ``Spaceship2_LOD0``, etc. Select all 10 assemblies, run **H Merge** with Find Target, and enter ``*_LOD0`` as the search pattern — each assembly is merged and placed at its corresponding placeholder in one operation.
 
 Naming
 ------
