@@ -57,7 +57,18 @@ Options are accessible under the collapsible **Exporter Options** section.
    Clears previous messages in the Validator Panel before each new export or validation run.
 
 **Split by Materials**
-   Splits objects by material during export. Each material becomes a separate FBX (transparent to the end result). Use **Split Material Suffix** entries to assign custom name suffixes per material slot.
+   Splits objects by material during export. Each material becomes a separate FBX (transparent to the end result).
+
+**Use Material Aliases**
+   When enabled, material names are matched against a user‑curated alias list. If a material name matches a stored pattern, the matching alias is used as the export suffix (e.g. ``_Wood``). If no alias matches, a numbered fallback suffix is applied (e.g. ``_Part01``).
+
+   Click **Use Material Aliases** to open the alias editor popup. Each entry has an **Alias** (the suffix to apply) and a **Search Pattern** (with ``%`` wildcards matching the material name). Use the ``%`` button to append a wildcard, the ``+``/``-`` buttons to add or remove entries, and the column headers to sort.
+
+**Suffix** (Fallback)
+   Prefix for numbered fallback suffixes when no material alias matches. Default is ``Part``.
+
+**Number Padding** (Fallback)
+   Controls the zero‑padded width of fallback numbers. For ``2`` the suffix is ``_Part01``; for ``3`` it is ``_Part001``.
 
 **Save Settings / Load Settings**
    Persist the current exporter options to ``exporter/settings.json`` or reload from it.
