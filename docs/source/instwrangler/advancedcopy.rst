@@ -181,6 +181,36 @@ This toggle controls how parent-child relationships are handled for the newly cr
 
    *Toggling clear parents will either flatten or maintain a hierarchical structure on new copies.*
 
+.. _modifiers:
+
+Modifiers & Booleans
+--------------------
+
+Advanced Copy handles modifiers and boolean setups automatically so your copies and
+merges stay correct:
+
+* **Baked on merge:** **Merged Copy** and **H Merge** permanently apply (bake) every
+  modifier on the source objects before joining. The result is a single, game-ready
+  mesh with no leftover modifier stack.
+* **Boolean cutters excluded:** Objects used as a Boolean modifier's *Object* target
+  are treated as cutters and are automatically left out of the merged result instead
+  of being absorbed into it.
+* **Modifier object references remapped:** When **Linked Copy** or **Unlinked Copy**
+  duplicates a hierarchy, any modifier that points at another object in that
+  hierarchy (Mirror, Boolean, Array, Lattice, Shrinkwrap, Data Transfer, etc.) is
+  re-pointed at the corresponding new copy, so the duplicated modifiers keep working
+  on the new objects.
+* **Keep Target Modifiers:** When targeting a mesh object (**Merged Copy** / **H
+  Merge** data-block swap), this toggle keeps the target's existing modifiers after
+  its mesh data is replaced. Disable it to strip the target's modifier stack. Enabled
+  by default.
+
+.. note::
+   Modifiers live on the object, while UVs, vertex groups, and shape keys live on the
+   mesh data-block. When a target's mesh data is swapped in place, only the
+   object-level modifiers need managing — the rest follows the new data-block
+   automatically.
+
 Target Settings
 ===============
 
@@ -286,6 +316,53 @@ H Merge
 * You updated a spaceship asset by adding child objects to the original, but the other instances in your scene don't reflect those changes. Leave the search empty and run **Linked Copy** with Find Target — all other objects sharing the same data-block are replaced with fresh linked copies of the updated source.
 * Use a name pattern to replace multiple scene objects with a merged copy of your source in one click — useful for pushing a merged result into a set of existing placeholders.
 * You have 10 assembled spaceships and matching placeholder meshes named ``Spaceship1_LOD0``, ``Spaceship2_LOD0``, etc. Select all 10 assemblies, run **H Merge** with Find Target, and enter ``*_LOD0`` as the search pattern — each assembly is merged and placed at its corresponding placeholder in one operation.
+
+.. _Special Ops:
+
+Special Ops
+-----------
+
+Recipes built on top of the targeting options above.
+
+Replace Parents
+^^^^^^^^^^^^^^^
+
+Swap an existing parent object for a new copy while keeping its children in place.
+Enable **Use Target**, set the source and target, and run **Linked Copy** or
+**Unlinked Copy** with `Include Children`_ **off**. The target parent is replaced by
+a copy of the source, and the target's original children are automatically
+re-parented to the new object with their world transforms preserved.
+
+* *Example:* You've re-modeled a landing-gear strut. Set the new strut as the source
+  and the old strut as the target, then run **Linked Copy** — every wheel and door
+  parented to the old strut is now parented to the new one without moving.
+
+Replace Children
+^^^^^^^^^^^^^^^^
+
+Update the children of a target hierarchy while keeping its parent. Enable
+**Use Target**, set the source and target, and run **Linked Copy** or **Unlinked
+Copy** with `Skip Active`_ and `Include Children`_ **on**. The target parent stays in
+place while its children are removed and rebuilt from the source's children.
+
+* *Example:* You've added armor plates and greebles to your source rig. Point the
+  source at your other rigs and run **Linked Copy** with `Skip Active`_ and `Include
+  Children`_ on — each target keeps its root, but its children are replaced with
+  duplicates of the updated source's children.
+
+Destructive Merge
+^^^^^^^^^^^^^^^^^
+
+Collapse a hierarchy into a single, game-ready mesh that replaces the original. Run
+**Merged Copy** (or **H Merge** per hierarchy) with **Use Target** enabled and a mesh
+target set: the target's data-block is swapped for the merged result, and every
+object sharing that data-block updates in place. The original multi-object hierarchy
+is reduced to one mesh with all modifiers baked.
+
+* *Example:* You have a detailed character assembly and matching proxy placeholders.
+  Select the assembly, set a placeholder as the target, and run **Merged Copy** — the
+  placeholder becomes a single merged proxy, and every other instance of that
+  placeholder updates at once.
 
 Naming
 ------
