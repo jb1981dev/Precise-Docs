@@ -27,3 +27,13 @@ p.caption {
 readthedocs-flyout {
    display: none !important;
 }
+
+/* Tables: wrap long text inside the cells instead of scrolling the table sideways.
+   The theme sets nowrap on cells and puts tables in a horizontally scrolling box. */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal !important;
+}
+.wy-table-responsive {
+    overflow: visible !important;
+}
