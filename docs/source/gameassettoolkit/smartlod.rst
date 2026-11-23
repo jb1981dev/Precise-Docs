@@ -91,7 +91,23 @@ Per-LOD Settings
 ----------------
 
 Each enabled LOD has its own settings. The quality limits (Shape, UV, Normal) decide how far a
-LOD is reduced. The distances are in scene units.
+LOD is reduced.
+
+Sizes relative to the asset
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Shape**, **Gaps** and **Islands** are set as a percentage of LOD0's size, measured along the
+diagonal of its bounding box (100% = the full diagonal). Each selected object is measured on
+its own, so the same settings and presets work the same on a small prop and on a building, and
+object scale does not matter.
+
+The label of each of these fields shows what the percentage means in scene units for the
+active object, for example *Shape (≈ 1.2 cm)*.
+
+.. note::
+   On long, thin assets (fences, pipes, cables) the diagonal mostly follows the length, so a
+   small percentage can still be larger than the asset is thick. Keep these values low for
+   such assets and check the size shown next to the field.
 
 .. list-table::
    :widths: 30 70
@@ -103,7 +119,8 @@ LOD is reduced. The distances are in scene units.
        limits, until the cap is reached. **100%** means no cap. The result is then marked
        *capped*.
    * - **Shape**
-     - The maximum distance the LOD's surface may move away from LOD0.
+     - The maximum distance the LOD's surface may move away from LOD0, as a percentage of
+       LOD0's size.
    * - **UV**
      - The maximum texture shift, in pixels, at the **Texture Size** set below.
    * - **Normal**
@@ -116,14 +133,15 @@ LOD is reduced. The distances are in scene units.
        within the UV limit, which removes more triangles.
    * - **Gaps**
      - Visually closes narrow gaps between separate pieces of the mesh by moving the facing
-       vertices towards each other. The value is the widest gap that is closed. No faces are
-       added and pieces are not welded.
+       vertices towards each other. The value is the widest gap that is closed, as a percentage
+       of LOD0's size. No faces are added and pieces are not welded.
    * - **Hidden**
      - Removes faces that are buried in, or pressed against, other closed pieces of the same
        mesh. The value is how much of a face must be hidden before it is removed (95% by
        default).
    * - **Islands**
-     - Removes separate pieces whose bounding box diagonal is smaller than the value.
+     - Removes separate pieces that are small compared to the whole asset: a piece is removed
+       when its bounding box diagonal is smaller than this percentage of LOD0's diagonal.
 
 Shared Settings
 ---------------
