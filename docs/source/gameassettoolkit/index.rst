@@ -4,7 +4,7 @@
 About Game Asset Toolkit
 ==========================
 
-**Game Asset Toolkit** is a Blender addon that streamlines the game asset export pipeline. It provides tools for LOD management, collider generation, mesh cleanup, and a validated batch FBX exporter — all from a single panel in the 3D Viewport.
+**Game Asset Toolkit** is a Blender addon that streamlines the game asset export pipeline. It provides tools for LOD management, automatic LOD generation, collider generation, mesh cleanup, and a validated batch FBX exporter — all from a single panel in the 3D Viewport.
 
 The panel is found in the **Precise** tab of the N-panel (:kbd:`N` in the 3D Viewport).
 
@@ -24,5 +24,6 @@ Pages
 * :doc:`smartexporter`
 * :doc:`assetpreview`
 * :doc:`assettools`
+* :doc:`smartlod`
 * :doc:`cleanuptool`
 * :doc:`preferences`

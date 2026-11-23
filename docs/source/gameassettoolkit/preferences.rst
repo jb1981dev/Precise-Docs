@@ -65,6 +65,11 @@ Control which toolsets appear in the three UI surfaces, and in what order:
      - ✓/✗
      - ✓/✗
      - ✓/✗
+   * - Smart LOD
+     - ⬆⬇
+     - ✓/✗
+     - ✓/✗
+     - ✓/✗
    * - Cleanup
      - ⬆⬇
      - ✓/✗
