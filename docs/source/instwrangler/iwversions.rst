@@ -1,10 +1,10 @@
 Version History
 ===============
 
-.. _version_1_2_00:
+.. _version_1_2_0:
 
-Version 1.2.00
---------------
+Version 1.2.0
+-------------
 
 A major feature release adding new access points, new operators, and significant improvements across existing tools.
 
@@ -31,7 +31,7 @@ Apply Transforms
 ^^^^^^^^^^^^^^^^
 
 * **Ctrl — Selective Reset:** Resets the toggled transform channels on non-leader instances in the group.
-* **Cross-scene instance handling:** Searches all scenes for linked instances and temporarily unhides objects in excluded collections to complete the apply.
+* **Hidden instance handling:** Instances that are hidden or in excluded collections are temporarily revealed to complete the apply, then hidden again. Instances that only exist in another scene are reported with a clear message instead of being skipped silently.
 
 Instance Management (new operators)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
