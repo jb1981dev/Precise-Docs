@@ -93,6 +93,24 @@ Per-LOD Settings
 Each enabled LOD has its own settings. The quality limits (Shape, UV, Normal) decide how far a
 LOD is reduced.
 
+Link LODs
+^^^^^^^^^
+
+With **Link LODs** on (the default), every LOD stays at least as aggressive as the LOD before
+it. When you change a setting on one LOD, the same setting on the other LODs is pushed along
+as soon as they would end up out of order:
+
+* Making a LOD more aggressive pushes the later LODs. With Max Tris at 100% on every LOD,
+  dragging LOD1 down to 75% takes LOD2 and LOD3 with it.
+* Making a LOD less aggressive pushes the earlier LODs. Dragging LOD3 up past LOD2 takes LOD2
+  with it.
+
+LODs that are already in order don't move, and pushed values stay where they were pushed. All
+sliders and the **Gaps**, **Hidden** and **Islands** checkboxes are linked, including those of
+LODs that are switched off. The **Sharps** and **Seams** locks are not linked.
+
+Presets are always applied exactly as saved. Turn **Link LODs** off to set each LOD freely.
+
 Sizes relative to the asset
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
