@@ -62,4 +62,4 @@ After the apply step runs, :kbd:`Ctrl` triggers an additional reset pass on non-
     .. figure:: images/apply_transform_ctrl.gif
         :align: left
 
-*Selective Reset resets non-leader instance transforms after applying.*
+    *Selective Reset resets non-leader instance transforms after applying.*

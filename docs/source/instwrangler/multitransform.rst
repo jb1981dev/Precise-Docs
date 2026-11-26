@@ -35,15 +35,26 @@ The panel is organized as a grid. On the left is a column of **axis toggles**. T
 Set Buttons
 -----------
 
-The four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support two modifier keys:
+The four Set buttons (**Set All**, **Set P**, **Set R**, **Set S**) support these modifier keys:
 
 :kbd:`LMB`
     **Set** — applies the current values to the selection.
 
 :kbd:`Ctrl`
-    **Get** — reads the active object's current transform into the value fields (respects axis toggles).
+    **Get** — reads the active object's current transform into the value fields (respects axis toggles). Works with any rotation mode. With **Relative** on, the transform is read relative to the object's parent.
 
-For **Set All**, both shortcuts also respect the **Pos / Rot / Scale include toggles** — only the enabled transform types are affected.
+:kbd:`Alt`
+    **Reset** — resets the transform of the selected objects themselves (not the value fields). **Set P**, **Set R** and **Set S** reset their own channel on all three axes.
+
+    * **Relative off:** objects reset to the world origin — Position 0, Rotation 0°, Scale 1.
+    * **Relative on:** objects reset to their parent's transform. Objects without a parent reset to the world origin.
+
+For **Set All**, all three shortcuts also respect the **Pos / Rot / Scale include toggles** — only the enabled transform types are affected.
+
+After a Reset, the redo/F9 panel shows a **Reset Relative to Parent** toggle, so you can switch between the two reset targets afterwards.
+
+.. note::
+   When a parent and its children are both selected, **Set** only transforms the parent; the children follow it. **Reset** resets every selected object, parents first.
 
 Toggle Buttons
 --------------

@@ -160,6 +160,9 @@ This option is useful when you want to use the active object as a reference poin
     * **Parenting Behavior:** If **Skip Active** and `Include Children`_ are both enabled, the newly created copies will be automatically parented to the *original* active object.
 * **OFF (Default):** The active object is treated as a normal part of the selection and is copied/merged along with everything else.
 
+.. note::
+   If **Skip Active** is on and the active object is the only thing that would be copied (it is the only selected object, and `Include Children`_ is off or it has no children), the copy would be empty. Instead of creating nothing, a confirmation appears: **Disable & Continue** runs the copy with Skip Active turned off for that run.
+
 Clear Parents
 -------------
 

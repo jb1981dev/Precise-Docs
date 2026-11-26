@@ -12,9 +12,9 @@ Multi Transform
 ^^^^^^^^^^^^^^^
 
 * **Include toggles (Pos / Rot / Scale):** Control which transform types are affected by **Set All** and Advanced Copy's **Apply Multi Transform**.
-* **Modifier keys on Set buttons:** :kbd:`Ctrl` reads the active object's transform into the value fields.
+* **Modifier keys on Set buttons:** :kbd:`Ctrl` reads the active object's transform into the value fields. :kbd:`Alt` resets the selected objects' transforms, to the world origin or (with **Relative** on) to their parent.
 * **Modifier keys on axis/column toggles:** :kbd:`Shift` rounds, :kbd:`Ctrl` inverts (sign flip), :kbd:`Alt` resets the associated values.
-* **Bypass Children:** When a parent and its children are both selected, only the parent is transformed.
+* **Parents and children:** When a parent and its children are both selected, Set only transforms the parent; the children follow it.
 * **Redo / F9 panel:** Axis toggles, include toggles, and values are now recorded for post-run adjustment.
 
 Advanced Copy
@@ -26,6 +26,7 @@ Advanced Copy
 * **Apply Multi Transform** now respects the Pos / Rot / Scale include toggles.
 * **Redo / F9 panel:** All Advanced Copy settings are now recorded for post-run adjustment.
 * **Wildcard repetition prevention:** Duplicate prefixes or suffixes in the resolved name are automatically dropped.
+* **Skip Active guard:** When Skip Active would leave nothing to copy, a confirmation offers to run the copy with Skip Active turned off.
 
 Apply Transforms
 ^^^^^^^^^^^^^^^^
@@ -39,6 +40,7 @@ Instance Management (new operators)
 * **Find Unlinked Duplicates:** Scans the scene for objects sharing the same geometry as the selection but not currently linked to them. Matching objects are added to the selection, ready for **Link Selected**. UV, material, and attribute comparisons are individually toggleable.
 * **Deactivate Selected:** Clears the active object slot without affecting the current selection. :kbd:`Ctrl` also removes the previously active object from the selection.
 * **Select Children:** Additively selects all recursive children of every selected object, across multiple hierarchies at once. :kbd:`Ctrl` walks up to the root ancestor first, then selects the full subtree.
+* **Link Selected with an Empty:** When the active object has no data-block to share (e.g. an Empty), the selected objects are replaced by copies of it, keeping their name, transform, parent and children.
 
 Data Ops (renamed from Data Cycler)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -59,6 +61,17 @@ Preferences
 
 * **Toolset visibility and ordering:** Control show/hide in the N-panel and popup, display order, and default expanded state per toolset.
 * **Custom icons:** Each toolset has a dedicated icon used throughout the UI.
+
+Fixes
+^^^^^
+
+* **Get rotation** (:kbd:`Ctrl`-click and right-click Get) now works for objects using quaternion or axis-angle rotation, instead of returning 0.
+* **Unlinked Copy** always gives copies their own data, even when Blender's *Preferences > Editing > Duplicate Data* would share it, and no longer renames the original's data.
+* **Link Selected** keeps the full transform of replaced objects and their children, in any rotation mode.
+* **Find Unlinked (Attr)** ignores Blender's internal attributes and UV maps, so identical meshes are no longer missed.
+* **Cycle Data** now cycles NURBS curves (e.g. *Path*) together with other curves instead of with surfaces.
+* **Cycle Data** and **Deep Delete** support Grease Pencil objects in Blender 4.3–4.5.
+* The right-click Set / Get / Round / Invert / Reset items only appear on Instance Wrangler's own value fields, not on Blender fields with the same name.
 
 .. _version_1_1_30:
 

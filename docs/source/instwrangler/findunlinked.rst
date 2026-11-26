@@ -26,7 +26,7 @@ The comparison can optionally include additional data layers to make the fingerp
     When enabled, material slot assignments are included. Objects with the same geometry but different materials are treated as distinct.
 
 :Attributes (Attr):
-    When enabled, custom attribute layers are included. Useful for distinguishing objects that carry per-vertex or per-face data.
+    When enabled, custom attribute layers are included. Useful for distinguishing objects that carry per-vertex or per-face data. UV maps are left to the **UV** toggle, and Blender's internal attributes (such as the edit-mode selection) are ignored.
 
 ..
    IMAGE PLACEHOLDER

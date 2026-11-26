@@ -44,4 +44,4 @@ The process relies on a source (the active object) and one or more targets (the 
 #. Run the **Link Selected** operator.
 
 .. note::
-   This operation requires that the active object has a linkable data-block (e.g., a Mesh, Curve, or Armature). It will not work if the active object is an Empty. The tool will warn you if it is unable to perform a requested conversion between incompatible types.
+   If the active object has no data-block to share (for example an **Empty**), each selected object is instead replaced by a copy of the active object, keeping its name, transform, parent and children. The tool will warn you if it is unable to perform a requested conversion between incompatible types.
