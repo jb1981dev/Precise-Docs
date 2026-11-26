@@ -19,33 +19,15 @@ Instance Wrangler is an addon for Blender which assists the user in managing ins
 More addons to follow soon!
 
 
-.. The following Toctree will populate the Sidebar. For the table of contents on Page, go to instwrangler/index
+.. The following Toctree populates the Sidebar with one entry per addon.
+   Each addon's own pages are listed in the hidden toctree in its index.rst
+   (e.g. instwrangler/index), so the sidebar only expands the addon you are in.
 .. toctree::
-   :maxdepth: 1
-   :caption: Instance Wrangler
+   :maxdepth: 2
+   :caption: Blender Addons
    :hidden:
 
-   instwrangler/index
-   instwrangler/iwversions
-   instwrangler/usingtheaddon
-
-   instwrangler/multitransform
-   instwrangler/advancedcopy
-   instwrangler/applytransforms
-   instwrangler/modifiersync
-   instwrangler/applymodifiers
-   instwrangler/selectlinked
-   instwrangler/linkselected
-   instwrangler/unlink
-   instwrangler/groupunlink
-   instwrangler/findunlinked
-   instwrangler/deactivateselected
-   instwrangler/selectchildren
-   instwrangler/cycledata
-   instwrangler/deeprename
-   instwrangler/deepdelete
-   instwrangler/copyname
-   instwrangler/blendermenus
+   Instance Wrangler <instwrangler/index>
 
 ..
    .. toctree::

@@ -23,9 +23,39 @@ p.caption {
     font-weight: bold;
 }
 
-/* Hides the floating "versions" menu in the bottom right corner */
+/* Hides the floating "versions" menu in the bottom right corner */ 
 readthedocs-flyout {
-    display: none !important;
+   display: none !important;
+}
+
+/* Tables: wrap long text inside the cells instead of scrolling the table sideways.
+   The theme sets nowrap on cells and puts tables in a horizontally scrolling box. */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal !important;
+}
+.wy-table-responsive {
+    overflow: visible !important;
+}
+
+/* Sidebar: show its own scrollbar. The theme makes the scroll area 20px wider
+   than the panel to hide the scrollbar, so on short pages there was no hint
+   that the page list continues below. */
+.wy-side-scroll {
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #5a5a5a transparent;
+}
+.wy-side-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.wy-side-scroll::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+    border-radius: 4px;
+}
+.wy-side-scroll::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /* Widen the main content area on larger screens (default is 800px) */
