@@ -53,7 +53,7 @@ New Access Points
 ^^^^^^^^^^^^^^^^^
 
 * **Popup Menu (:kbd:`Ctrl+Y`):** A floating popup with all toolsets, accessible anywhere in the 3D Viewport.
-* **Right-Click Context Menus:** All major operators are available in the right-click menu in Object Mode and Edit Mode.
+* **Right-Click Context Menus:** All major operators are available in the Object Mode right-click menu. The Edit Mode menu holds the tools that are safe while editing: Unlink (stays in Edit Mode), Select Linked and Copy Name.
 * **Header Toolbar:** An IW logo button in the tool header toggles inline icon buttons; each opens a popover panel for its toolset.
 
 Preferences
@@ -69,6 +69,9 @@ Fixes
 * **Unlinked Copy** always gives copies their own data, even when Blender's *Preferences > Editing > Duplicate Data* would share it, and no longer renames the original's data.
 * **Link Selected** keeps the full transform of replaced objects and their children, in any rotation mode.
 * **Find Unlinked (Attr)** ignores Blender's internal attributes and UV maps, so identical meshes are no longer missed.
+* **Find Unlinked** finds duplicates whose vertices are stored in a different order (e.g. the same asset built or imported in a different way), ignores tiny float differences, and is much faster on heavy meshes.
+* **Advanced Copy with a target** no longer stops halfway when a target's child is in an excluded collection.
+* **Include Children with a target** is much faster on large scenes (100 targets with 20 children: seconds instead of minutes). Children that share a mesh keep sharing one new mesh in unlinked copies, like :kbd:`Shift+D`.
 * **Cycle Data** now cycles NURBS curves (e.g. *Path*) together with other curves instead of with surfaces.
 * **Cycle Data** and **Deep Delete** support Grease Pencil objects in Blender 4.3–4.5.
 * The right-click Set / Get / Round / Invert / Reset items only appear on Instance Wrangler's own value fields, not on Blender fields with the same name.

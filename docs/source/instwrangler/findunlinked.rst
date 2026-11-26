@@ -17,6 +17,8 @@ How It Works
 
 The operator compares geometry using a **SHA256 fingerprint** — a hash derived from the object's mesh data. When you run the operator, it generates a fingerprint for each selected object and then scans all other objects in the scene for matching fingerprints. Any matches that are not already linked to the selected object are added to the selection.
 
+The fingerprint does not depend on the order in which the mesh stores its vertices and faces, so objects with the same shape match even when they were built or imported in different ways (for example Blender's startup cube and a cube from **Add > Mesh > Cube**). Faces that point the other way (flipped normals) still count as different. Positions are compared to 0.0001 m, so tiny floating-point differences don't matter.
+
 The comparison can optionally include additional data layers to make the fingerprint more precise:
 
 :UV Maps (UV):
