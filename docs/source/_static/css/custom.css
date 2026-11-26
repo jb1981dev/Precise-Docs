@@ -37,3 +37,23 @@ readthedocs-flyout {
 .wy-table-responsive {
     overflow: visible !important;
 }
+
+/* Sidebar: show its own scrollbar. The theme makes the scroll area 20px wider
+   than the panel to hide the scrollbar, so on short pages there was no hint
+   that the page list continues below. */
+.wy-side-scroll {
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #5a5a5a transparent;
+}
+.wy-side-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.wy-side-scroll::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+    border-radius: 4px;
+}
+.wy-side-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}

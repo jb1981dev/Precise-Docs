@@ -1,13 +1,30 @@
-:orphan:
-
 ===============================
 About Instance Wrangler
 ===============================
 
 **Instance Wrangler** is a Blender addon to assist to provide ultimate control in managing instances objects and copies in your Blender scene.
 
-Pages
-"""""
+.. Sidebar navigation for this addon. Keep in sync with the "Pages" list below.
+   It sits before the first sub-heading so the pages nest directly under the addon.
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   iwversions
+   multitransform
+   advancedcopy
+   applytransforms
+   modifiersync
+   applymodifiers
+   selectlinked
+   linkselected
+   unlink
+   groupunlink
+   cycledata
+   copyname
+   blendermenus
+
+.. rubric:: Pages
 
 * :doc:`iwversions`
 * :doc:`multitransform`
