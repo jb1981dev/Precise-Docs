@@ -47,7 +47,10 @@ Press :kbd:`Ctrl+Y` in Object Mode or Edit Mode to open a floating popup contain
 Right-Click Context Menu
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-All major operators appear in the right-click menu in both **Object Mode** and **Edit Mode**. Useful for quick one-off actions without opening any panel.
+Right-click in the 3D Viewport and open the **Instance Wrangler** submenu for quick one-off actions without opening any panel.
+
+* **Object Mode:** all major operators.
+* **Edit Mode:** only the tools that are safe while editing a mesh: **Unlink**, **Select Linked**, and **Copy Object Name to Data-Block** / **Copy Data-Block Name to Object**. **Unlink** makes the mesh you are editing unique and keeps you in Edit Mode, so your edits no longer change its other instances. For all other tools, switch to Object Mode.
 
 Redo Panel (F9)
 ^^^^^^^^^^^^^^^
