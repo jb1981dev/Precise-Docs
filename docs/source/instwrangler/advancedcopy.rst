@@ -262,6 +262,8 @@ Manual Target (Set Target)
 
 Before running a copy operation, click the **Set Target** button (or eyedropper icon) to store the currently active object as the target. Once set, the button shows **T: {object name}** and an **X** button to clear the target.
 
+The target stays set when you rename it, and after a copy it points at the object that replaced it, so you can copy to the same target again. Undoing a copy brings the original target back into the slot. Deleting the target clears it.
+
 **For Linked Copy and Unlinked Copy:**
 
 The stored target object is **removed** from the scene. A new duplicate of the source is created and placed at the target's world position, inheriting its parent relationship.

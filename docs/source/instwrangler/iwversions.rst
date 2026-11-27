@@ -14,7 +14,8 @@ Multi Transform
 * **Include toggles (Pos / Rot / Scale):** Control which transform types are affected by **Set All** and Advanced Copy's **Apply Multi Transform**.
 * **Modifier keys on Set buttons:** :kbd:`Ctrl` reads the active object's transform into the value fields. :kbd:`Alt` resets the selected objects' transforms, to the world origin or (with **Relative** on) to their parent.
 * **Modifier keys on axis/column toggles:** :kbd:`Shift` rounds, :kbd:`Ctrl` inverts (sign flip), :kbd:`Alt` resets the associated values.
-* **Parents and children:** When a parent and its children are both selected, Set only transforms the parent; the children follow it.
+* **Bypass Children toggle:** When a parent and its children are both selected, Set only transforms the parent and the children follow it. On by default; an icon button next to Active Leads turns it off.
+* **Right-click menus on the buttons:** The Set buttons (Get / Reset) and the X / Y / Z and Pos / Rot / Scale toggles (Round / Invert / Reset) offer their modifier-key functions in their right-click menu, with the key shown.
 * **Redo / F9 panel:** Axis toggles, include toggles, and values are now recorded for post-run adjustment.
 
 Advanced Copy
@@ -72,6 +73,9 @@ Fixes
 * **Find Unlinked** finds duplicates whose vertices are stored in a different order (e.g. the same asset built or imported in a different way), ignores tiny float differences, and is much faster on heavy meshes.
 * **Advanced Copy with a target** no longer stops halfway when a target's child is in an excluded collection.
 * **Include Children with a target** is much faster on large scenes (100 targets with 20 children: seconds instead of minutes). Children that share a mesh keep sharing one new mesh in unlinked copies, like :kbd:`Shift+D`.
+* **Linked / Unlinked / Merged Copy** name each copy after its own original, also when objects are in several collections (before, names like ``*_copy`` could be swapped between copies).
+* **Manual target** stays set when it is renamed, after a target copy, and after undoing one.
+* **Apply Transforms** returns to Local View after applying, instead of leaving it.
 * **Cycle Data** now cycles NURBS curves (e.g. *Path*) together with other curves instead of with surfaces.
 * **Cycle Data** and **Deep Delete** support Grease Pencil objects in Blender 4.3–4.5.
 * The right-click Set / Get / Round / Invert / Reset items only appear on Instance Wrangler's own value fields, not on Blender fields with the same name.

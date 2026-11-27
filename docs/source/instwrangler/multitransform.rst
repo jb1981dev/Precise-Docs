@@ -23,6 +23,7 @@ The panel is organized as a grid. On the left is a column of **axis toggles**. T
 * **Mode Toggles:**
     * **Relative:** Switches between Absolute and Relative modes. See `Relative Toggle`_ below.
     * **Active Leads:** Switches to a mode where the active object acts as a pivot for the selection. See `Active Leads Mode`_ below.
+    * **Bypass Children** (the small icon button after Active Leads, on by default): when a parent and its children are both selected, only the parent is transformed and the children follow it. Turn it off to transform the selected children as well. See the note under `Set Buttons`_.
 
 .. dropdown:: Animation: Set All
    :open:
@@ -53,8 +54,10 @@ For **Set All**, all three shortcuts also respect the **Pos / Rot / Scale includ
 
 After a Reset, the redo/F9 panel shows a **Reset Relative to Parent** toggle, so you can switch between the two reset targets afterwards.
 
+Get and Reset are also in each Set button's right-click menu — see `Right-Click Menu`_ below.
+
 .. note::
-   When a parent and its children are both selected, **Set** only transforms the parent; the children follow it. **Reset** resets every selected object, parents first.
+   When a parent and its children are both selected, **Set** only transforms the parent by default; the children follow it. Turn off the **Bypass Children** toggle (icon button next to Active Leads) to transform the selected children as well. **Reset** resets every selected object, parents first.
 
 Toggle Buttons
 --------------
@@ -77,6 +80,8 @@ For the **axis row buttons** (X / Y / Z), Round / Invert / Reset apply across al
 
 For the **column buttons** (Pos / Rot / Scale), Round / Invert / Reset apply to all three values in that column, but only the rows currently enabled by the X / Y / Z axis toggles are affected.
 
+Round, Invert and Reset are also in each toggle's right-click menu — see `Right-Click Menu`_ below.
+
 .. dropdown:: Animation: Toggle button operations
    :open:
 
@@ -88,13 +93,24 @@ For the **column buttons** (Pos / Rot / Scale), Round / Invert / Reset apply to 
 Right-Click Menu
 -----------------
 
-Right-clicking any of the nine value fields opens a context menu with per-cell operations:
+Right-clicking a Multi Transform button or field adds its operations to the bottom of Blender's context menu. For buttons, these are the same as their modifier-key clicks, and the menu shows the matching key, so it doubles as a reminder of the shortcuts.
+
+**Value fields** — per-cell operations:
 
 * **Set** *field* **to Selection** — applies this single value to all selected objects (respects Relative and Active Leads modes).
 * **Get** *field* **from Active** — reads this single value from the active object into the field.
 * **Round** *field* — snaps the value to the nearest clean step.
 * **Invert** *field* — negates the value.
 * **Reset** *field* — resets the value to its default (0 for Position and Rotation, 1 for Scale).
+
+**Set buttons** (Set All, Set P, Set R, Set S) — see `Set Buttons`_:
+
+* **Get … from Active** (:kbd:`Ctrl`) — reads the active object's transform into the value fields.
+* **Reset … of Selection** (:kbd:`Alt`) — resets the selected objects' transforms.
+
+**Toggle buttons** (X / Y / Z, Pos / Rot / Scale) — see `Toggle Buttons`_:
+
+* **Round … Values** (:kbd:`Shift`), **Invert … Values** (:kbd:`Ctrl`), **Reset … Values** (:kbd:`Alt`) — act on the values of that row or column.
 
 .. dropdown:: Animation: Right-click menu
    :open:
